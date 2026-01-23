@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "version": "1.0",
+    "language": "ru",
+    "wake_word": "артефакт",
+    "auto_reset_timeout": 30
+  },
+  "spells": {
+    "огненный_шар": {
+      "name": "Огненный шар",
+      "trigger_words": ["огненный шар", "фаер болл", "fireball"],
+      "description": "Создает мощный огненный снаряд",
+      "media": {
+        "video": "spells/fireball/video.mp4",
+        "image": "spells/fireball/image.jpg",
+        "sound": "spells/fireball/sound.mp3"
+      },
+      "duration": 5000,
+      "cooldown": 0,
+      "effects": ["fire", "explosion"]
+    },
+    "лечение": {
+      "name": "Лечебное заклинание",
+      "trigger_words": ["лечение", "хил", "heal", "исцеление"],
+      "description": "Восстанавливает здоровье",
+      "media": {
+        "video": "spells/heal/video.mp4",
+        "image": "spells/heal/image.jpg",
+        "sound": "spells/heal/sound.mp3"
+      },
+      "duration": 3000,
+      "cooldown": 0,
+      "effects": ["heal", "light"]
+    },
+    "магический_щит": {
+      "name": "Магический щит",
+      "trigger_words": ["щит", "защита", "shield", "магический щит"],
+      "description": "Создает защитный барьер",
+      "media": {
+        "video": "spells/shield/video.mp4",
+        "image": "spells/shield/image.jpg",
+        "sound": "spells/shield/sound.mp3"
+      },
+      "duration": 4000,
+      "cooldown": 0,
+      "effects": ["shield", "magic"]
+    },
+    "темная_стрела": {
+      "name": "Темная стрела",
+      "trigger_words": ["темная стрела", "дарк болт", "dark bolt", "темная магия"],
+      "description": "Выпускает стрелу темной энергии",
+      "media": {
+        "video": "spells/dark_arrow/video.mp4",
+        "image": "spells/dark_arrow/image.jpg",
+        "sound": "spells/dark_arrow/sound.mp3"
+      },
+      "duration": 3000,
+      "cooldown": 0,
+      "effects": ["dark", "damage"]
+    },
+    "молния": {
+      "name": "Молния",
+      "trigger_words": ["молния", "электричество", "lightning", "разряд"],
+      "description": "Создает электрический разряд",
+      "media": {
+        "video": "spells/lightning/video.mp4",
+        "image": "spells/lightning/image.jpg",
+        "sound": "spells/lightning/sound.mp3"
+      },
+      "duration": 2500,
+      "cooldown": 0,
+      "effects": ["electric", "damage"]
+    }
+  },
+  "settings": {
+    "volume": 0.8,
+    "auto_play": true,
+    "fallback_image": "assets/default_spell.jpg"
+  }
+}
