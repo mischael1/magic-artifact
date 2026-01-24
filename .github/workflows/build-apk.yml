@@ -53,7 +53,7 @@ jobs:
           buildozer android debug 2>&1 | tee build.log
       
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: magicartifact-apk
           path: bin/*.apk
@@ -61,7 +61,7 @@ jobs:
       
       - name: Upload Build Log
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-log
           path: build.log
