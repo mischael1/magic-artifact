@@ -1,0 +1,37 @@
+ИСПРАВЛЕННАЯ ЯЧЕЙКА 4:
+
+import os
+import subprocess
+
+print("="*60)
+print("🔨 НАЧАЛО СБОРКИ APK")
+print("="*60)
+print()
+
+os.environ["ANDROID_SDK_ROOT"] = os.path.expanduser("~/android-sdk")
+os.environ["ANDROID_NDK_ROOT"] = os.path.expanduser("~/android-sdk/ndk/25.1.8937393")
+
+project_dir = '/content/opencode'
+
+if os.path.exists(project_dir):
+    os.chdir(project_dir)
+    print(f"✓ Папка проекта: {os.getcwd()}")
+    print()
+    print("Запуск buildozer (10-20 минут)...")
+    print("="*60)
+    print()
+    
+    # ВАЖНО: echo "y" | передаёт "y" на вопрос buildozer
+    result = os.system('echo "y" | buildozer android debug 2>&1')
+    
+    print()
+    print("="*60)
+    
+    if result == 0:
+        print("✅ APK УСПЕШНО СОБРАН!")
+        print()
+        print("Следующий шаг: запустите ячейку 5")
+    else:
+        print("❌ Ошибка при сборке")
+else:
+    print(f"❌ Папка не найдена: {project_dir}")

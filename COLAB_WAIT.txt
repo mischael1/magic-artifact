@@ -1,0 +1,46 @@
+НОВАЯ ЯЧЕЙКА ДЛЯ ЧТЕНИЯ ПОЛНОГО ЛОГА:
+
+import os
+import glob
+
+os.chdir('/content/opencode')
+
+# Ищем лог файлы buildozer
+log_files = glob.glob('.buildozer/android/platform/build-*/build/outputs/logs/*.log')
+
+if not log_files:
+    # Ищем в других местах
+    log_files = glob.glob('.buildozer/**/*.log', recursive=True)
+
+if log_files:
+    print("Найденные логи:")
+    for log_file in log_files:
+        print(f"\n{'='*60}")
+        print(f"📄 {log_file}")
+        print('='*60)
+        try:
+            with open(log_file, 'r') as f:
+                content = f.read()
+                # Показываем последние 2000 символов
+                if len(content) > 2000:
+                    print("... (начало пропущено)")
+                    print(content[-2000:])
+                else:
+                    print(content)
+        except Exception as e:
+            print(f"Ошибка чтения: {e}")
+else:
+    print("❌ Логов не найдено")
+    print("\nПроверяем структуру .buildozer:")
+    if os.path.exists('.buildozer'):
+        for root, dirs, files in os.walk('.buildozer'):
+            level = root.replace('.buildozer', '').count(os.sep)
+            indent = ' ' * 2 * level
+            print(f'{indent}{os.path.basename(root)}/')
+            sub_indent = ' ' * 2 * (level + 1)
+            for file in files[-10:]:  # Последние 10 файлов
+                print(f'{sub_indent}{file}')
+            if level > 3:  # Ограничиваем глубину
+                break
+    else:
+        print("❌ .buildozer папка не найдена!")

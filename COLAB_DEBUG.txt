@@ -1,0 +1,93 @@
+ЯЧЕЙКА 4 С ПОЛНЫМ ЛОГИРОВАНИЕМ (замените текущую):
+
+import os
+import subprocess
+
+print("="*60)
+print("🔨 НАЧАЛО СБОРКИ APK")
+print("="*60)
+print()
+print("⏳ Это займет 10-20 минут...")
+print("Будет много текста - это нормально!")
+print()
+print("-"*60)
+
+# Устанавливаем переменные окружения
+os.environ["ANDROID_SDK_ROOT"] = os.path.expanduser("~/android-sdk")
+os.environ["ANDROID_NDK_ROOT"] = os.path.expanduser("~/android-sdk/ndk/25.1.8937393")
+
+# ВАЖНО: Переходим в папку проекта
+project_dir = None
+
+# Проверяем возможные пути
+possible_paths = [
+    '/content/opencode',
+    '/content/magic-artifact',
+    '/workspace',
+]
+
+# Добавляем поиск в /content
+for item in os.listdir('/content'):
+    path = f'/content/{item}'
+    if os.path.isdir(path) and os.path.exists(f'{path}/buildozer.spec'):
+        possible_paths.insert(0, path)
+
+# Ищем папку с buildozer.spec
+for path in possible_paths:
+    if os.path.exists(path) and os.path.exists(os.path.join(path, 'buildozer.spec')):
+        project_dir = path
+        break
+
+if not project_dir:
+    print("❌ ОШИБКА: buildozer.spec не найден!")
+else:
+    print(f"✓ Папка проекта: {project_dir}")
+    os.chdir(project_dir)
+    print(f"✓ Переходим в: {os.getcwd()}")
+    print(f"✓ buildozer.spec найден")
+    print()
+    
+    # Проверяем что есть все нужные файлы
+    print("Проверка файлов:")
+    files_to_check = ['main.py', 'buildozer.spec', 'requirements.txt', 'src/spell_manager.py']
+    for f in files_to_check:
+        if os.path.exists(f):
+            print(f"  ✓ {f}")
+        else:
+            print(f"  ❌ {f} - НЕ НАЙДЕН!")
+    
+    print()
+    print("Запуск buildozer...")
+    print("="*60)
+    print()
+    
+    # Запускаем с ПОЛНЫМ выводом ошибок
+    result = subprocess.run(
+        ["buildozer", "android", "debug"],
+        capture_output=True,
+        text=True
+    )
+    
+    # Выводим ВСЕ сообщения
+    print("STDOUT:")
+    print(result.stdout)
+    print()
+    print("STDERR:")
+    print(result.stderr)
+    print()
+    print("="*60)
+    print(f"Return code: {result.returncode}")
+    print()
+    
+    if result.returncode == 0:
+        print("✅ APK УСПЕШНО СОБРАН!")
+    else:
+        print("❌ ОШИБКА ПРИ СБОРКЕ")
+        print()
+        print("Анализ ошибки:")
+        if "gradle" in result.stderr.lower() or "gradle" in result.stdout.lower():
+            print("  - Проблема с Gradle")
+        if "ndk" in result.stderr.lower() or "ndk" in result.stdout.lower():
+            print("  - Проблема с NDK")
+        if "memory" in result.stderr.lower() or "memory" in result.stdout.lower():
+            print("  - Недостаточно памяти")

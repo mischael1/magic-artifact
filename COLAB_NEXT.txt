@@ -1,0 +1,42 @@
+ЗАПУСТИТЕ ВСЕ ЭТИ КОМАНДЫ ПО ОЧЕРЕДИ В ОТДЕЛЬНЫХ ЯЧЕЙКАХ:
+
+=== ЯЧЕЙКА 1: Проверка buildozer ===
+!buildozer --version
+
+
+=== ЯЧЕЙКА 2: Проверка Java ===
+!java -version
+
+
+=== ЯЧЕЙКА 3: Проверка файлов ===
+import os
+os.chdir('/content/opencode')
+print("Файлы в проекте:")
+print(os.listdir('.'))
+print()
+print("Содержимое buildozer.spec (первые 20 строк):")
+with open('buildozer.spec', 'r') as f:
+    for i, line in enumerate(f):
+        if i >= 20:
+            break
+        print(line.rstrip())
+
+
+=== ЯЧЕЙКА 4: Сборка с ПОЛНЫМ выводом ===
+import os
+import subprocess
+
+os.chdir('/content/opencode')
+os.environ["ANDROID_SDK_ROOT"] = os.path.expanduser("~/android-sdk")
+os.environ["ANDROID_NDK_ROOT"] = os.path.expanduser("~/android-sdk/ndk/25.1.8937393")
+
+print("Запуск buildozer с полным выводом...")
+print("="*60)
+
+# Запускаем БЕЗ capture_output чтобы видеть ВСЕ сообщения
+import sys
+result = subprocess.call(['bash', '-c', 'echo "y" | buildozer android debug'])
+
+print()
+print("="*60)
+print(f"Результат: {result}")
