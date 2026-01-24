@@ -26,6 +26,14 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
       
+      - name: Install build-tools for buildozer
+        run: |
+          mkdir -p ~/.buildozer/android/platform/android-sdk/build-tools
+          cp -r /usr/local/lib/android/sdk/build-tools/* ~/.buildozer/android/platform/android-sdk/build-tools/ 2>/dev/null || true
+          
+          mkdir -p ~/.buildozer/android/platform/android-sdk/platforms
+          cp -r /usr/local/lib/android/sdk/platforms/* ~/.buildozer/android/platform/android-sdk/platforms/ 2>/dev/null || true
+      
       - name: Install system dependencies
         run: |
           sudo apt-get update
