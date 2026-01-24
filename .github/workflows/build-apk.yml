@@ -33,15 +33,18 @@ jobs:
           unzip -q commandlinetools-linux-*.zip
           rm commandlinetools-linux-*.zip
           
-          # Accept licenses
-          yes | ./cmdline-tools/bin/sdkmanager --licenses 2>/dev/null || true
+          # Accept all licenses
+          echo "y" | ./cmdline-tools/bin/sdkmanager --licenses >/dev/null 2>&1 || true
           
           # Install SDK components
-          yes | ./cmdline-tools/bin/sdkmanager --install \
+          echo "y" | ./cmdline-tools/bin/sdkmanager --install \
             "platforms;android-31" \
             "build-tools;31.0.0" \
-            "build-tools;36.1.0" \
-            "ndk;25.1.8937393" 2>/dev/null || true
+            "ndk;25.1.8937393" >/dev/null 2>&1 || true
+          
+          # Retry with gradle support
+          echo "y" | ./cmdline-tools/bin/sdkmanager --install \
+            "extras;android;m2repository" >/dev/null 2>&1 || true
       
       - name: Install Python dependencies
         run: |
