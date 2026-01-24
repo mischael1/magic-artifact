@@ -23,28 +23,21 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
       
-      - name: Setup Android SDK
+      - name: Setup Android SDK  
         run: |
-          mkdir -p ~/android-sdk
-          cd ~/android-sdk
+          mkdir -p ~/.buildozer/android/platform/android-sdk
+          cd ~/.buildozer/android/platform/android-sdk
           
           # Download Android SDK Command-line Tools
           wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
           unzip -q commandlinetools-linux-*.zip
-          rm commandlinetools-linux-*.zip
           
-          # Accept all licenses
-          echo "y" | ./cmdline-tools/bin/sdkmanager --licenses >/dev/null 2>&1 || true
-          
-          # Install SDK components
-          echo "y" | ./cmdline-tools/bin/sdkmanager --install \
+          # Accept all licenses and install
+          (echo y; echo y; echo y; echo y; echo y; echo y; echo y; echo y) | \
+            ./cmdline-tools/bin/sdkmanager --install \
             "platforms;android-31" \
             "build-tools;31.0.0" \
-            "ndk;25.1.8937393" >/dev/null 2>&1 || true
-          
-          # Retry with gradle support
-          echo "y" | ./cmdline-tools/bin/sdkmanager --install \
-            "extras;android;m2repository" >/dev/null 2>&1 || true
+            "ndk;25.1.8937393" 2>&1 || true
       
       - name: Install Python dependencies
         run: |
@@ -56,9 +49,6 @@ jobs:
           sudo apt-get install -y ant gradle
           
       - name: Build APK
-        env:
-          ANDROID_SDK_ROOT: /home/runner/android-sdk
-          ANDROID_NDK_ROOT: /home/runner/android-sdk/ndk/25.1.8937393
         run: |
           cd $GITHUB_WORKSPACE
           timeout 3600 buildozer android debug 2>&1 | tee build.log || true
