@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  buildozer:
+    build:
+      context: .
+      dockerfile: Dockerfile.android
+    working_dir: /app
+    volumes:
+      # Исходный код меняется на хосте
+      - .:/app:delegated
+      # Кеш сборки остается в контейнере (не пересоздается)
+      - buildozer_cache:/root/.buildozer
+      - gradle_cache:/root/.gradle
+      - maven_cache:/root/.m2
+    environment:
+      - ANDROID_HOME=/opt/android-sdk
+      - PATH=/opt/android-sdk/cmdline-tools/latest/bin:/opt/android-sdk/platform-tools:${PATH}
+    # Для быстрого пересоздания - оставляем контейнер живым
+    command: sh -c "buildozer android debug && sleep 3600"
+    stdin_open: true
+    tty: true
+
+volumes:
+  buildozer_cache:
+  gradle_cache:
+  maven_cache:
