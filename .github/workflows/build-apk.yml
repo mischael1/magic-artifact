@@ -48,8 +48,14 @@ jobs:
     - name: Accept Android SDK licenses
       run: |
         echo "Accepting Android SDK licenses..."
-        yes | sdkmanager --licenses 2>/dev/null || true
-        sdkmanager "platform-tools" "platforms;android-31" "build-tools;34.0.0" "ndk;25.1.8937393" --verbose 2>&1 | grep -E "(Installing|done)"
+        mkdir -p ~/.android
+        touch ~/.android/repositories.cfg
+        
+        # Accept all licenses
+        sdkmanager --licenses < /dev/null 2>&1 || true
+        
+        echo "Installing Android SDK components..."
+        sdkmanager "platform-tools" "platforms;android-31" "build-tools;34.0.0" --verbose 2>&1 | tail -20
     
     - name: Build APK
       run: |
