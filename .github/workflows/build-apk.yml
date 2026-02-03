@@ -29,9 +29,14 @@ jobs:
         pip install buildozer cython
         pip install kivy numpy
     
+    - name: Accept Android licenses
+      run: |
+        mkdir -p ~/.android
+        echo -e "\n\nn\n" | sdkmanager --licenses || true
+    
     - name: Build APK
       run: |
-        buildozer android debug
+        buildozer android debug 2>&1 | tee build.log
     
     - name: Upload APK
       uses: actions/upload-artifact@v4
