@@ -34,7 +34,8 @@ jobs:
         buildozer android debug
     
     - name: Upload APK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
+      if: success()
       with:
         name: magicartifact-apk
         path: bin/magicartifact-0.1-debug.apk
