@@ -32,8 +32,15 @@ jobs:
     - name: Accept Android licenses
       run: |
         mkdir -p ~/.android
-        yes | sdkmanager --licenses || true
-        sdkmanager --update || true
+        echo "Finding sdkmanager..."
+        which sdkmanager || echo "sdkmanager not in PATH"
+        
+        # Try to find Android SDK
+        ANDROID_SDK=$(find / -name "cmdline-tools" -type d 2>/dev/null | head -1)
+        echo "Found Android SDK: $ANDROID_SDK"
+        
+        # Accept licenses using yes
+        yes | $ANDROID_SDK/latest/bin/sdkmanager --licenses || true
     
     - name: Build APK
       run: |
