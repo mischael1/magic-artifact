@@ -45,11 +45,17 @@ jobs:
       run: |
         mkdir -p ~/.android
         echo "Accepting Android licenses..."
-        echo "y" | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || echo "Licenses already accepted"
+        yes | sdkmanager --licenses || echo "Licenses accepted"
+    
+    - name: Install Android build components
+      run: |
+        echo "Installing build-tools and platforms..."
+        sdkmanager "build-tools;34.0.0" "platforms;android-31" --verbose
         
-        # Verify build-tools installation
-        ls -la $ANDROID_HOME/build-tools/ || echo "Build tools not found"
-        ls -la $ANDROID_HOME/platforms/ || echo "Platforms not found"
+        # Verify installation
+        echo "Verifying installation..."
+        ls -la $ANDROID_HOME/build-tools/ | head -20
+        ls -la $ANDROID_HOME/platforms/ | head -20
     
     - name: Build APK
       run: |
