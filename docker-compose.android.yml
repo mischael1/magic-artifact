@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  buildozer:
+    build:
+      context: .
+      dockerfile: Dockerfile.android
+    working_dir: /app
+    volumes:
+      - .:/app
+      - buildozer_cache:/root/.buildozer
+    environment:
+      - ANDROID_HOME=/opt/android-sdk
+      - PATH=/opt/android-sdk/cmdline-tools/latest/bin:/opt/android-sdk/platform-tools:${PATH}
+    command: buildozer android debug
+
+volumes:
+  buildozer_cache:

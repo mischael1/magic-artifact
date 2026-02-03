@@ -1,0 +1,61 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV ANDROID_HOME=/opt/android-sdk
+ENV NDK_HOME=$ANDROID_HOME/ndk/25.1.8937393
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+ENV PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin
+
+# Базовые зависимости
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    python3.9 \
+    python3-pip \
+    python3-dev \
+    git \
+    openjdk-11-jdk \
+    wget \
+    curl \
+    unzip \
+    libffi-dev \
+    libssl-dev \
+    libjpeg-dev \
+    zlib1g-dev \
+    libpng-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Обновление pip
+RUN python3.9 -m pip install --upgrade pip setuptools wheel
+
+# Установка Python зависимостей
+RUN python3.9 -m pip install \
+    buildozer \
+    cython \
+    numpy \
+    kivy \
+    pyjnius
+
+# Создание директории для Android SDK
+RUN mkdir -p $ANDROID_HOME
+
+# Скачивание и установка Android SDK
+RUN wget -q https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip && \
+    unzip -q commandlinetools-linux-10406996_latest.zip -d $ANDROID_HOME && \
+    mkdir -p $ANDROID_HOME/cmdline-tools/latest && \
+    mv $ANDROID_HOME/cmdline-tools/* $ANDROID_HOME/cmdline-tools/latest/ 2>/dev/null || true && \
+    rm commandlinetools-linux-10406996_latest.zip
+
+# Установка Android SDK компонентов
+RUN yes | sdkmanager "platform-tools" && \
+    yes | sdkmanager "platforms;android-31" && \
+    yes | sdkmanager "ndk;25.1.8937393" && \
+    yes | sdkmanager "build-tools;31.0.0"
+
+# Рабочая директория
+WORKDIR /app
+
+# Копирование кода
+COPY . .
+
+# Сборка
+CMD ["buildozer", "android", "debug"]
