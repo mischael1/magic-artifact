@@ -51,18 +51,21 @@ jobs:
         mkdir -p ~/.buildozer
         mkdir -p ~/.android
         
-        # Set environment variables for buildozer
-        export ANDROID_SDK_ROOT=$ANDROID_HOME
-        export ANDROID_NDK_ROOT=$ANDROID_HOME/ndk/25.1.8937393
+        # Buildozer expects SDK in ~/.buildozer/android/platform/android-sdk
+        # Create symlink from ANDROID_HOME to buildozer location
+        mkdir -p ~/.buildozer/android/platform
+        rm -rf ~/.buildozer/android/platform/android-sdk
+        ln -s $ANDROID_HOME ~/.buildozer/android/platform/android-sdk
         
+        # Set environment variables for buildozer
         echo "ANDROID_SDK_ROOT=$ANDROID_HOME" >> $GITHUB_ENV
         echo "ANDROID_NDK_ROOT=$ANDROID_HOME/ndk/25.1.8937393" >> $GITHUB_ENV
+        echo "ANDROID_HOME=$ANDROID_HOME" >> $GITHUB_ENV
         
-        # Show what's installed
-        echo "=== Android SDK Structure ==="
-        ls -la $ANDROID_HOME/ || echo "ANDROID_HOME not found"
-        ls -la $ANDROID_HOME/build-tools/ || echo "build-tools not found"
-        ls -la $ANDROID_HOME/platforms/ || echo "platforms not found"
+        # Verify symlink
+        echo "=== Checking buildozer SDK paths ==="
+        ls -la ~/.buildozer/android/platform/android-sdk/build-tools/ || echo "build-tools not found"
+        ls -la ~/.buildozer/android/platform/android-sdk/platforms/ || echo "platforms not found"
     
     - name: Build APK
       run: |
