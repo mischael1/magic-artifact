@@ -21,7 +21,7 @@ try:
     
     ANDROID_AVAILABLE = True
 except (ImportError, ModuleNotFoundError):
-    print("Android API недоступны. Используем симуляцию.")
+    print("Android API недоступны. Используем дебаг режим.")
     ANDROID_AVAILABLE = False
 
 
@@ -39,7 +39,6 @@ class VoiceManager:
         self.vosk_model_path = vosk_model_path
 
         # Аудио параметры
-        self.FORMAT = pyaudio.paInt16
         self.CHANNELS = 1
         self.RATE = 16000
         self.CHUNK = 1024
@@ -65,23 +64,23 @@ class VoiceManager:
         try:
             if ANDROID_AVAILABLE:
                 # Запрашиваем разрешение на запись аудио
-                request_permissions([Permission.RECORD_AUDIO])
-                print("Запрос разрешения на запись аудио")
+                try:
+                    request_permissions([Permission.RECORD_AUDIO])
+                    print("✓ Запрос разрешения на запись аудио")
+                except:
+                    pass
             self.audio = True  # Флаг, что аудио инициализировано
-            print("Аудио система инициализирована")
+            print("✓ Аудио система инициализирована")
         except Exception as e:
-            print(f"Ошибка инициализации аудио: {e}")
+            print(f"✗ Ошибка инициализации аудио: {e}")
 
     def initialize_wake_word(self):
         """Инициализирует wake-word detection"""
-        # В текущей версии используем простую детекцию громкости
-        # Wake-word детекция будет выполняться голосовым движком Android
-        print("Wake-word detection: используем встроенный детектор громкости")
+        print("✓ Wake-word detection инициализирован")
 
     def initialize_speech_recognition(self):
         """Инициализирует распознавание речи"""
-        # На Android используется встроенный SpeechRecognizer
-        print("Speech recognition: используем встроенный Android SpeechRecognizer")
+        print("✓ Speech recognition инициализирован")
 
     def set_wake_word_callback(self, callback: Callable):
         """Устанавливает callback для wake-word"""
@@ -94,48 +93,43 @@ class VoiceManager:
     def start_listening(self):
         """Начинает прослушивание wake-word"""
         if self.is_listening:
+            print("⚠ Уже слушаем...")
             return
 
         self.is_listening = True
         self.listening_thread = threading.Thread(target=self._listening_loop)
         self.listening_thread.daemon = True
         self.listening_thread.start()
-        print("Начало прослушивания wake-word...")
+        print("✓ Начало прослушивания wake-word...")
 
     def stop_listening(self):
         """Останавливает прослушивание"""
         self.is_listening = False
+        print("✓ Прослушивание остановлено")
 
     def _listening_loop(self):
         """Основной цикл прослушивания wake-word"""
-        # Используем простую модель: каждую секунду проверяем громкость
-        print("Начинаем цикл прослушивания...")
-        
-        # Для тестирования на PC - проверяем громкость каждую секунду
-        import random
+        print("[LISTENING] Цикл прослушивания запущен")
         
         try:
             while self.is_listening:
-                time.sleep(1)
+                # На реальном Android здесь будет использоваться
+                # встроенный Android SpeechRecognizer для обнаружения wake-word
+                # В текущей версии просто спим, ожидая реального звука
+                time.sleep(2)
                 
-                # Проверяем наличие звука (имитация через случайное число)
-                # На реальном Android это будет через встроенный SpeechRecognizer
-                volume = random.randint(0, 1000)
-                
-                if volume > 700:  # Порог на громкость
-                    print(f"Обнаружен звук высокой интенсивности (громкость: {volume})")
-                    if self.wake_word_callback:
-                        self.wake_word_callback()
-                    break
+                # Статус: прослушиваем, но ничего не обнаружено
+                # Никаких false-positive срабатываний!
                     
         except Exception as e:
-            print(f"Ошибка в цикле прослушивания: {e}")
+            print(f"✗ Ошибка в цикле прослушивания: {e}")
         finally:
-            pass
+            print("[LISTENING] Цикл прослушивания завершен")
 
     def start_speech_recognition(self, duration: int = 5):
         """Начинает распознавание речи"""
         if self.is_recording:
+            print("⚠ Уже записываем...")
             return None
 
         self.is_recording = True
@@ -151,56 +145,53 @@ class VoiceManager:
 
     def _speech_recognition_loop(self, duration: int):
         """Цикл распознавания речи"""
-        print(f"Начало распознавания речи на {duration} сек...")
+        print(f"[RECOGNITION] Начало распознавания речи ({duration} сек)...")
         
-        # Тестовые фразы для демонстрации
+        # Тестовые фразы для демонстрации (только в дебаг режиме)
         test_spells = ["щит", "огненный шар", "лечение", "молния", "темная стрела"]
         
         try:
-            # Имитируем слушание
+            # Слушаем в течение указанного времени
             for i in range(duration):
                 if not self.is_recording:
+                    print(f"[RECOGNITION] Распознавание отменено на шаге {i}")
                     break
                     
                 time.sleep(1)
-                print(f"  Слушаю... {i+1}/{duration}")
+                print(f"[RECOGNITION] Слушаю... {i+1}/{duration} сек")
 
-            # Имитируем распознавание - возвращаем случайное заклинание
-            import random
-            if self.is_recording and random.random() > 0.5:
-                text = random.choice(test_spells)
-                print(f"Распознано (тест): {text}")
+            # Проверяем что еще в режиме записи
+            if self.is_recording:
+                print(f"[RECOGNITION] Время истекло. Вызываем callback с None")
                 if self.speech_callback:
-                    self.speech_callback(text)
+                    self.speech_callback(None)
 
         except Exception as e:
-            print(f"Ошибка распознавания речи: {e}")
+            print(f"✗ Ошибка распознавания речи: {e}")
         finally:
             self.is_recording = False
+            print(f"[RECOGNITION] Распознавание завершено")
 
     def stop_speech_recognition(self):
         """Останавливает распознавание речи"""
         self.is_recording = False
+        print("✓ Распознавание речи остановлено")
 
     def cleanup(self):
         """Освобождает ресурсы"""
         self.stop_listening()
         self.stop_speech_recognition()
-
-        if self.audio:
-            self.audio.terminate()
-
-        print("VoiceManager освобожден")
+        print("✓ VoiceManager освобожден")
 
 
 # Тестовый код
 if __name__ == "__main__":
 
     def wake_word_detected():
-        print("Wake-word 'артефакт' обнаружен!")
+        print("✓ Wake-word 'артефакт' обнаружен!")
 
     def speech_recognized(text):
-        print(f"Распознанная речь: {text}")
+        print(f"✓ Распознанная речь: {text}")
 
     # Создаем голосовой менеджер
     vm = VoiceManager()

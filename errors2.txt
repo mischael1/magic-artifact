@@ -1,0 +1,147 @@
+# ============================================
+# ЯЧЕЙКА 4: СБОРКА APK (С ПОДРОБНЫМ ЛОГГИРОВАНИЕМ)
+# ============================================
+# ВНИМАНИЕ: Это может занять 60-120 минут в первый раз!
+
+import os
+import subprocess
+import time
+import glob
+
+print("="*70)
+print("🔨 НАЧАЛО СБОРКИ APK С ПОДРОБНЫМ ЛОГГИРОВАНИЕМ")
+print("="*70)
+print()
+print("⏳ Это займет 60-120 минут в первый раз...")
+print()
+
+# Устанавливаем переменные окружения
+os.environ["ANDROID_SDK_ROOT"] = os.path.expanduser("~/android-sdk")
+os.environ["ANDROID_NDK_ROOT"] = os.path.expanduser("~/android-sdk/ndk/25.1.8937393")
+os.environ["ANDROID_HOME"] = os.path.expanduser("~/android-sdk")
+
+# ВАЖНО: Находим папку проекта
+project_dir = None
+possible_paths = ['/content/opencode', '/content/magic-artifact', '/workspace']
+
+for item in os.listdir('/content'):
+    path = f'/content/{item}'
+    if os.path.isdir(path) and os.path.exists(f'{path}/buildozer.spec'):
+        possible_paths.insert(0, path)
+
+for path in possible_paths:
+    if os.path.exists(path) and os.path.exists(os.path.join(path, 'buildozer.spec')):
+        project_dir = path
+        break
+
+if not project_dir:
+    print("❌ ОШИБКА: buildozer.spec не найден!")
+else:
+    print(f"✓ Папка проекта: {project_dir}")
+    print(f"✓ SDK: {os.environ['ANDROID_SDK_ROOT']}")
+    print(f"✓ NDK: {os.environ['ANDROID_NDK_ROOT']}")
+    print()
+    
+    os.chdir(project_dir)
+    
+    # Очищаем старые логи
+    if os.path.exists('build.log'):
+        os.remove('build.log')
+    
+    print("="*70)
+    print("ЗАПУСК BUILDOZER...")
+    print("="*70)
+    print()
+    
+    start_time = time.time()
+    
+    # Запускаем buildozer с логгированием
+    process = subprocess.Popen(
+        ["bash", "-c", "yes | buildozer android debug 2>&1"],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        cwd=project_dir
+    )
+    
+    # Читаем вывод строка за строкой
+    line_count = 0
+    for line in process.stdout:
+        line_count += 1
+        
+        # Выводим каждую 50-ю строку для отслеживания прогресса
+        if line_count % 50 == 0:
+            elapsed = time.time() - start_time
+            print(f"[{line_count:5d} строк, {elapsed/60:.1f} мин] {line.rstrip()[:70]}")
+        
+        # Выводим важные события
+        if any(x in line for x in ['ERROR', 'FAILED', 'Successfully', 'created', 'APK', 'error:']):
+            print(f"[ВАЖНО] {line.rstrip()}")
+    
+    returncode = process.wait()
+    elapsed = time.time() - start_time
+    
+    print()
+    print("="*70)
+    print(f"Buildozer завершен. Код ошибки: {returncode} (время: {elapsed/60:.1f} мин)")
+    print("="*70)
+    print()
+    
+    # ВАЖНО: Проверяем физически наличие APK файла
+    print("ПРОВЕРКА НАЛИЧИЯ APK ФАЙЛА...")
+    print("-"*70)
+    print()
+    
+    apk_search_paths = [
+        os.path.join(project_dir, 'bin'),
+        os.path.expanduser('~/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/dist'),
+        os.path.expanduser('~/.buildozer/android/platform/build-armv7a_arm64-v8a/dist'),
+        os.path.expanduser('~/.buildozer/android/platform/build/dist'),
+    ]
+    
+    found_apk = False
+    apk_file = None
+    
+    for search_path in apk_search_paths:
+        if os.path.exists(search_path):
+            print(f"Ищем в: {search_path}")
+            apk_files = glob.glob(os.path.join(search_path, '*.apk'))
+            if apk_files:
+                found_apk = True
+                apk_file = max(apk_files, key=os.path.getmtime)
+                size = os.path.getsize(apk_file) / (1024*1024)
+                print(f"  ✅ НАЙДЕН: {os.path.basename(apk_file)}")
+                print(f"  Размер: {size:.1f} MB")
+                print()
+                break
+    
+    if found_apk and apk_file:
+        print()
+        print("="*70)
+        print("✅ APK УСПЕШНО СОБРАН!")
+        print("="*70)
+        print()
+        print(f"Файл: {apk_file}")
+        print()
+        print("Следующий шаг: запустите ячейку 5 (скачивание APK)")
+    else:
+        print()
+        print("="*70)
+        print("❌ APK НЕ НАЙДЕН")
+        print("="*70)
+        print()
+        print(f"Buildozer вернул код: {returncode}")
+        print()
+        print("⚠️ АНАЛИЗ ПРОБЛЕМЫ:")
+        print()
+        print("Проверьте последние строки build.log на ошибки:")
+        print("-"*70)
+        
+        if os.path.exists('build.log'):
+            with open('build.log', 'r', encoding='utf-8', errors='ignore') as f:
+                lines = f.readlines()
+            print(f"Всего строк в логе: {len(lines)}")
+            print()
+            print("Последние 100 строк:")
+            for line in lines[-100:]:
+                print(line.rstrip())

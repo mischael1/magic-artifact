@@ -10,6 +10,10 @@ from kivy.uix.widget import Widget
 import random
 import os
 import sys
+import traceback
+import time
+import math
+from datetime import datetime
 
 # Добавляем путь к src для импорта модулей
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
@@ -17,6 +21,50 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 # Настройка полноэкранного режима
 Window.fullscreen = "auto"
 Window.keep_screen_on = True  # Отключаем спящий режим
+
+
+# ЛОГИРОВАНИЕ НА ANDROID
+class LogWriter:
+    """Пишет логи в файл на устройстве"""
+    
+    def __init__(self):
+        # Пытаемся использовать общую папку
+        try:
+            # Для Android
+            from android.storage import app_storage_path
+            self.log_dir = app_storage_path()
+        except:
+            # Для других платформ
+            self.log_dir = os.path.expanduser("~")
+        
+        self.log_file = os.path.join(self.log_dir, "magicartifact_debug.log")
+        
+        # Очищаем старый лог
+        try:
+            if os.path.exists(self.log_file):
+                os.remove(self.log_file)
+        except:
+            pass
+        
+        self.write(f"\n{'='*70}")
+        self.write(f"🔮 МАГИЧЕСКИЙ АРТЕФАКТ - ЛОГИРОВАНИЕ")
+        self.write(f"Время: {datetime.now()}")
+        self.write(f"{'='*70}\n")
+    
+    def write(self, message):
+        """Пишет сообщение в лог"""
+        try:
+            with open(self.log_file, 'a', encoding='utf-8') as f:
+                f.write(message + "\n")
+                f.flush()
+        except:
+            pass
+        
+        # Также выводим в консоль
+        print(message)
+
+
+log_writer = LogWriter()
 
 
 class MagicArtifactWidget(Widget):
@@ -73,11 +121,11 @@ class MagicArtifactWidget(Widget):
             ]
             Color(*random.choice(colors))
 
-            # Случайная позиция на круге
-            angle = random.uniform(0, 2 * 3.14159)
-            radius = random.uniform(80, 120)
-            x = self.center_x + radius * (angle**0.5)
-            y = self.center_y + radius * (3.14159 - angle) ** 0.5
+            # Случайная позиция в прямоугольной области вокруг центра
+            offset_x = random.uniform(-150, 150)
+            offset_y = random.uniform(-150, 150)
+            x = self.center_x + offset_x
+            y = self.center_y + offset_y
 
             # Маленькая частица
             size = random.uniform(3, 8)
@@ -89,151 +137,253 @@ class MagicArtifactApp(App):
 
     def build(self):
         """Строит интерфейс приложения"""
-        # Создаем основной layout
-        main_layout = BoxLayout(orientation="vertical", padding=20, spacing=10)
+        try:
+            log_writer.write("\n" + "="*70)
+            log_writer.write("🔨 Запуск build()")
+            log_writer.write("="*70)
+            
+            # Создаем основной layout
+            log_writer.write("[1/3] Создание layout...")
+            main_layout = BoxLayout(orientation="vertical", padding=20, spacing=10)
 
-        # Создаем магический виджет
-        self.magic_widget = MagicArtifactWidget()
+            # Создаем магический виджет
+            log_writer.write("[2/3] Создание magic_widget...")
+            self.magic_widget = MagicArtifactWidget()
 
-        # Создаем заголовок
-        title_label = Label(
-            text="МАГИЧЕСКИЙ АРТЕФАКТ",
-            font_size="32sp",
-            color=(0.9, 0.7, 1.0, 1.0),  # Светло-фиолетовый
-            halign="center",
-            valign="middle",
-            size_hint_y=None,
-            height=60,
-        )
+            # Создаем заголовок
+            log_writer.write("[3/3] Создание labels...")
+            title_label = Label(
+                text="МАГИЧЕСКИЙ АРТЕФАКТ",
+                font_size="32sp",
+                color=(0.9, 0.7, 1.0, 1.0),
+                halign="center",
+                valign="middle",
+                size_hint_y=None,
+                height=60,
+            )
 
-        # Создаем статусный текст
-        status_label = Label(
-            text="Инициализация...\nПожалуйста подождите",
-            font_size="18sp",
-            color=(0.7, 0.5, 0.9, 1.0),
-            halign="center",
-            valign="middle",
-            size_hint_y=None,
-            height=80,
-        )
+            # Создаем статусный текст
+            status_label = Label(
+                text="Инициализация...\nПожалуйста подождите",
+                font_size="18sp",
+                color=(0.7, 0.5, 0.9, 1.0),
+                halign="center",
+                valign="middle",
+                size_hint_y=None,
+                height=80,
+            )
 
-        # Добавляем виджеты в layout
-        main_layout.add_widget(title_label)
-        main_layout.add_widget(self.magic_widget)
-        main_layout.add_widget(status_label)
+            # Добавляем виджеты в layout
+            main_layout.add_widget(title_label)
+            main_layout.add_widget(self.magic_widget)
+            main_layout.add_widget(status_label)
 
-        # Запускаем анимацию
-        Clock.schedule_interval(self.magic_widget.update_animation, 1 / 60)
+            # Запускаем анимацию
+            Clock.schedule_interval(self.magic_widget.update_animation, 1 / 60)
 
-        # Сохраняем ссылки для будущего использования
-        self.status_label = status_label
-        self.title_label = title_label
+            # Сохраняем ссылки для будущего использования
+            self.status_label = status_label
+            self.title_label = title_label
 
-        # Инициализируем компоненты
-        Clock.schedule_once(self.initialize_components, 1)
+            log_writer.write("✓ UI инициализирован успешно")
+            log_writer.write(f"  Лог-файл: {log_writer.log_file}")
+            
+            # Инициализируем компоненты с задержкой
+            Clock.schedule_once(self.initialize_components, 1.5)
 
-        return main_layout
+            return main_layout
+            
+        except Exception as e:
+            log_writer.write(f"✗ КРИТИЧЕСКАЯ ОШИБКА в build(): {e}")
+            log_writer.write(traceback.format_exc())
+            raise
 
     def initialize_components(self, dt):
         """Инициализирует компоненты приложения"""
+        log_writer.write("\n" + "="*70)
+        log_writer.write("⚙️  Инициализация компонентов")
+        log_writer.write("="*70)
+        
         try:
-            # Импортируем и инициализируем модули
-            from spell_manager import SpellManager
-            from voice_manager import VoiceManager
-            from media_player import MediaPlayer
+            # ЭТАП 1: Импорт модулей
+            log_writer.write("\n[1/6] Импорт модулей...")
+            try:
+                from spell_manager import SpellManager
+                log_writer.write("  ✓ SpellManager импортирован")
+            except Exception as e:
+                log_writer.write(f"  ✗ SpellManager: {e}")
+                log_writer.write(traceback.format_exc())
+                raise
+            
+            try:
+                from voice_manager import VoiceManager
+                log_writer.write("  ✓ VoiceManager импортирован")
+            except Exception as e:
+                log_writer.write(f"  ✗ VoiceManager: {e}")
+                log_writer.write(traceback.format_exc())
+                raise
+            
+            try:
+                from media_player import MediaPlayer
+                log_writer.write("  ✓ MediaPlayer импортирован")
+            except Exception as e:
+                log_writer.write(f"  ✗ MediaPlayer: {e}")
+                log_writer.write(traceback.format_exc())
+                raise
 
-            # Создаем компоненты
-            self.spell_manager = SpellManager()
-            self.voice_manager = VoiceManager()
-            self.media_player = MediaPlayer()
-            self.media_player.set_parent_widget(self.magic_widget)
+            # ЭТАП 2: Инициализация SpellManager
+            log_writer.write("\n[2/6] SpellManager...")
+            try:
+                self.spell_manager = SpellManager()
+                log_writer.write("  ✓ SpellManager инициализирован")
+            except Exception as e:
+                log_writer.write(f"  ✗ {e}")
+                log_writer.write(traceback.format_exc())
+                self.update_status(f"Ошибка SpellManager:\n{str(e)[:100]}")
+                raise
 
-            # Устанавливаем callback'и
-            self.voice_manager.set_wake_word_callback(self.on_wake_word_detected)
-            self.voice_manager.set_speech_callback(self.on_speech_recognized)
+            # ЭТАП 3: Инициализация VoiceManager
+            log_writer.write("\n[3/6] VoiceManager...")
+            try:
+                self.voice_manager = VoiceManager()
+                log_writer.write("  ✓ VoiceManager инициализирован")
+            except Exception as e:
+                log_writer.write(f"  ✗ {e}")
+                log_writer.write(traceback.format_exc())
+                self.update_status(f"Ошибка VoiceManager:\n{str(e)[:100]}")
+                raise
 
-            # Обновляем статус
-            wake_word = self.spell_manager.get_wake_word()
-            self.update_status(
-                f'Слушаю пробуждение...\nСкажи "{wake_word}" для активации'
-            )
+            # ЭТАП 4: Инициализация MediaPlayer
+            log_writer.write("\n[4/6] MediaPlayer...")
+            try:
+                self.media_player = MediaPlayer()
+                self.media_player.set_parent_widget(self.magic_widget)
+                log_writer.write("  ✓ MediaPlayer инициализирован")
+            except Exception as e:
+                log_writer.write(f"  ✗ {e}")
+                log_writer.write(traceback.format_exc())
+                self.update_status(f"Ошибка MediaPlayer:\n{str(e)[:100]}")
+                raise
 
-            # Начинаем прослушивание
-            self.voice_manager.start_listening()
+            # ЭТАП 5: Настройка callbacks
+            log_writer.write("\n[5/6] Callbacks...")
+            try:
+                self.voice_manager.set_wake_word_callback(self.on_wake_word_detected)
+                self.voice_manager.set_speech_callback(self.on_speech_recognized)
+                log_writer.write("  ✓ Callbacks установлены")
+            except Exception as e:
+                log_writer.write(f"  ✗ {e}")
+                log_writer.write(traceback.format_exc())
+                raise
 
-            print("Все компоненты успешно инициализированы")
+            # ЭТАП 6: Запуск прослушивания
+            log_writer.write("\n[6/6] Запуск прослушивания...")
+            try:
+                wake_word = self.spell_manager.get_wake_word()
+                self.update_status(
+                    f'Слушаю пробуждение...\nСкажи "{wake_word}" для активации'
+                )
+                
+                self.voice_manager.start_listening()
+                log_writer.write("  ✓ Прослушивание запущено")
+            except Exception as e:
+                log_writer.write(f"  ✗ {e}")
+                log_writer.write(traceback.format_exc())
+                raise
+
+            log_writer.write("\n" + "="*70)
+            log_writer.write("✅ Все компоненты успешно инициализированы!")
+            log_writer.write("="*70)
 
         except Exception as e:
-            print(f"Ошибка инициализации компонентов: {e}")
+            log_writer.write("\n" + "="*70)
+            log_writer.write("❌ ОШИБКА ИНИЦИАЛИЗАЦИИ")
+            log_writer.write("="*70)
+            log_writer.write(f"\nТип: {type(e).__name__}")
+            log_writer.write(f"Сообщение: {e}")
+            log_writer.write("\nFull trace:")
+            log_writer.write(traceback.format_exc())
+            log_writer.write("="*70)
+            log_writer.write(f"\nЛог сохранен в: {log_writer.log_file}")
+            
             self.update_status(
-                f"Ошибка инициализации:\n{str(e)}\n\nРаботаем в тестовом режиме"
+                f"ОШИБКА:\n{type(e).__name__}\n\nСм. логи на устройстве"
             )
 
     def on_start(self):
         """Вызывается при запуске приложения"""
-        print("Магический Артефакт активирован!")
+        log_writer.write("\n🚀 Приложение запущено")
 
     def update_status(self, text):
         """Обновляет статусный текст"""
-        if hasattr(self, "status_label"):
-            self.status_label.text = text
+        try:
+            if hasattr(self, "status_label"):
+                self.status_label.text = text
+                log_writer.write(f"[STATUS] {text.replace(chr(10), ' | ')}")
+        except Exception as e:
+            log_writer.write(f"✗ Ошибка обновления статуса: {e}")
 
     def on_wake_word_detected(self):
         """Обрабатывает обнаружение wake-word"""
-        print("Wake-word обнаружен!")
-        self.update_status("Пробуждение обнаружено!\nОжидаю заклинание...")
+        try:
+            log_writer.write("\n[WAKE-WORD] Обнаружен!")
+            self.update_status("Пробуждение обнаружено!\nОжидаю заклинание...")
 
-        # Запускаем распознавание речи
-        if hasattr(self, "voice_manager"):
-            self.voice_manager.start_speech_recognition(duration=5)
+            if hasattr(self, "voice_manager"):
+                self.voice_manager.start_speech_recognition(duration=5)
 
-        # Автосброс через 10 секунд если ничего не сказано
-        Clock.schedule_once(lambda dt: self.reset_to_listening(), 10)
+            Clock.schedule_once(lambda dt: self.reset_to_listening(), 10)
+        except Exception as e:
+            log_writer.write(f"✗ Ошибка wake-word: {e}")
+            log_writer.write(traceback.format_exc())
 
     def on_speech_recognized(self, text):
         """Обрабатывает распознанную речь"""
-        print(f"Распознано: {text}")
+        try:
+            if text is None:
+                log_writer.write("[SPEECH] Ничего не распознано")
+                self.reset_to_listening()
+                return
+                
+            log_writer.write(f"[SPEECH] Распознано: {text}")
 
-        if not hasattr(self, "spell_manager"):
-            self.update_status(f'Распознано: "{text}"\nМенеджер заклинаний не готов')
-            return
+            if not hasattr(self, "spell_manager"):
+                self.update_status(f'Распознано: "{text}"\nНет менеджера')
+                Clock.schedule_once(lambda dt: self.reset_to_listening(), 3)
+                return
 
-        # Ищем заклинание
-        spell_id = self.spell_manager.find_spell(text)
+            spell_id = self.spell_manager.find_spell(text)
 
-        if spell_id:
-            spell_data = self.spell_manager.get_spell_data(spell_id)
-            if spell_data:
-                spell_name = spell_data.get("name", spell_id)
-                self.update_status(f"Заклинание активировано!\n{spell_name}")
-
-                # Воспроизводим эффект
-                self.play_spell_effect(spell_id)
-
-                # Обновляем время использования
-                self.spell_manager.update_last_cast(spell_id)
+            if spell_id:
+                spell_data = self.spell_manager.get_spell_data(spell_id)
+                if spell_data:
+                    spell_name = spell_data.get("name", spell_id)
+                    self.update_status(f"Заклинание!\n{spell_name}")
+                    self.play_spell_effect(spell_id)
+                    self.spell_manager.update_last_cast(spell_id)
+                else:
+                    self.update_status(f"Заклинание\n(нет данных)")
             else:
-                self.update_status(
-                    f"Заклинание найдено: {spell_id}\nНо данные не загружены"
-                )
-        else:
-            self.update_status(f'Неизвестное заклинание:\n"{text}"')
+                self.update_status(f'Неизвестное:\n"{text}"')
 
-        # Автосброс через 30 секунд
-        reset_timeout = self.spell_manager.get_reset_timeout()
-        Clock.schedule_once(lambda dt: self.reset_to_listening(), reset_timeout)
+            reset_timeout = self.spell_manager.get_reset_timeout()
+            Clock.schedule_once(lambda dt: self.reset_to_listening(), reset_timeout)
+            
+        except Exception as e:
+            log_writer.write(f"✗ Ошибка speech: {e}")
+            log_writer.write(traceback.format_exc())
+            self.update_status(f"Ошибка обработки")
+            Clock.schedule_once(lambda dt: self.reset_to_listening(), 3)
 
     def play_spell_effect(self, spell_id):
         """Воспроизводит эффект заклинания"""
-        if not hasattr(self, "media_player"):
-            return
-
         try:
-            # Получаем медиа пути
+            if not hasattr(self, "media_player"):
+                return
+
             media_paths = self.spell_manager.get_spell_media_paths(spell_id)
             duration = self.spell_manager.get_spell_duration(spell_id)
 
-            # Воспроизводим эффект
             self.media_player.play_spell(
                 spell_id=spell_id,
                 media_paths=media_paths,
@@ -241,32 +391,48 @@ class MagicArtifactApp(App):
                 completion_callback=lambda: None,
             )
 
-            print(f"Воспроизведение эффекта для {spell_id}")
+            log_writer.write(f"[EFFECT] Эффект: {spell_id}")
 
         except Exception as e:
-            print(f"Ошибка воспроизведения эффекта: {e}")
+            log_writer.write(f"✗ Ошибка эффекта: {e}")
+            log_writer.write(traceback.format_exc())
 
     def reset_to_listening(self):
         """Возвращает в режим прослушивания"""
-        self.update_status('Слушаю пробуждение...\nСкажи "артефакт" для активации')
+        try:
+            log_writer.write("[RESET] Режим прослушивания")
+            self.update_status('Слушаю пробуждение...\nСкажи "артефакт"')
 
-        # Возобновляем прослушивание wake-word
-        if hasattr(self, "voice_manager"):
-            self.voice_manager.start_listening()
+            if hasattr(self, "voice_manager"):
+                self.voice_manager.start_listening()
+        except Exception as e:
+            log_writer.write(f"✗ Ошибка reset: {e}")
+            log_writer.write(traceback.format_exc())
 
     def on_stop(self):
         """Вызывается при остановке приложения"""
-        print("Остановка Магического Артефакта")
+        log_writer.write("\n" + "="*70)
+        log_writer.write("🛑 Остановка приложения")
+        log_writer.write("="*70)
 
-        # Освобождаем ресурсы
-        if hasattr(self, "voice_manager"):
-            self.voice_manager.cleanup()
+        try:
+            if hasattr(self, "voice_manager"):
+                self.voice_manager.cleanup()
+                log_writer.write("✓ VoiceManager очищен")
+        except Exception as e:
+            log_writer.write(f"✗ Ошибка очистки voice: {e}")
 
-        if hasattr(self, "media_player"):
-            self.media_player.cleanup()
+        try:
+            if hasattr(self, "media_player"):
+                self.media_player.cleanup()
+                log_writer.write("✓ MediaPlayer очищен")
+        except Exception as e:
+            log_writer.write(f"✗ Ошибка очистки media: {e}")
+
+        log_writer.write("="*70)
 
 
 if __name__ == "__main__":
-    # Запускаем приложение
+    log_writer.write("\nСоздание приложения...")
     app = MagicArtifactApp()
     app.run()
