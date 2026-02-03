@@ -32,7 +32,8 @@ jobs:
     - name: Accept Android licenses
       run: |
         mkdir -p ~/.android
-        echo -e "\n\nn\n" | sdkmanager --licenses || true
+        yes | sdkmanager --licenses || true
+        sdkmanager --update || true
     
     - name: Build APK
       run: |
