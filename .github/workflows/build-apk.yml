@@ -37,6 +37,22 @@ jobs:
     - name: Build APK
       run: |
         buildozer android debug 2>&1 | tee build.log
+        echo "Build finished. Checking for APK..."
+        ls -la bin/ || echo "bin directory not found"
+        find . -name "*.apk" -type f || echo "No APK files found"
+    
+    - name: Check APK exists
+      run: |
+        if [ -f "bin/magicartifact-0.1-debug.apk" ]; then
+          echo "APK found!"
+          ls -lh bin/magicartifact-0.1-debug.apk
+        else
+          echo "APK NOT found - checking for alternatives..."
+          find . -name "*.apk" -type f
+          echo "BUILD FAILED - APK not created"
+          cat build.log | tail -100
+          exit 1
+        fi
     
     - name: Upload APK
       uses: actions/upload-artifact@v4
@@ -51,5 +67,6 @@ jobs:
       with:
         files: bin/magicartifact-0.1-debug.apk
         tag_name: v0.1-${{ github.run_number }}
+        draft: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
