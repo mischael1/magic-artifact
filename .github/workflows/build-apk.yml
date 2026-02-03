@@ -81,15 +81,16 @@ jobs:
         find . -name "*.apk" -type f || echo "No APK files found"
     
     - name: Check APK exists
+      if: always()
       run: |
         if [ -f "bin/magicartifact-0.1-debug.apk" ]; then
-          echo "APK found!"
+          echo "✅ APK found!"
           ls -lh bin/magicartifact-0.1-debug.apk
         else
-          echo "APK NOT found - checking for alternatives..."
-          find . -name "*.apk" -type f
-          echo "BUILD FAILED - APK not created"
-          cat build.log | tail -100
+          echo "❌ APK NOT found - showing full build log:"
+          echo "=================================================="
+          cat build.log
+          echo "=================================================="
           exit 1
         fi
     
