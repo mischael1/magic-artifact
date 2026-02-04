@@ -7,7 +7,7 @@ source.include_exts = py,png,jpg,json,mp3,mp4,wav
 source.exclude_exts = zip
 source.exclude_patterns = tests/*,test_*,*~,.git/*,.buildozer/*,bin/*,*.pyc,__pycache__,*.egg-info,MagicArtifactApp/*,models/*
 version = 0.1
-requirements = python3,kivy,numpy
+requirements = python3,kivy
 fullscreen = 1
 
 [buildozer]
