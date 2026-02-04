@@ -75,15 +75,17 @@ jobs:
     
     - name: Clean build cache
       run: |
-        rm -rf .buildozer/android/platform/build-*
-        echo "Cleaned build cache"
+        rm -rf .buildozer
+        rm -rf bin
+        echo "Cleaned .buildozer and bin directories"
     
-    - name: Build APK
+    - name: Build APK with verbose output
       run: |
-        buildozer android debug 2>&1 | tee build.log
-        echo "Build finished. Checking for APK..."
-        ls -la bin/ || echo "bin directory not found"
-        find . -name "*.apk" -type f || echo "No APK files found"
+        buildozer -v android debug 2>&1 | tee build.log
+        echo "===== BUILD COMPLETE ====="
+        echo "Checking for APK..."
+        ls -la bin/ 2>/dev/null || echo "bin directory not found"
+        find . -name "*.apk" -type f 2>/dev/null || echo "No APK files found"
     
     - name: Check APK exists
       if: always()
