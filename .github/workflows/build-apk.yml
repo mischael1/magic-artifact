@@ -92,12 +92,19 @@ jobs:
           echo "✅ APK found!"
           ls -lh bin/magicartifact-0.1-debug.apk
         else
-          echo "❌ APK NOT found - showing full build log:"
-          echo "=================================================="
-          cat build.log
-          echo "=================================================="
+          echo "❌ APK NOT found"
           exit 1
         fi
+    
+    - name: Upload build logs on failure
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-logs
+        path: |
+          build.log
+          .buildozer/
+        retention-days: 3
     
     - name: Upload APK
       uses: actions/upload-artifact@v4
