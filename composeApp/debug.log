@@ -1234,3 +1234,5 @@ SyntaxError: invalid syntax
 [21:53:18.499] NO RESULT from Vosk
 [19:11:55.521] Loading Vosk model from: C:\Users\GIGABYTE\opencode\composeApp/model/vosk-model-small-ru-0.22
 [19:11:55.531] ERROR: Model directory not found at C:\Users\GIGABYTE\opencode\composeApp/model/vosk-model-small-ru-0.22
+[19:21:33.816] Loading Vosk model from: C:\Users\GIGABYTE\opencode\composeApp/model/vosk-model-small-ru-0.22
+[19:21:33.831] ERROR: Model directory not found at C:\Users\GIGABYTE\opencode\composeApp/model/vosk-model-small-ru-0.22

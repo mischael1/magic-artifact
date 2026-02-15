@@ -1,52 +1,91 @@
 plugins {
-    kotlin("multiplatform") version "2.0.21"
+    id("com.android.application")
+    kotlin("android") version "2.0.21"
     kotlin("plugin.compose") version "2.0.21"
     id("org.jetbrains.compose") version "1.6.11"
 }
 
-repositories {
-    google()
-    mavenCentral()
-    maven("https://repo1.maven.org/maven2")
-    maven("https://oss.sonatype.org/content/repositories/snapshots")
-    maven("https://maven.indexdata.com/snapshot")
+android {
+    namespace = "com.magicartifact"
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.magicartifact"
+        minSdk = 24
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            isDebuggable = true
+            applicationIdSuffix = ".debug"
+        }
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "2.0.21"
+    }
+
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+}
+
+
+
+dependencies {
+    // Android Core
+    implementation("androidx.core:core:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.activity:activity-compose:1.8.1")
+
+    // Compose Android
+    implementation("androidx.compose.ui:ui:1.6.4")
+    implementation("androidx.compose.ui:ui-graphics:1.6.4")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.6.4")
+    implementation("androidx.compose.material3:material3:1.2.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+
+    // Vosk for Android - temporarily disabled due to unavailable dependency
+    // implementation("com.github.alphacephei:vosk-android:0.3.32")
+
+    // Audio
+    implementation("androidx.media:media:1.7.0")
+
+    // Kotlin
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+
+    // Testing
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.6.4")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.6.4")
 }
 
 kotlin {
     jvmToolchain(11)
-    
-    // Desktop target
-    jvm("desktop") {
-    }
-    
-    sourceSets {
-        val commonMain by getting {
-            dependencies {
-                implementation(compose.runtime)
-                implementation(compose.foundation)
-                implementation(compose.material3)
-            }
-        }
-        
-        val desktopMain by getting {
-            dependencies {
-                implementation(compose.desktop.currentOs)
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
-                implementation("net.java.dev.jna:jna:5.13.0")
-                implementation("com.alphacephei:vosk:0.3.32")
-            }
-        }
-    }
-}
-
-compose.desktop {
-    application {
-        mainClass = "MainKt"
-        jvmArgs += listOf(
-            "-Dfile.encoding=UTF-8",
-            "-Dstdout.encoding=UTF-8",
-            "-Dstderr.encoding=UTF-8",
-            "-Djava.library.path=."
-        )
-    }
 }
