@@ -1,0 +1,70 @@
+Run if [ -f "bin/magicartifact-0.1-debug.apk" ]; then
+  if [ -f "bin/magicartifact-0.1-debug.apk" ]; then
+    echo "APK found!"
+    ls -lh bin/magicartifact-0.1-debug.apk
+  else
+    echo "APK NOT found - checking for alternatives..."
+    find . -name "*.apk" -type f
+    echo "BUILD FAILED - APK not created"
+    cat build.log | tail -100
+    exit 1
+  fi
+  shell: /usr/bin/bash -e {0}
+  env:
+    JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+    JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+    pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+    PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+    Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+    Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+    Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+    LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+    ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+    ANDROID_NDK_ROOT: /usr/local/lib/android/sdk/ndk/25.1.8937393
+    ANDROID_HOME: /usr/local/lib/android/sdk
+APK NOT found - checking for alternatives...
+BUILD FAILED - APK not created
+Cloning into 'python-for-android'...
+# Check configuration tokens
+# Ensure build layout
+# Create directory /home/runner/.buildozer/cache
+# Create directory /home/runner/work/magic-artifact/magic-artifact/.buildozer
+# Create directory /home/runner/work/magic-artifact/magic-artifact/bin
+# Create directory /home/runner/work/magic-artifact/magic-artifact/.buildozer/applibs
+# Create directory /home/runner/.buildozer/android/platform/android/platform
+# Create directory /home/runner/work/magic-artifact/magic-artifact/.buildozer/android/platform
+# Create directory /home/runner/work/magic-artifact/magic-artifact/.buildozer/android/app
+# Check configuration tokens
+# Preparing build
+# Check requirements for android
+# Search for Git (git)
+#  -> found at /usr/bin/git
+# Search for Cython (cython)
+#  -> found at /opt/hostedtoolcache/Python/3.9.25/x64/bin/cython
+# Search for Java compiler (javac)
+#  -> found at /usr/lib/jvm/temurin-17-jdk-amd64/bin/javac
+# Search for Java keytool (keytool)
+#  -> found at /usr/lib/jvm/temurin-17-jdk-amd64/bin/keytool
+# Install platform
+# Run ['git', 'clone', '-b', 'master', '--single-branch', 'https://github.com/kivy/python-for-android.git', 'python-for-android']
+# Cwd /home/runner/work/magic-artifact/magic-artifact/.buildozer/android/platform
+# Run ['/opt/hostedtoolcache/Python/3.9.25/x64/bin/python', '-m', 'pip', 'install', '-q', '--user', 'appdirs', 'colorama>=0.3.3', 'jinja2', 'sh>=1.10, <2.0; sys_platform!="win32"', 'build', 'toml', 'packaging', 'setuptools']
+# Cwd None
+# Android ANT is missing, downloading
+# Downloading https://archive.apache.org/dist/ant/binaries/apache-ant-1.9.4-bin.tar.gz
+# Run ['tar', 'xzf', 'apache-ant-1.9.4-bin.tar.gz']
+# Cwd /home/runner/.buildozer/android/platform/apache-ant-1.9.4
+# Apache ANT installation done.
+# Android SDK found at /home/runner/.buildozer/android/platform/android-sdk
+# Recommended android's NDK version by p4a is: 25b
+# Android NDK is missing, downloading
+# Downloading https://dl.google.com/android/repository/android-ndk-r25b-linux.zip
+# Unpacking Android NDK
+# Run ['unzip', '-q', '/home/runner/.buildozer/android/platform/android-ndk-r25b-linux.zip']
+# Cwd /home/runner/.buildozer/android/platform
+# Rename /home/runner/.buildozer/android/platform/android-ndk-r25b to /home/runner/.buildozer/android/platform/android-ndk-r25b
+# Android NDK installation done.
+# Installing/updating SDK platform tools if necessary
+# Check configuration tokens
+# sdkmanager path "/home/runner/.buildozer/android/platform/android-sdk/tools/bin/sdkmanager" does not exist, sdkmanager is notinstalled
+Error: Process completed with exit code 1.

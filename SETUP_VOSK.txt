@@ -1,0 +1,40 @@
+═══════════════════════════════════════════════════════════════
+  УСТАНОВКА VOSK ДЛЯ РАСПОЗНАВАНИЯ РЕЧИ
+═══════════════════════════════════════════════════════════════
+
+ШАГИ:
+
+1. Скачать Vosk JAR файлы:
+
+   Опция A (Автоматически):
+   - Запусти: download_vosk_jars.ps1 (создам скрипт)
+   
+   Опция B (Вручную):
+   - Перейди: https://github.com/alphacephei/vosk-api/releases
+   - Скачай vosk-windows-X64-X.zip (или другую версию для твоей ОС)
+   - Распакуй
+   - Найди файлы vosk.jar и vosk-jni.jar
+   - Положи в папку: c:\Users\GIGABYTE\opencode\composeApp\libs\
+
+2. Скачать языковую модель:
+   
+   - Перейди: https://alphacephei.com/vosk/models
+   - Скачай модель (например: vosk-model-en-us-0.22.zip)
+   - Распакуй в: %USERPROFILE%\.vosk\model-en-us
+
+3. Собрать и запустить приложение:
+   
+   cd c:\Users\GIGABYTE\opencode
+   gradlew composeApp:run
+
+═══════════════════════════════════════════════════════════════
+
+ПРОВЕРКА:
+Если в папке c:\Users\GIGABYTE\opencode\composeApp\libs есть JAR файлы,
+приложение будет их использовать.
+
+В консоли должно быть:
+- "Vosk initialized successfully"
+- "Model loaded"
+
+Когда нажимаешь LISTEN - приложение будет распознавать речь в текст.

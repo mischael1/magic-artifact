@@ -1,0 +1,31 @@
+Warning: Unexpected input(s) 'api-level', 'build-tools-version', 'ndk-version', valid inputs are ['']
+Run android-actions/setup-android@v2
+  with:
+    api-level: 31
+    build-tools-version: 34.0.0
+    ndk-version: 25.1.8937393
+  env:
+    JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.30-7/x64
+    JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.30-7/x64
+    pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+    PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+    Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+    Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+    Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+    LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+/usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager cmdline-tools;7.0
+Error: LinkageError occurred while loading main class com.android.sdklib.tool.sdkmanager.SdkManagerCli
+	java.lang.UnsupportedClassVersionError: com/android/sdklib/tool/sdkmanager/SdkManagerCli has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+/home/runner/work/_actions/android-actions/setup-android/v2/dist/index.js:2348
+                error = new Error(`The process '${this.toolPath}' failed with exit code ${this.processExitCode}`);
+                        ^
+
+Error: The process '/usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager' failed with exit code 1
+    at ExecState._setResult (/home/runner/work/_actions/android-actions/setup-android/v2/dist/index.js:2348:25)
+    at ExecState.CheckComplete (/home/runner/work/_actions/android-actions/setup-android/v2/dist/index.js:2331:18)
+    at ChildProcess.<anonymous> (/home/runner/work/_actions/android-actions/setup-android/v2/dist/index.js:2225:27)
+    at ChildProcess.emit (node:events:524:28)
+    at maybeClose (node:internal/child_process:1104:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+
+Node.js v20.19.6

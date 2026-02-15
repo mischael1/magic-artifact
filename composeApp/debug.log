@@ -1,0 +1,1236 @@
+[20:55:30.549] === START VOSK RECOGNITION ===
+[20:55:30.559] Audio bytes: 225280
+[20:55:30.560] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.wav
+[20:55:30.563] Audio file size: 225324 bytes
+[20:55:30.564] Audio file exists: true
+[20:55:30.801] Running Vosk Python script...
+[20:55:32.245] Vosk process exit code: 0
+[20:55:32.246] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.wav
+File exists: True
+File size: 225324
+Loading model...
+Model loaded
+Opening file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.wav
+Reading audio chunks...
+EOF after 55 chunks
+Getting final result...
+Final: 
+NO_TEXT
+
+[20:55:32.252] Final recognized text: ''
+[20:55:32.252] NO RESULT from Vosk
+[21:06:45.096] === START VOSK RECOGNITION ===
+[21:06:45.103] Audio bytes: 131072
+[21:06:45.104] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.wav
+[21:06:45.109] Audio file size: 131116 bytes
+[21:06:45.110] Audio file exists: true
+[21:06:45.354] Running Vosk Python script...
+[21:06:46.556] Vosk process exit code: 0
+[21:06:46.557] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.wav
+File exists: True
+File size: 131116
+Loading model...
+Model loaded
+Opening file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.wav
+Reading audio chunks...
+EOF after 32 chunks
+Getting final result...
+Final: 
+NO_TEXT
+
+[21:06:46.557] Final recognized text: ''
+[21:06:46.558] NO RESULT from Vosk
+[21:06:54.634] === START VOSK RECOGNITION ===
+[21:06:54.635] Audio bytes: 147456
+[21:06:54.635] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.wav
+[21:06:54.637] Audio file size: 147500 bytes
+[21:06:54.637] Audio file exists: true
+[21:06:54.639] Running Vosk Python script...
+[21:06:55.911] Vosk process exit code: 0
+[21:06:55.911] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.wav
+File exists: True
+File size: 147500
+Loading model...
+Model loaded
+Opening file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.wav
+Reading audio chunks...
+EOF after 36 chunks
+Getting final result...
+Final: 
+NO_TEXT
+
+[21:06:55.911] Final recognized text: ''
+[21:06:55.912] NO RESULT from Vosk
+[21:11:20.852] === START VOSK RECOGNITION ===
+[21:11:20.859] Audio bytes: 65536
+[21:11:20.860] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:11:20.863] Audio file size: 65536 bytes
+[21:11:20.864] Audio file exists: true
+[21:11:21.096] Running Vosk Python script...
+[21:11:22.293] Vosk process exit code: 0
+[21:11:22.293] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 65536
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+EOF after 16 chunks
+Getting final result...
+Final: 
+NO_TEXT
+
+[21:11:22.294] Final recognized text: ''
+[21:11:22.295] NO RESULT from Vosk
+[21:11:50.034] === START VOSK RECOGNITION ===
+[21:11:50.035] Audio bytes: 839680
+[21:11:50.037] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:11:50.037] Audio file size: 839680 bytes
+[21:11:50.037] Audio file exists: true
+[21:11:50.040] Running Vosk Python script...
+[21:11:51.754] Vosk process exit code: 0
+[21:11:51.754] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 839680
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+EOF after 205 chunks
+Getting final result...
+Final: 
+NO_TEXT
+
+[21:11:51.755] Final recognized text: ''
+[21:11:51.755] NO RESULT from Vosk
+[21:11:57.537] === START VOSK RECOGNITION ===
+[21:11:57.538] Audio bytes: 81920
+[21:11:57.539] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:11:57.540] Audio file size: 81920 bytes
+[21:11:57.540] Audio file exists: true
+[21:11:57.542] Running Vosk Python script...
+[21:11:58.719] Vosk process exit code: 0
+[21:11:58.719] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 81920
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+EOF after 20 chunks
+Getting final result...
+Final: 
+NO_TEXT
+
+[21:11:58.719] Final recognized text: ''
+[21:11:58.720] NO RESULT from Vosk
+[21:13:52.768] === START VOSK RECOGNITION ===
+[21:13:52.777] Audio bytes: 57344
+[21:13:52.778] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:13:52.782] Audio file size: 57344 bytes
+[21:13:52.783] Audio file exists: true
+[21:13:53.024] Running Vosk Python script...
+[21:13:54.252] Vosk process exit code: 1
+[21:13:54.252] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Traceback (most recent call last):
+  File "C:\Users\GIGABYTE\AppData\Local\Temp\vosk_recognize5142292922131435127.py", line 44, in <module>
+    text = ' '.join(result.get('result', []))
+TypeError: sequence item 0: expected str instance, dict found
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 57344
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+EOF after 14 chunks
+Getting final result...
+Final result object: {'result': [{'conf': 1.0, 'end': 1.53, 'start': 0.72, 'word': '��������'}], 'text': '��������'}
+ERROR:sequence item 0: expected str instance, dict found
+
+[21:13:54.253] Final recognized text: ''
+[21:13:54.254] NO RESULT from Vosk
+[21:14:06.239] === START VOSK RECOGNITION ===
+[21:14:06.241] Audio bytes: 331776
+[21:14:06.242] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:14:06.243] Audio file size: 331776 bytes
+[21:14:06.243] Audio file exists: true
+[21:14:06.246] Running Vosk Python script...
+[21:14:07.417] Vosk process exit code: 1
+[21:14:07.418] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Traceback (most recent call last):
+  File "C:\Users\GIGABYTE\AppData\Local\Temp\vosk_recognize1925824502517708466.py", line 32, in <module>
+    text = ' '.join(result.get('result', []))
+TypeError: sequence item 0: expected str instance, dict found
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 331776
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:����
+PARTIAL:����
+PARTIAL:����
+PARTIAL:����
+PARTIAL:����
+PARTIAL:����
+PARTIAL:����
+ERROR:sequence item 0: expected str instance, dict found
+
+[21:14:07.418] Final recognized text: ''
+[21:14:07.419] NO RESULT from Vosk
+[21:16:08.784] === START VOSK RECOGNITION ===
+[21:16:08.797] Audio bytes: 45056
+[21:16:08.797] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:16:08.801] Audio file size: 45056 bytes
+[21:16:08.802] Audio file exists: true
+[21:16:09.053] Running Vosk Python script...
+[21:16:10.214] Vosk process exit code: 1
+[21:16:10.215] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Traceback (most recent call last):
+  File "C:\Users\GIGABYTE\AppData\Local\Temp\vosk_recognize263873035065907095.py", line 44, in <module>
+    text = ' '.join(result.get('result', []))
+TypeError: sequence item 0: expected str instance, dict found
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 45056
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+EOF after 11 chunks
+Getting final result...
+Final result object: {'result': [{'conf': 1.0, 'end': 1.38, 'start': 0.57, 'word': '��������'}], 'text': '��������'}
+ERROR:sequence item 0: expected str instance, dict found
+
+[21:16:10.216] Final recognized text: ''
+[21:16:10.216] NO RESULT from Vosk
+[21:16:14.550] === START VOSK RECOGNITION ===
+[21:16:14.552] Audio bytes: 90112
+[21:16:14.553] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:16:14.554] Audio file size: 90112 bytes
+[21:16:14.555] Audio file exists: true
+[21:16:14.558] Running Vosk Python script...
+[21:16:15.717] Vosk process exit code: 1
+[21:16:15.717] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Traceback (most recent call last):
+  File "C:\Users\GIGABYTE\AppData\Local\Temp\vosk_recognize5198691294260453573.py", line 44, in <module>
+    text = ' '.join(result.get('result', []))
+TypeError: sequence item 0: expected str instance, dict found
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 90112
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:����
+PARTIAL:����
+PARTIAL:����
+PARTIAL:����
+EOF after 22 chunks
+Getting final result...
+Final result object: {'result': [{'conf': 1.0, 'end': 2.04, 'start': 1.44, 'word': '����'}], 'text': '����'}
+ERROR:sequence item 0: expected str instance, dict found
+
+[21:16:15.718] Final recognized text: ''
+[21:16:15.718] NO RESULT from Vosk
+[21:17:15.915] === START VOSK RECOGNITION ===
+[21:17:15.922] Audio bytes: 356352
+[21:17:15.922] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:17:15.926] Audio file size: 356352 bytes
+[21:17:15.926] Audio file exists: true
+[21:17:16.171] Running Vosk Python script...
+[21:17:17.581] Vosk process exit code: 0
+[21:17:17.581] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 356352
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+INTERMEDIATE:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+INTERMEDIATE:��������
+EOF after 87 chunks
+Getting final result...
+Final result object: {'result': [{'conf': 1.0, 'end': 11.07, 'start': 10.26, 'word': '��������'}], 'text': '��������'}
+Final text: '��������'
+RESULT:��������
+
+[21:17:17.584] Final recognized text: '��������'
+[21:17:17.584] SUCCESS: Text recognized
+[21:19:32.522] === START VOSK RECOGNITION ===
+[21:19:32.534] Audio bytes: 143360
+[21:19:32.535] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:19:32.543] Audio file size: 143360 bytes
+[21:19:32.544] Audio file exists: true
+[21:19:32.782] Running Vosk Python script...
+[21:19:34.037] Vosk process exit code: 0
+[21:19:34.038] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 143360
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+INTERMEDIATE:��������
+EOF after 35 chunks
+Getting final result...
+Final result object: {'result': [{'conf': 1.0, 'end': 4.44, 'start': 3.84, 'word': '������'}], 'text': '������'}
+Final text: '������'
+RESULT:������
+
+[21:19:34.041] Final recognized text: '������'
+[21:19:34.041] SUCCESS: Text recognized
+[21:19:45.725] === START VOSK RECOGNITION ===
+[21:19:45.727] Audio bytes: 286720
+[21:19:45.728] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:19:45.729] Audio file size: 286720 bytes
+[21:19:45.729] Audio file exists: true
+[21:19:45.732] Running Vosk Python script...
+[21:19:47.105] Vosk process exit code: 0
+[21:19:47.105] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 286720
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+INTERMEDIATE:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+INTERMEDIATE:��������
+EOF after 70 chunks
+Getting final result...
+Final result object: {'result': [{'conf': 1.0, 'end': 8.82, 'start': 8.04, 'word': '��������'}], 'text': '��������'}
+Final text: '��������'
+RESULT:��������
+
+[21:19:47.106] Final recognized text: '��������'
+[21:19:47.106] SUCCESS: Text recognized
+[21:22:30.822] === START VOSK RECOGNITION ===
+[21:22:30.831] Audio bytes: 69632
+[21:22:30.832] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:22:30.838] Audio file size: 69632 bytes
+[21:22:30.839] Audio file exists: true
+[21:22:31.079] Running Vosk Python script...
+[21:22:32.262] Vosk process exit code: 0
+[21:22:32.262] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 69632
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+EOF after 17 chunks
+Getting final result...
+Final result object: {'text': '��������'}
+Final text: ''
+NO_TEXT
+
+[21:22:32.263] Final recognized text: ''
+[21:22:32.264] NO RESULT from Vosk
+[21:22:40.682] === START VOSK RECOGNITION ===
+[21:22:40.682] Audio bytes: 147456
+[21:22:40.684] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:22:40.685] Audio file size: 147456 bytes
+[21:22:40.685] Audio file exists: true
+[21:22:40.689] Running Vosk Python script...
+[21:22:41.851] Vosk process exit code: 0
+[21:22:41.856] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 147456
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+EOF after 36 chunks
+Getting final result...
+Final result object: {'text': ''}
+Final text: ''
+NO_TEXT
+
+[21:22:41.856] Final recognized text: ''
+[21:22:41.856] NO RESULT from Vosk
+[21:22:46.631] === START VOSK RECOGNITION ===
+[21:22:46.632] Audio bytes: 61440
+[21:22:46.634] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:22:46.634] Audio file size: 61440 bytes
+[21:22:46.634] Audio file exists: true
+[21:22:46.636] Running Vosk Python script...
+[21:22:47.760] Vosk process exit code: 0
+[21:22:47.760] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 61440
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:�����
+EOF after 15 chunks
+Getting final result...
+Final result object: {'text': '�����'}
+Final text: ''
+NO_TEXT
+
+[21:22:47.762] Final recognized text: ''
+[21:22:47.762] NO RESULT from Vosk
+[21:22:55.317] === START VOSK RECOGNITION ===
+[21:22:55.317] Audio bytes: 118784
+[21:22:55.318] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:22:55.319] Audio file size: 118784 bytes
+[21:22:55.319] Audio file exists: true
+[21:22:55.321] Running Vosk Python script...
+[21:22:56.500] Vosk process exit code: 0
+[21:22:56.501] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 118784
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:�
+PARTIAL:�
+PARTIAL:�������
+PARTIAL:�������
+EOF after 29 chunks
+Getting final result...
+Final result object: {'text': '�������'}
+Final text: ''
+NO_TEXT
+
+[21:22:56.502] Final recognized text: ''
+[21:22:56.502] NO RESULT from Vosk
+[21:23:36.402] === START VOSK RECOGNITION ===
+[21:23:36.410] Audio bytes: 69632
+[21:23:36.411] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:23:36.416] Audio file size: 69632 bytes
+[21:23:36.417] Audio file exists: true
+[21:23:36.668] Running Vosk Python script...
+[21:23:37.767] Vosk process exit code: 0
+[21:23:37.767] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 69632
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+EOF after 17 chunks
+Getting final result...
+Final result object: {'text': '������'}
+Final text: ''
+NO_TEXT
+
+[21:23:37.768] Final recognized text: ''
+[21:23:37.769] NO RESULT from Vosk
+[21:23:43.526] === START VOSK RECOGNITION ===
+[21:23:43.526] Audio bytes: 61440
+[21:23:43.528] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:23:43.528] Audio file size: 61440 bytes
+[21:23:43.528] Audio file exists: true
+[21:23:43.529] Running Vosk Python script...
+[21:23:44.609] Vosk process exit code: 0
+[21:23:44.610] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 61440
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:���
+EOF after 15 chunks
+Getting final result...
+Final result object: {'text': '���'}
+Final text: ''
+NO_TEXT
+
+[21:23:44.610] Final recognized text: ''
+[21:23:44.610] NO RESULT from Vosk
+[21:25:36.105] === START VOSK RECOGNITION ===
+[21:25:36.114] Audio bytes: 405504
+[21:25:36.115] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:25:36.117] Audio file size: 405504 bytes
+[21:25:36.119] Audio file exists: true
+[21:25:36.357] Running Vosk Python script...
+[21:25:37.830] Vosk process exit code: 0
+[21:25:37.830] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 405504
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+INTERMEDIATE:��������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+INTERMEDIATE:������
+PARTIAL:�
+PARTIAL:�
+PARTIAL:�
+PARTIAL:� ������
+PARTIAL:� ������
+PARTIAL:� ������
+EOF after 99 chunks
+Getting final result...
+Final result object: {'text': '� ������'}
+Final text: '� ������'
+RESULT:� ������
+
+[21:25:37.831] Final recognized text: '� ������'
+[21:25:37.832] SUCCESS: Text recognized
+[21:25:43.264] === START VOSK RECOGNITION ===
+[21:25:43.265] Audio bytes: 118784
+[21:25:43.266] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:25:43.266] Audio file size: 118784 bytes
+[21:25:43.267] Audio file exists: true
+[21:25:43.269] Running Vosk Python script...
+[21:25:44.431] Vosk process exit code: 0
+[21:25:44.431] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 118784
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+EOF after 29 chunks
+Getting final result...
+Final result object: {'text': '��������'}
+Final text: '��������'
+RESULT:��������
+
+[21:25:44.432] Final recognized text: '��������'
+[21:25:44.432] SUCCESS: Text recognized
+[21:35:01.638] === START VOSK RECOGNITION ===
+[21:35:01.650] Audio bytes: 61440
+[21:35:01.652] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:35:01.656] Audio file size: 61440 bytes
+[21:35:01.657] Audio file exists: true
+[21:35:01.903] Running Vosk Python script...
+[21:35:03.079] Vosk process exit code: 0
+[21:35:03.079] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 61440
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:��������
+EOF after 15 chunks
+Getting final result...
+Final result object: {'text': '��������'}
+Final text: '��������'
+RESULT:��������
+
+[21:35:03.081] Final recognized text: '��������'
+[21:35:03.081] SUCCESS: Text recognized
+[21:35:08.185] === START VOSK RECOGNITION ===
+[21:35:08.187] Audio bytes: 110592
+[21:35:08.188] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:35:08.189] Audio file size: 110592 bytes
+[21:35:08.190] Audio file exists: true
+[21:35:08.195] Running Vosk Python script...
+[21:35:09.352] Vosk process exit code: 0
+[21:35:09.352] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 110592
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+INTERMEDIATE:������
+EOF after 27 chunks
+Getting final result...
+Final result object: {'text': ''}
+Final text: ''
+NO_TEXT
+
+[21:35:09.352] Final recognized text: ''
+[21:35:09.352] NO RESULT from Vosk
+[21:35:13.905] === START VOSK RECOGNITION ===
+[21:35:13.906] Audio bytes: 73728
+[21:35:13.908] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:35:13.908] Audio file size: 73728 bytes
+[21:35:13.909] Audio file exists: true
+[21:35:13.912] Running Vosk Python script...
+[21:35:14.985] Vosk process exit code: 0
+[21:35:14.986] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 73728
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+EOF after 18 chunks
+Getting final result...
+Final result object: {'text': ''}
+Final text: ''
+NO_TEXT
+
+[21:35:14.986] Final recognized text: ''
+[21:35:14.987] NO RESULT from Vosk
+[21:35:28.315] === START VOSK RECOGNITION ===
+[21:35:28.316] Audio bytes: 299008
+[21:35:28.317] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:35:28.317] Audio file size: 299008 bytes
+[21:35:28.317] Audio file exists: true
+[21:35:28.319] Running Vosk Python script...
+[21:35:29.737] Vosk process exit code: 0
+[21:35:29.738] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 299008
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:�������
+PARTIAL:�������
+PARTIAL:�������
+PARTIAL:�������
+PARTIAL:�������
+PARTIAL:�������
+PARTIAL:�������
+PARTIAL:�������
+PARTIAL:�������
+INTERMEDIATE:�������
+PARTIAL:�����
+PARTIAL:�����
+PARTIAL:�����
+PARTIAL:�����
+PARTIAL:�����
+PARTIAL:�����
+INTERMEDIATE:�����
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+EOF after 73 chunks
+Getting final result...
+Final result object: {'text': '��������'}
+Final text: '��������'
+RESULT:��������
+
+[21:35:29.739] Final recognized text: '��������'
+[21:35:29.740] SUCCESS: Text recognized
+[21:36:51.952] === START VOSK RECOGNITION ===
+[21:36:51.965] Audio bytes: 81920
+[21:36:51.966] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:36:51.973] Audio file size: 81920 bytes
+[21:36:51.973] Audio file exists: true
+[21:36:52.209] Running Vosk Python script...
+[21:36:53.412] Vosk process exit code: 0
+[21:36:53.413] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 81920
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:������
+EOF after 20 chunks
+Getting final result...
+Final result object: {'text': '������'}
+Final text: '������'
+RESULT:������
+
+[21:36:53.414] Final recognized text: '������'
+[21:36:53.414] SUCCESS: Text recognized
+[21:37:06.101] === START VOSK RECOGNITION ===
+[21:37:06.103] Audio bytes: 270336
+[21:37:06.104] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:37:06.105] Audio file size: 270336 bytes
+[21:37:06.105] Audio file exists: true
+[21:37:06.108] Running Vosk Python script...
+[21:37:07.415] Vosk process exit code: 0
+[21:37:07.415] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 270336
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:�����
+PARTIAL:�����
+PARTIAL:�����
+PARTIAL:�����
+PARTIAL:�����
+PARTIAL:�����
+PARTIAL:�����
+PARTIAL:�����
+PARTIAL:�����
+PARTIAL:�����
+INTERMEDIATE:�����
+PARTIAL:����
+PARTIAL:����
+PARTIAL:����
+EOF after 66 chunks
+Getting final result...
+Final result object: {'text': '����'}
+Final text: '����'
+RESULT:����
+
+[21:37:07.416] Final recognized text: '����'
+[21:37:07.416] SUCCESS: Text recognized
+[21:45:01.859] === START VOSK RECOGNITION ===
+[21:45:01.864] Audio bytes: 73728
+[21:45:01.866] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:45:01.866] Audio file size: 73728 bytes
+[21:45:01.866] Audio file exists: true
+[21:45:02.119] Running Vosk Python script...
+[21:45:03.242] Vosk process exit code: 0
+[21:45:03.242] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 73728
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+EOF after 18 chunks
+Getting final result...
+Final result object: {'text': '��������'}
+Final text: '��������'
+RESULT:��������
+
+[21:45:03.242] Final recognized text: '��������'
+[21:45:03.242] SUCCESS: Text recognized
+[21:45:37.242] === START VOSK RECOGNITION ===
+[21:45:37.242] Audio bytes: 946176
+[21:45:37.242] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:45:37.242] Audio file size: 946176 bytes
+[21:45:37.242] Audio file exists: true
+[21:45:37.251] Running Vosk Python script...
+[21:45:39.113] Vosk process exit code: 0
+[21:45:39.113] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 946176
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+PARTIAL:��������
+INTERMEDIATE:��������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+INTERMEDIATE:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+INTERMEDIATE:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+INTERMEDIATE:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+INTERMEDIATE:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+INTERMEDIATE:������
+EOF after 231 chunks
+Getting final result...
+Final result object: {'text': ''}
+Final text: ''
+NO_TEXT
+
+[21:45:39.119] Final recognized text: ''
+[21:45:39.119] NO RESULT from Vosk
+[21:47:55.041] === START VOSK RECOGNITION ===
+[21:47:55.050] Audio bytes: 94208
+[21:47:55.053] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:47:55.059] Audio file size: 94208 bytes
+[21:47:55.059] Audio file exists: true
+[21:47:55.345] Running Vosk Python script...
+[21:47:56.534] Vosk process exit code: 0
+[21:47:56.534] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 94208
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+PARTIAL:������
+INTERMEDIATE:������
+EOF after 23 chunks
+Getting final result...
+Final result object: {'text': ''}
+Final text: ''
+NO_TEXT
+
+[21:47:56.534] Final recognized text: ''
+[21:47:56.534] NO RESULT from Vosk
+[21:48:03.769] === START VOSK RECOGNITION ===
+[21:48:03.769] Audio bytes: 86016
+[21:48:03.771] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:48:03.771] Audio file size: 86016 bytes
+[21:48:03.773] Audio file exists: true
+[21:48:03.773] Running Vosk Python script...
+[21:48:04.884] Vosk process exit code: 0
+[21:48:04.884] Vosk output:
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/HCLr.fst C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:308) Loading winfo C:\Users\GIGABYTE\.cache\vosk\vosk-model-small-ru-0.22/graph/phones/word_boundary.int
+Audio file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+File exists: True
+File size: 86016
+Loading model...
+Model loaded
+Opening RAW PCM file: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+Reading audio chunks...
+EOF after 21 chunks
+Getting final result...
+Final result object: {'text': '������'}
+Final text: '������'
+RESULT:������
+
+[21:48:04.885] Final recognized text: '������'
+[21:48:04.885] SUCCESS: Text recognized
+[21:52:36.997] === START VOSK RECOGNITION ===
+[21:52:37.008] Audio bytes: 77824
+[21:52:37.010] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:52:37.012] Audio file size: 77824 bytes
+[21:52:37.012] Audio file exists: true
+[21:52:37.250] Running Vosk Python script...
+[21:52:37.351] Vosk process exit code: 1
+[21:52:37.351] Vosk output:
+  File "C:\Users\GIGABYTE\AppData\Local\Temp\vosk_recognize18131498212070616042.py", line 68
+    except Exception as e:
+    ^^^^^^
+SyntaxError: invalid syntax
+
+[21:52:37.351] JSON result: 
+[21:52:37.351] Final recognized text: ''
+[21:52:37.351] NO RESULT from Vosk
+[21:52:41.150] === START VOSK RECOGNITION ===
+[21:52:41.152] Audio bytes: 65536
+[21:52:41.152] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:52:41.152] Audio file size: 65536 bytes
+[21:52:41.154] Audio file exists: true
+[21:52:41.154] Running Vosk Python script...
+[21:52:41.261] Vosk process exit code: 1
+[21:52:41.261] Vosk output:
+  File "C:\Users\GIGABYTE\AppData\Local\Temp\vosk_recognize16683554916364638536.py", line 68
+    except Exception as e:
+    ^^^^^^
+SyntaxError: invalid syntax
+
+[21:52:41.261] JSON result: 
+[21:52:41.261] Final recognized text: ''
+[21:52:41.261] NO RESULT from Vosk
+[21:53:03.261] === START VOSK RECOGNITION ===
+[21:53:03.262] Audio bytes: 589824
+[21:53:03.264] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:53:03.264] Audio file size: 589824 bytes
+[21:53:03.264] Audio file exists: true
+[21:53:03.264] Running Vosk Python script...
+[21:53:03.359] Vosk process exit code: 1
+[21:53:03.359] Vosk output:
+  File "C:\Users\GIGABYTE\AppData\Local\Temp\vosk_recognize7171502861371608822.py", line 68
+    except Exception as e:
+    ^^^^^^
+SyntaxError: invalid syntax
+
+[21:53:03.359] JSON result: 
+[21:53:03.359] Final recognized text: ''
+[21:53:03.359] NO RESULT from Vosk
+[21:53:18.390] === START VOSK RECOGNITION ===
+[21:53:18.392] Audio bytes: 380928
+[21:53:18.392] Audio file written: C:\Users\GIGABYTE\opencode\composeApp\audio_temp.raw
+[21:53:18.392] Audio file size: 380928 bytes
+[21:53:18.392] Audio file exists: true
+[21:53:18.398] Running Vosk Python script...
+[21:53:18.499] Vosk process exit code: 1
+[21:53:18.499] Vosk output:
+  File "C:\Users\GIGABYTE\AppData\Local\Temp\vosk_recognize15369955475233756919.py", line 68
+    except Exception as e:
+    ^^^^^^
+SyntaxError: invalid syntax
+
+[21:53:18.499] JSON result: 
+[21:53:18.499] Final recognized text: ''
+[21:53:18.499] NO RESULT from Vosk
+[19:11:55.521] Loading Vosk model from: C:\Users\GIGABYTE\opencode\composeApp/model/vosk-model-small-ru-0.22
+[19:11:55.531] ERROR: Model directory not found at C:\Users\GIGABYTE\opencode\composeApp/model/vosk-model-small-ru-0.22

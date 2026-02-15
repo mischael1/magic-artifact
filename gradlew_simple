@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+JAVA_HOME="/c/Program Files/Eclipse Adoptium/jdk-11.0.28.6-hotspot"
+export JAVA_HOME
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+
+GRADLE_JAR="gradle/wrapper/gradle-wrapper.jar"
+
+if [ ! -f "$GRADLE_JAR" ]; then
+    echo "Error: gradle-wrapper.jar not found"
+    exit 1
+fi
+
+"$JAVA_HOME/bin/java" \
+    -Dorg.gradle.appname=gradlew \
+    -classpath "$GRADLE_JAR" \
+    org.gradle.wrapper.GradleWrapperMain \
+    "$@"

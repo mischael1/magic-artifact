@@ -1,0 +1,23 @@
+Run if [ -f "bin/magicartifact-0.1-debug.apk" ]; then
+  if [ -f "bin/magicartifact-0.1-debug.apk" ]; then
+    echo "✅ APK found!"
+    ls -lh bin/magicartifact-0.1-debug.apk
+  else
+    echo "❌ APK NOT found"
+    exit 1
+  fi
+  shell: /usr/bin/bash -e {0}
+  env:
+    JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+    JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+    pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+    PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+    Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+    Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+    Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+    LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+    ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+    ANDROID_NDK_ROOT: /usr/local/lib/android/sdk/ndk/25.1.8937393
+    ANDROID_HOME: /usr/local/lib/android/sdk
+❌ APK NOT found
+Error: Process completed with exit code 1.

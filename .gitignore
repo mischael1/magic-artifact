@@ -1,55 +1,44 @@
-# Buildozer
-bin/
-.buildozer/
-.gradle/
-*.jks
-*.keystore
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-ENV/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+# Gradle
+.gradle
+**/build
+**/.gradle
 
 # IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
+.idea
+.vscode
+*.iml
+*.iws
+*.ipr
+out/
 
-# Android
-*.apk
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Local properties
 local.properties
 
-# Logs
-build.log
-logcat.txt
-*.log
+# Android
+local.properties
+.Android
+*.apk
+*.ap_
+.android/
 
-# Models
-models/*.onnx
-models/vosk-model-*/
+# Build
+bin/
+gen/
+build/
 
-# Cache
-.ruff_cache/
+# Python (старый код)
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+.venv
+venv/

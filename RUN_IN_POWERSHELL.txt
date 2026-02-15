@@ -1,0 +1,47 @@
+⚠️ ВАЖНО: Запуск должен быть в PowerShell, а не в bash!
+
+Скопируй ниже и выполни в PowerShell (НЕ в cmd, НЕ в bash):
+
+===============================================================================
+
+# Откройте PowerShell как администратор и выполните:
+
+$env:JAVA_HOME = 'C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot'
+cd C:\Users\GIGABYTE\opencode
+.\gradlew.bat composeApp:runDesktop
+
+===============================================================================
+
+После этого через 30-60 секунд должно открыться окно приложения Magic Artifact.
+
+Если это не сработало:
+
+1. Проверьте что Java установлена:
+   java -version
+
+2. Очистите кэш Gradle:
+   .\gradlew.bat clean
+
+3. Попробуйте снова:
+   .\gradlew.bat composeApp:runDesktop
+
+===============================================================================
+
+Визуально это должно выглядеть так:
+
+C:\Users\GIGABYTE\opencode> .\gradlew.bat composeApp:runDesktop
+
+> Task :composeApp:compileDesktopMainKotlin
+> Task :composeApp:processDesktopMainResources
+> Task :composeApp:desktopMainClasses
+> Task :composeApp:desktopJar
+> Task :composeApp:runDesktop
+
+[Откроется окно приложения]
+
+===============================================================================
+
+Если нужна помощь, читай:
+- RUN_NOW.md
+- QUICK_START_DEVELOPMENT.md
+- TESTING_REPORT.md
