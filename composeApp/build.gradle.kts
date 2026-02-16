@@ -81,6 +81,9 @@ dependencies {
     // Kotlin
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
     
+    // System UI Controller for managing status/navigation bars
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
+    
     // JSON parsing
     implementation("org.json:json:20240303")
 

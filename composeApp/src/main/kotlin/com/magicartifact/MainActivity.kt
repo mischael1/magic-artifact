@@ -22,6 +22,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import kotlinx.coroutines.launch
 
 private const val TAG = "MagicArtifact"
@@ -92,6 +93,19 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun AppScreen(voiceManager: VoiceManager) {
     Log.d(TAG, "AppScreen composable created")
+    
+    // Hide system UI bars
+    val systemUiController = rememberSystemUiController()
+    LaunchedEffect(Unit) {
+        systemUiController.setStatusBarColor(
+            color = Color.Black,
+            darkIcons = false
+        )
+        systemUiController.setNavigationBarColor(
+            color = Color.Black,
+            darkIcons = false
+        )
+    }
     
     var recognizedText by remember { mutableStateOf("") }
     var isAwaitingArtifact by remember { mutableStateOf(true) }
