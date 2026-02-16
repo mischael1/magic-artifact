@@ -32,6 +32,7 @@ class VoiceManager(private val context: Context) : RecognitionListener {
     private var onPartialResult: ((String) -> Unit)? = null
     private var onFinalResult: ((String) -> Unit)? = null
     private var onError: ((String) -> Unit)? = null
+    private var onReady: (() -> Unit)? = null
     
     init {
         try {
@@ -59,6 +60,7 @@ class VoiceManager(private val context: Context) : RecognitionListener {
                 this.model = model
                 isReady = true
                 Log.d(TAG, "Model loaded successfully")
+                onReady?.invoke()
             },
             { exception ->
                 Log.e(TAG, "Failed to unpack model", exception)
@@ -89,6 +91,13 @@ class VoiceManager(private val context: Context) : RecognitionListener {
     }
     
     /**
+     * Sets callback for when model is ready
+     */
+    fun setOnReady(callback: () -> Unit) {
+        onReady = callback
+    }
+    
+    /**
      * Starts listening for speech
      */
     fun startListening() {
@@ -111,14 +120,17 @@ class VoiceManager(private val context: Context) : RecognitionListener {
         }
         
         try {
-            Log.d(TAG, "Starting speech recognition")
+            Log.d(TAG, "Starting speech recognition, model ready: $isReady")
             
             // Create recognizer with default grammar
             val recognizer = Recognizer(model, 16000.0f)
+            Log.d(TAG, "Recognizer created")
             
             // Create speech service
             speechService = SpeechService(recognizer, 16000.0f)
+            Log.d(TAG, "SpeechService created, starting listening...")
             speechService?.startListening(this)
+            Log.d(TAG, "Listening started")
             
         } catch (e: IOException) {
             Log.e(TAG, "Error starting listening", e)
@@ -165,26 +177,32 @@ class VoiceManager(private val context: Context) : RecognitionListener {
     
     /**
      * Called when recognizer returns final result
-     * Format: {"result": ["word1", "word2", ...]}
+     * Format can be: {"result": ["word1", "word2", ...]} or {"text": "words"}
      */
     override fun onFinalResult(hypothesis: String) {
         Log.d(TAG, "onFinalResult: $hypothesis")
         
         try {
             val json = org.json.JSONObject(hypothesis)
-            val resultArray = json.optJSONArray("result")
+            var text = ""
             
+            // Try result array first
+            val resultArray = json.optJSONArray("result")
             if (resultArray != null && resultArray.length() > 0) {
-                // Join all words from result array
                 val words = mutableListOf<String>()
                 for (i in 0 until resultArray.length()) {
                     words.add(resultArray.getString(i))
                 }
-                val text = words.joinToString(" ")
-                
-                if (text.isNotEmpty()) {
-                    onFinalResult?.invoke(text)
-                }
+                text = words.joinToString(" ")
+            }
+            
+            // Fallback to text field
+            if (text.isEmpty()) {
+                text = json.optString("text", "")
+            }
+            
+            if (text.isNotEmpty()) {
+                onFinalResult?.invoke(text)
             }
         } catch (e: Exception) {
             Log.e(TAG, "Error parsing final result JSON", e)

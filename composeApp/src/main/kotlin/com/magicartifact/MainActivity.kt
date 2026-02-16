@@ -108,6 +108,11 @@ fun AppScreen(voiceManager: VoiceManager) {
     
     // Настраиваем callbacks VoiceManager
     LaunchedEffect(Unit) {
+        voiceManager.setOnReady {
+            Log.d(TAG, "VoiceManager ready")
+            statusMessage = "Готов к распознаванию"
+        }
+        
         voiceManager.setOnFinalResult { text ->
             Log.d(TAG, "Final result from Vosk: $text")
             recognizedText = text
