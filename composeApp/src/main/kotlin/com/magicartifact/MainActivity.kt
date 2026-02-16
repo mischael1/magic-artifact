@@ -209,7 +209,20 @@ fun AppScreen(voiceManager: VoiceManager) {
             modifier = Modifier
                 .fillMaxSize()
                 .background(backgroundColor)
-        )
+        ) {
+            // Отладка: показываем последний распознанный текст внизу экрана
+            if (recognizedText.isNotEmpty()) {
+                Text(
+                    text = recognizedText,
+                    fontSize = 14.sp,
+                    color = Color.White.copy(alpha = 0.5f),
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .padding(16.dp)
+                )
+            }
+        }
     } else {
         // Режим слушания - чёрный экран
         Box(
