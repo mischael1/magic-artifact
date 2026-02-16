@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -54,6 +55,24 @@ class MainActivity : ComponentActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+        
+        // Скрыть системный бар (statusBar и navigationBar)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.setDecorFitsSystemWindows(false)
+            window.insetsController?.hide(
+                android.view.WindowInsets.Type.systemBars() or 
+                android.view.WindowInsets.Type.navigationBars()
+            )
+            window.insetsController?.systemBarsBehavior = 
+                android.view.WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        } else {
+            @Suppress("DEPRECATION")
+            window.decorView.systemUiVisibility = (
+                android.view.View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or
+                android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                android.view.View.SYSTEM_UI_FLAG_FULLSCREEN
+            )
+        }
         
         Log.d(TAG, "Window flags set")
         
@@ -144,21 +163,26 @@ fun AppScreen(voiceManager: VoiceManager) {
         }
         
         voiceManager.setOnFinalResult { text ->
-            Log.d(TAG, "Final result from Vosk: $text")
+            Log.d(TAG, "Final result from Vosk: '$text'")
             
             if (isAwaitingArtifact) {
                 // Ищем слово "артефакт"
-                if (text.lowercase().contains("артефакт")) {
-                    Log.d(TAG, "Artifact detected!")
+                val lowerText = text.lowercase()
+                Log.d(TAG, "Checking for artifact: '$lowerText'")
+                if (lowerText.contains("артефакт") || lowerText.contains("артефект") || lowerText.contains("артефакт")) {
+                    Log.d(TAG, "Artifact detected! Switching to spell mode")
                     isAwaitingArtifact = false
                     allRecognizedWords = listOf()
                     recognizedText = ""
+                } else {
+                    Log.d(TAG, "Not artifact, continuing to listen")
                 }
                 // Продолжаем слушать
                 voiceManager.startListening()
             } else {
                 // В режиме слушания заклинания - добавляем слова
                 if (text.isNotEmpty()) {
+                    Log.d(TAG, "Adding spell word: '$text'")
                     allRecognizedWords = allRecognizedWords + text
                     recognizedText = allRecognizedWords.joinToString(" ")
                 }
