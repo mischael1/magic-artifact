@@ -94,15 +94,15 @@ class MainActivity : ComponentActivity() {
 fun AppScreen(voiceManager: VoiceManager) {
     Log.d(TAG, "AppScreen composable created")
     
-    // Hide system UI bars
+    // Make system UI bars transparent so content goes behind them
     val systemUiController = rememberSystemUiController()
     LaunchedEffect(Unit) {
         systemUiController.setStatusBarColor(
-            color = Color.Black,
+            color = Color.Transparent,
             darkIcons = false
         )
         systemUiController.setNavigationBarColor(
-            color = Color.Black,
+            color = Color.Transparent,
             darkIcons = false
         )
     }
