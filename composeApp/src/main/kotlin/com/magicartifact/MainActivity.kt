@@ -52,6 +52,11 @@ class MainActivity : ComponentActivity() {
         // Полноэкранный режим
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         
+        // Позволить контенту идти под системными барами
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.setDecorFitsSystemWindows(false)
+        }
+        
         Log.d(TAG, "Window flags set")
         
         // Проверка и запрос разрешений
