@@ -48,31 +48,8 @@ class MainActivity : ComponentActivity() {
         // Инициализируем VoiceManager
         voiceManager = VoiceManager(this)
         
-        // Полноэкранный режим (киоск режим)
+        // Полноэкранный режим
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        @Suppress("DEPRECATION")
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
-        
-        // Скрыть системный бар (statusBar и navigationBar)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            window.setDecorFitsSystemWindows(false)
-            window.insetsController?.hide(
-                android.view.WindowInsets.Type.systemBars() or 
-                android.view.WindowInsets.Type.navigationBars()
-            )
-            window.insetsController?.systemBarsBehavior = 
-                android.view.WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        } else {
-            @Suppress("DEPRECATION")
-            window.decorView.systemUiVisibility = (
-                android.view.View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or
-                android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
-                android.view.View.SYSTEM_UI_FLAG_FULLSCREEN
-            )
-        }
         
         Log.d(TAG, "Window flags set")
         
@@ -167,9 +144,20 @@ fun AppScreen(voiceManager: VoiceManager) {
             
             if (isAwaitingArtifact) {
                 // Ищем слово "артефакт"
-                val lowerText = text.lowercase()
+                val lowerText = text.lowercase().trim()
                 Log.d(TAG, "Checking for artifact: '$lowerText'")
-                if (lowerText.contains("артефакт") || lowerText.contains("артефект") || lowerText.contains("артефакт")) {
+                
+                // Проверяем различные варианты слова артефакт
+                val isArtifact = (
+                    lowerText.contains("артефакт") ||
+                    lowerText.contains("артефект") ||
+                    lowerText.contains("артифакт") ||
+                    lowerText == "артефакт" ||
+                    lowerText == "артефект" ||
+                    lowerText == "артифакт"
+                )
+                
+                if (isArtifact) {
                     Log.d(TAG, "Artifact detected! Switching to spell mode")
                     isAwaitingArtifact = false
                     allRecognizedWords = listOf()
