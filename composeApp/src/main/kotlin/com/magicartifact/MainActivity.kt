@@ -10,6 +10,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -97,211 +98,123 @@ fun AppScreen(voiceManager: VoiceManager) {
     Log.d(TAG, "AppScreen composable created")
     
     var recognizedText by remember { mutableStateOf("") }
-    var foundSpell by remember { mutableStateOf<SpellData?>(null) }
-    var isListening by remember { mutableStateOf(false) }
-    var statusMessage by remember { mutableStateOf("Готов к распознаванию") }
+    var isAwaitingArtifact by remember { mutableStateOf(true) }
+    var allRecognizedWords by remember { mutableStateOf(listOf<String>()) }
     
     val spellRecognizer = remember { 
         Log.d(TAG, "Creating SpellRecognizer")
         SpellRecognizer() 
     }
     
+    // Animation for color transition
+    val infiniteTransition = rememberInfiniteTransition(label = "color_animation")
+    val colorAnim by infiniteTransition.animateFloat(
+        initialValue = 0f,
+        targetValue = 360f,
+        animationSpec = infiniteRepeatable(
+            animation = tween(8000, easing = LinearEasing),
+            repeatMode = RepeatMode.Restart
+        ),
+        label = "hue_animation"
+    )
+    
+    fun hsvToRgb(h: Float, s: Float, v: Float): Color {
+        val c = v * s
+        val hPrime = h / 60f
+        val x = c * (1 - Math.abs((hPrime % 2) - 1).toFloat())
+        val (r1, g1, b1) = when {
+            hPrime < 1 -> Triple(c, x, 0f)
+            hPrime < 2 -> Triple(x, c, 0f)
+            hPrime < 3 -> Triple(0f, c, x)
+            hPrime < 4 -> Triple(0f, x, c)
+            hPrime < 5 -> Triple(x, 0f, c)
+            else -> Triple(c, 0f, x)
+        }
+        val m = v - c
+        return Color(r1 + m, g1 + m, b1 + m)
+    }
+    
+    val backgroundColor = hsvToRgb(colorAnim, 0.8f, 0.6f)
+    
     // Настраиваем callbacks VoiceManager
     LaunchedEffect(Unit) {
         voiceManager.setOnReady {
             Log.d(TAG, "VoiceManager ready")
-            statusMessage = "Готов к распознаванию"
+            voiceManager.startListening()
         }
         
         voiceManager.setOnFinalResult { text ->
             Log.d(TAG, "Final result from Vosk: $text")
-            recognizedText = text
-            val spell = spellRecognizer.findSpell(text)
-            if (spell != null) {
-                foundSpell = spell
-                statusMessage = "✨ Найдено: ${spell.name}"
+            
+            if (isAwaitingArtifact) {
+                // Ищем слово "артефакт"
+                if (text.lowercase().contains("артефакт")) {
+                    Log.d(TAG, "Artifact detected!")
+                    isAwaitingArtifact = false
+                    allRecognizedWords = listOf()
+                    recognizedText = ""
+                }
+                // Продолжаем слушать
+                voiceManager.startListening()
             } else {
-                statusMessage = "Заклинание не найдено"
+                // В режиме слушания заклинания - добавляем слова
+                if (text.isNotEmpty()) {
+                    allRecognizedWords = allRecognizedWords + text
+                    recognizedText = allRecognizedWords.joinToString(" ")
+                }
+                // Продолжаем слушать
+                voiceManager.startListening()
             }
         }
         
         voiceManager.setOnPartialResult { text ->
             Log.d(TAG, "Partial result: $text")
             recognizedText = text
-            statusMessage = "🎤 Слушаю..."
         }
         
         voiceManager.setOnError { error ->
             Log.e(TAG, "Vosk error: $error")
-            statusMessage = "❌ Ошибка: $error"
         }
     }
     
     Log.d(TAG, "AppScreen state initialized")
     
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color(0xFF1a0f1f))
-    ) {
-        Log.d(TAG, "Box drawn")
-        Column(
+    if (isAwaitingArtifact) {
+        // Режим ожидания - цветная заливка с переливанием
+        Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.SpaceEvenly
+                .background(backgroundColor)
+        )
+    } else {
+        // Режим слушания - чёрный экран
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.Black),
+            contentAlignment = Alignment.Center
         ) {
-            // Заголовок
-            Text(
-                text = "🔮 МАГИЧЕСКИЙ АРТЕФАКТ",
-                fontSize = 32.sp,
-                color = Color(0xFFe8b4f0),
-                textAlign = TextAlign.Center,
-                modifier = Modifier.padding(bottom = 32.dp)
-            )
-            
-            // Статус
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF2d1a3f))
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxSize()
             ) {
-                Column(
-                    modifier = Modifier.padding(16.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Text(
-                        text = statusMessage,
-                        fontSize = 18.sp,
-                        color = Color(0xFFb385e8),
-                        textAlign = TextAlign.Center
-                    )
-                    
-                    Spacer(modifier = Modifier.height(12.dp))
-                    
-                    if (recognizedText.isNotEmpty()) {
-                        Text(
-                            text = "Распознано: $recognizedText",
-                            fontSize = 16.sp,
-                            color = Color(0xFF64b5f6),
-                            textAlign = TextAlign.Center
-                        )
-                    }
-                }
-            }
-            
-            // Найденное заклинание
-            if (foundSpell != null) {
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFF3f2d5f))
-                ) {
-                    Column(
-                        modifier = Modifier.padding(16.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
-                        Text(
-                            text = "✨ Найдено заклинание!",
-                            fontSize = 16.sp,
-                            color = Color(0xFFffd54f)
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        Text(
-                            text = foundSpell!!.name,
-                            fontSize = 24.sp,
-                            color = Color(0xFFff6b9d)
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        Text(
-                            text = foundSpell!!.description,
-                            fontSize = 14.sp,
-                            color = Color(0xFFb3e5fc),
-                            textAlign = TextAlign.Center
-                        )
-                    }
-                }
-            }
-            
-            // Список всех заклинаний
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF2d1a3f))
-            ) {
-                Column(
-                    modifier = Modifier.padding(16.dp)
-                ) {
-                    Text(
-                        text = "📚 Доступные заклинания:",
-                        fontSize = 16.sp,
-                        color = Color(0xFFe8b4f0)
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    spellRecognizer.getAllSpells().forEach { spell ->
-                        Text(
-                            text = "• ${spell.name}",
-                            fontSize = 14.sp,
-                            color = Color(0xFF64b5f6),
-                            modifier = Modifier.padding(vertical = 4.dp)
-                        )
-                    }
-                }
-            }
-            
-            // Кнопки управления
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp),
-                horizontalArrangement = Arrangement.SpaceEvenly
-            ) {
-                Button(
-                    onClick = {
-                        if (!isListening) {
-                            isListening = true
-                            statusMessage = "🎤 Слушаю..."
-                            voiceManager.startListening()
-                        }
-                    },
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xFFff6b9d)
-                    )
-                ) {
-                    Text(if (isListening) "Слушаю..." else "Начать")
-                }
+                Text(
+                    text = "Слушаю...",
+                    fontSize = 48.sp,
+                    color = Color.White,
+                    textAlign = TextAlign.Center
+                )
                 
-                Button(
-                    onClick = {
-                        if (isListening) {
-                            isListening = false
-                            voiceManager.stopListening()
-                            statusMessage = "Остановлено"
-                        }
-                    },
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xFF64b5f6)
-                    )
-                ) {
-                    Text("Стоп")
-                }
+                Spacer(modifier = Modifier.height(32.dp))
                 
-                Button(
-                    onClick = {
-                        recognizedText = ""
-                        foundSpell = null
-                        statusMessage = "Готов к распознаванию"
-                    },
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xFF888888)
-                    )
-                ) {
-                    Text("Очистить")
-                }
+                Text(
+                    text = recognizedText,
+                    fontSize = 28.sp,
+                    color = Color(0xFF64b5f6),
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.padding(horizontal = 16.dp)
+                )
             }
         }
     }
