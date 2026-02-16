@@ -170,14 +170,30 @@ fun AppScreen(voiceManager: VoiceManager) {
                     voiceManager.startListening()
                 }
             } else {
-                // В режиме слушания заклинания - добавляем слова
-                if (text.isNotEmpty()) {
-                    Log.d(TAG, "Adding spell word: '$text'")
-                    allRecognizedWords = allRecognizedWords + text
-                    recognizedText = allRecognizedWords.joinToString(" ")
+                // В режиме слушания заклинания - проверяем финал
+                val lowerText = text.lowercase().trim()
+                val isFinale = (
+                    lowerText.contains("финал") ||
+                    lowerText.contains("финале") ||
+                    lowerText == "финал" ||
+                    lowerText == "финале"
+                )
+                
+                if (isFinale) {
+                    Log.d(TAG, "Finale detected! Switching back to artifact mode")
+                    isAwaitingArtifact = true
+                    allRecognizedWords = listOf()
+                    recognizedText = ""
+                } else {
+                    // В режиме слушания заклинания - добавляем слова
+                    if (text.isNotEmpty()) {
+                        Log.d(TAG, "Adding spell word: '$text'")
+                        allRecognizedWords = allRecognizedWords + text
+                        recognizedText = allRecognizedWords.joinToString(" ")
+                    }
+                    // Продолжаем слушать
+                    voiceManager.startListening()
                 }
-                // Продолжаем слушать
-                voiceManager.startListening()
             }
         }
         
@@ -201,7 +217,21 @@ fun AppScreen(voiceManager: VoiceManager) {
                     recognizedText = "[РЕЖИМ СЛУШАНИЯ]"
                 }
             } else {
-                recognizedText = text
+                // В режиме слушания - проверяем финал
+                val lowerText = text.lowercase().trim()
+                val isFinale = (
+                    lowerText.contains("финал") ||
+                    lowerText.contains("финале")
+                )
+                
+                if (isFinale) {
+                    Log.d(TAG, "Finale detected in partial! Switching back to artifact mode")
+                    isAwaitingArtifact = true
+                    allRecognizedWords = listOf()
+                    recognizedText = ""
+                } else {
+                    recognizedText = text
+                }
             }
         }
         
@@ -218,20 +248,7 @@ fun AppScreen(voiceManager: VoiceManager) {
             modifier = Modifier
                 .fillMaxSize()
                 .background(backgroundColor)
-        ) {
-            // Отладка: показываем последний распознанный текст внизу экрана
-            if (recognizedText.isNotEmpty()) {
-                Text(
-                    text = recognizedText,
-                    fontSize = 14.sp,
-                    color = Color.White.copy(alpha = 0.5f),
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .align(Alignment.BottomCenter)
-                        .padding(16.dp)
-                )
-            }
-        }
+        )
     } else {
         // Режим слушания - чёрный экран
         Box(
