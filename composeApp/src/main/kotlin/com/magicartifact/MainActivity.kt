@@ -147,6 +147,8 @@ fun AppScreen(voiceManager: VoiceManager) {
                 val lowerText = text.lowercase().trim()
                 Log.d(TAG, "Checking for artifact: '$lowerText'")
                 
+                recognizedText = "[FINAL] $text"
+                
                 // Проверяем различные варианты слова артефакт
                 val isArtifact = (
                     lowerText.contains("артефакт") ||
@@ -161,12 +163,12 @@ fun AppScreen(voiceManager: VoiceManager) {
                     Log.d(TAG, "Artifact detected! Switching to spell mode")
                     isAwaitingArtifact = false
                     allRecognizedWords = listOf()
-                    recognizedText = ""
+                    recognizedText = "[РЕЖИМ СЛУШАНИЯ]"
                 } else {
                     Log.d(TAG, "Not artifact, continuing to listen")
+                    // Продолжаем слушать
+                    voiceManager.startListening()
                 }
-                // Продолжаем слушать
-                voiceManager.startListening()
             } else {
                 // В режиме слушания заклинания - добавляем слова
                 if (text.isNotEmpty()) {
@@ -181,7 +183,11 @@ fun AppScreen(voiceManager: VoiceManager) {
         
         voiceManager.setOnPartialResult { text ->
             Log.d(TAG, "Partial result: $text")
-            recognizedText = text
+            if (isAwaitingArtifact) {
+                recognizedText = "[PARTIAL] $text"
+            } else {
+                recognizedText = text
+            }
         }
         
         voiceManager.setOnError { error ->
