@@ -108,7 +108,7 @@ fun AppScreen(voiceManager: VoiceManager) {
     
     // Make system UI bars transparent so content goes behind them
     val systemUiController = rememberSystemUiController()
-    LaunchedEffect(Unit) {
+    SideEffect {
         systemUiController.setStatusBarColor(
             color = Color.Transparent,
             darkIcons = false
@@ -160,8 +160,9 @@ fun AppScreen(voiceManager: VoiceManager) {
     
     // Настраиваем callbacks VoiceManager
     LaunchedEffect(Unit) {
+        Log.d(TAG, "Setting up VoiceManager callbacks")
         voiceManager.setOnReady {
-            Log.d(TAG, "VoiceManager ready")
+            Log.d(TAG, "VoiceManager ready - starting listening")
             voiceManager.startListening()
         }
         
