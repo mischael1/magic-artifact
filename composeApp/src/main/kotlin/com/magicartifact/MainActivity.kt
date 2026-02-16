@@ -185,6 +185,21 @@ fun AppScreen(voiceManager: VoiceManager) {
             Log.d(TAG, "Partial result: $text")
             if (isAwaitingArtifact) {
                 recognizedText = "[PARTIAL] $text"
+                
+                // Также проверяем артефакт в partial результатах
+                val lowerText = text.lowercase().trim()
+                val isArtifact = (
+                    lowerText.contains("артефакт") ||
+                    lowerText.contains("артефект") ||
+                    lowerText.contains("артифакт")
+                )
+                
+                if (isArtifact) {
+                    Log.d(TAG, "Artifact detected in partial! Switching to spell mode")
+                    isAwaitingArtifact = false
+                    allRecognizedWords = listOf()
+                    recognizedText = "[РЕЖИМ СЛУШАНИЯ]"
+                }
             } else {
                 recognizedText = text
             }
