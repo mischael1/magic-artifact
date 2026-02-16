@@ -20,16 +20,20 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import kotlinx.coroutines.launch
 
 private const val TAG = "MagicArtifact"
 
 class MainActivity : ComponentActivity() {
     
+    private lateinit var voiceManager: VoiceManager
+    
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
     ) { isGranted: Boolean ->
+        Log.d(TAG, "Audio permission granted: $isGranted")
         if (isGranted) {
-            // Разрешение дано, приложение может работать
+            voiceManager.startListening()
         }
     }
     
@@ -39,8 +43,12 @@ class MainActivity : ComponentActivity() {
         Log.e(TAG, ">>> MainActivity onCreate called <<<")
         Log.e(TAG, "App is starting!")
         
+        // Инициализируем VoiceManager
+        voiceManager = VoiceManager(this)
+        
         // Полноэкранный режим (киоск режим)
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        @Suppress("DEPRECATION")
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
@@ -70,26 +78,58 @@ class MainActivity : ComponentActivity() {
                 Log.d(TAG, "Content composable started")
                 MaterialTheme {
                     Log.d(TAG, "Rendering AppScreen")
-                    AppScreen()
+                    AppScreen(voiceManager)
                 }
             }
         } catch (e: Exception) {
             Log.e(TAG, "Error in setContent", e)
         }
     }
+    
+    override fun onDestroy() {
+        super.onDestroy()
+        voiceManager.cleanup()
+    }
 }
 
 @Composable
-fun AppScreen() {
+fun AppScreen(voiceManager: VoiceManager) {
     Log.d(TAG, "AppScreen composable created")
     
     var recognizedText by remember { mutableStateOf("") }
     var foundSpell by remember { mutableStateOf<SpellData?>(null) }
     var isListening by remember { mutableStateOf(false) }
+    var statusMessage by remember { mutableStateOf("Готов к распознаванию") }
     
     val spellRecognizer = remember { 
         Log.d(TAG, "Creating SpellRecognizer")
         SpellRecognizer() 
+    }
+    
+    // Настраиваем callbacks VoiceManager
+    LaunchedEffect(Unit) {
+        voiceManager.setOnFinalResult { text ->
+            Log.d(TAG, "Final result from Vosk: $text")
+            recognizedText = text
+            val spell = spellRecognizer.findSpell(text)
+            if (spell != null) {
+                foundSpell = spell
+                statusMessage = "✨ Найдено: ${spell.name}"
+            } else {
+                statusMessage = "Заклинание не найдено"
+            }
+        }
+        
+        voiceManager.setOnPartialResult { text ->
+            Log.d(TAG, "Partial result: $text")
+            recognizedText = text
+            statusMessage = "🎤 Слушаю..."
+        }
+        
+        voiceManager.setOnError { error ->
+            Log.e(TAG, "Vosk error: $error")
+            statusMessage = "❌ Ошибка: $error"
+        }
     }
     
     Log.d(TAG, "AppScreen state initialized")
@@ -128,7 +168,7 @@ fun AppScreen() {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
-                        text = if (isListening) "🎤 Слушаю..." else "Готов к восприятию",
+                        text = statusMessage,
                         fontSize = 18.sp,
                         color = Color(0xFFb385e8),
                         textAlign = TextAlign.Center
@@ -208,7 +248,7 @@ fun AppScreen() {
                 }
             }
             
-            // Кнопки
+            // Кнопки управления
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -217,36 +257,39 @@ fun AppScreen() {
             ) {
                 Button(
                     onClick = {
-                        isListening = true
-                        recognizedText = "Пример: огненный шар"
-                        foundSpell = spellRecognizer.findSpell("огненный шар")
-                        isListening = false
+                        if (!isListening) {
+                            isListening = true
+                            statusMessage = "🎤 Слушаю..."
+                            voiceManager.startListening()
+                        }
                     },
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color(0xFFff6b9d)
                     )
                 ) {
-                    Text("Тест 1")
+                    Text(if (isListening) "Слушаю..." else "Начать")
                 }
                 
                 Button(
                     onClick = {
-                        isListening = true
-                        recognizedText = "Пример: ледяной удар"
-                        foundSpell = spellRecognizer.findSpell("ледяной удар")
-                        isListening = false
+                        if (isListening) {
+                            isListening = false
+                            voiceManager.stopListening()
+                            statusMessage = "Остановлено"
+                        }
                     },
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color(0xFF64b5f6)
                     )
                 ) {
-                    Text("Тест 2")
+                    Text("Стоп")
                 }
                 
                 Button(
                     onClick = {
                         recognizedText = ""
                         foundSpell = null
+                        statusMessage = "Готов к распознаванию"
                     },
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color(0xFF888888)

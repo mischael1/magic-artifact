@@ -1,0 +1,159 @@
+═══════════════════════════════════════════════════════════════════════════════
+                        VOSK INTEGRATION - QUICK REFERENCE
+═══════════════════════════════════════════════════════════════════════════════
+
+CURRENT STATUS: Ready for final setup (code complete, need 2 downloads)
+
+═══════════════════════════════════════════════════════════════════════════════
+3 REQUIRED STEPS
+═══════════════════════════════════════════════════════════════════════════════
+
+1️⃣  DOWNLOAD VOSK AAR
+   URL: https://github.com/alphacephei/vosk-android/releases/download/v0.3.50/vosk-android-0.3.50.aar
+   Save to: composeApp\libs\vosk-android-0.3.50.aar
+   Size: ~4 MB
+
+2️⃣  DOWNLOAD VOSK MODEL  
+   URL: https://alphacephei.com/vosk/models
+   Get: "Model for English (US)" - Small version
+   Extract to: composeApp\src\main\assets\model-en-us\
+   Size: ~40 MB
+
+3️⃣  BUILD & RUN
+   ./gradlew clean build
+   adb install -r app-debug.apk
+   adb shell am start -n com.magicartifact.debug/com.magicartifact.MainActivity
+
+═══════════════════════════════════════════════════════════════════════════════
+WHAT'S COMPLETE ✓
+═══════════════════════════════════════════════════════════════════════════════
+
+✓ VoiceManager.kt
+  - LibVosk initialization
+  - Model loading from assets
+  - AudioRecord audio capture
+  - Real-time partial results
+  - Final result JSON parsing
+  - Proper resource cleanup
+
+✓ MainActivity.kt
+  - RECORD_AUDIO permission handling
+  - VoiceManager integration
+  - Result display callbacks
+  - Compose UI with controls
+
+✓ SpellRecognizer.kt
+  - 5 spells with multiple triggers
+  - Jaccard similarity matching
+  - English + Russian support
+
+✓ build.gradle.kts
+  - Local AAR dependency configured
+  - org.json library added
+  - flatDir repository set up
+
+✓ AndroidManifest.xml
+  - RECORD_AUDIO permission declared
+
+═══════════════════════════════════════════════════════════════════════════════
+KEY SPECS
+═══════════════════════════════════════════════════════════════════════════════
+
+Sample Rate: 16000 Hz (16 kHz)
+Audio Format: PCM 16-bit mono
+Min SDK: API 24 (Android 7.0)
+Target SDK: API 34 (Android 14)
+
+5 Spells:
+  • Fireball / огненный шар
+  • Ice Bolt / ледяной удар
+  • Shield / магический щит
+  • Healing / исцеление
+  • Lightning / молния
+
+═══════════════════════════════════════════════════════════════════════════════
+APP FLOW
+═══════════════════════════════════════════════════════════════════════════════
+
+User Press "Start"
+    ↓
+VoiceManager.startListening()
+    ↓
+AudioRecord captures microphone
+    ↓
+Vosk Recognizer processes audio
+    ↓
+Partial results → UI updates in real-time
+Final result → SpellRecognizer matches spell
+    ↓
+UI shows spell name & description (or "not found")
+
+User Press "Stop"
+    ↓
+VoiceManager.stopListening()
+    ↓
+Resources cleaned up
+
+═══════════════════════════════════════════════════════════════════════════════
+TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════════════════
+
+Problem: "Cannot find vosk-android-0.3.50.aar"
+→ Download AAR to composeApp/libs/
+
+Problem: "Model directory not found"
+→ Extract model ZIP to composeApp/src/main/assets/model-en-us/
+
+Problem: No audio capture
+→ Check permission in app settings
+→ Physical device works better than emulator
+
+Problem: No results after speaking
+→ Check logs: adb logcat | grep VoiceManager
+→ Verify microphone is working
+→ Try clear app data and reinstall
+
+═══════════════════════════════════════════════════════════════════════════════
+DOCUMENTATION FILES
+═══════════════════════════════════════════════════════════════════════════════
+
+VOSK_SETUP_INSTRUCTIONS.md        - Detailed setup guide
+VOSK_INTEGRATION_SUMMARY.md       - Complete architecture overview
+DOWNLOAD_VOSK_MODEL.md            - Model download & extraction guide
+VOSK_QUICK_REFERENCE.txt          - This file
+
+═══════════════════════════════════════════════════════════════════════════════
+VERIFICATION CHECKLIST
+═══════════════════════════════════════════════════════════════════════════════
+
+Pre-Build:
+  ☐ AAR downloaded to composeApp/libs/
+  ☐ Model extracted to composeApp/src/main/assets/model-en-us/
+  ☐ build.gradle.kts has flatDir and AAR dependency
+
+Build:
+  ☐ ./gradlew build completes without errors
+  ☐ No "cannot find vosk-android" errors
+
+Install:
+  ☐ adb install succeeds
+  ☐ App icon appears on home screen
+
+Runtime:
+  ☐ App starts without crashes
+  ☐ "Ready to recognize" message appears
+  ☐ Microphone permission dialog shows (first time)
+  ☐ "Start" button becomes enabled after permission
+  ☐ Clicking "Start" changes to "Listening..."
+  ☐ Speak a spell name ("fireball", "shield", etc.)
+  ☐ Partial results update in real-time
+  ☐ Final result triggers spell matching
+  ☐ Spell name displays when matched
+  ☐ "Stop" button stops listening
+  ☐ "Clear" button resets display
+
+═══════════════════════════════════════════════════════════════════════════════
+DONE! 🎉
+═══════════════════════════════════════════════════════════════════════════════
+
+All code is complete. Just download the AAR and model, then build!

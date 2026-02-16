@@ -5,6 +5,8 @@ plugins {
     id("org.jetbrains.compose") version "1.6.11"
 }
 
+
+
 android {
     namespace = "com.magicartifact"
     compileSdk = 34
@@ -69,14 +71,18 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.2.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
 
-    // Vosk for Android - temporarily disabled due to unavailable dependency
-    // implementation("com.github.alphacephei:vosk-android:0.3.32")
+    // Vosk for offline speech recognition (latest official version)
+    implementation("net.java.dev.jna:jna:5.18.1@aar")
+    implementation("com.alphacephei:vosk-android:0.3.75@aar")
 
     // Audio
     implementation("androidx.media:media:1.7.0")
 
     // Kotlin
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+    
+    // JSON parsing
+    implementation("org.json:json:20240303")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
