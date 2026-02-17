@@ -61,6 +61,7 @@ class MainActivity : ComponentActivity() {
             setMediaItem(mediaItem)
             repeatMode = ExoPlayer.REPEAT_MODE_ALL
             prepare()
+            playWhenReady = true  // Начинаем проигрывать сразу
         }
         
         // Полноэкранный режим
@@ -373,27 +374,33 @@ fun AppScreen(voiceManager: VoiceManager, exoPlayer: ExoPlayer?) {
     
     if (isAwaitingArtifact) {
         // Режим ожидания - проигрывание видео
-        if (exoPlayer != null) {
-            AndroidView(
-                factory = { context ->
-                    StyledPlayerView(context).apply {
-                        player = exoPlayer
-                        useController = false
-                        layoutParams = ViewGroup.LayoutParams(
-                            ViewGroup.LayoutParams.MATCH_PARENT,
-                            ViewGroup.LayoutParams.MATCH_PARENT
-                        )
-                    }
-                },
-                modifier = Modifier.fillMaxSize()
-            )
-        } else {
-            // Fallback если видео не загрузилось
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(backgroundColor)
-            )
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.Black)
+        ) {
+            if (exoPlayer != null) {
+                AndroidView(
+                    factory = { context ->
+                        StyledPlayerView(context).apply {
+                            player = exoPlayer
+                            useController = false
+                            layoutParams = ViewGroup.LayoutParams(
+                                ViewGroup.LayoutParams.MATCH_PARENT,
+                                ViewGroup.LayoutParams.MATCH_PARENT
+                            )
+                        }
+                    },
+                    modifier = Modifier.fillMaxSize()
+                )
+            } else {
+                // Fallback если видео не загрузилось
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(backgroundColor)
+                )
+            }
         }
     } else {
         // Режим слушания - фон меняется от черного к зеленому
