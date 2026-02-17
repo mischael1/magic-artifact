@@ -77,6 +77,9 @@ dependencies {
 
     // Audio
     implementation("androidx.media:media:1.7.0")
+    
+    // Video playback
+    implementation("com.google.android.exoplayer:exoplayer:2.19.1")
 
     // Kotlin
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")

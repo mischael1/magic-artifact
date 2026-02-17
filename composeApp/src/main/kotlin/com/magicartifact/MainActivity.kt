@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import android.view.WindowManager
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -22,7 +23,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.viewinterop.AndroidView
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.google.android.exoplayer2.ExoPlayer
+import com.google.android.exoplayer2.MediaItem
+import com.google.android.exoplayer2.ui.StyledPlayerView
 import kotlinx.coroutines.launch
 
 private const val TAG = "MagicArtifact"
@@ -30,6 +35,7 @@ private const val TAG = "MagicArtifact"
 class MainActivity : ComponentActivity() {
     
     private lateinit var voiceManager: VoiceManager
+    private var exoPlayer: ExoPlayer? = null
     
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -48,6 +54,14 @@ class MainActivity : ComponentActivity() {
         
         // Инициализируем VoiceManager
         voiceManager = VoiceManager(this)
+        
+        // Инициализируем ExoPlayer для видео
+        exoPlayer = ExoPlayer.Builder(this).build().apply {
+            val mediaItem = MediaItem.fromUri("asset:///book.mp4")
+            setMediaItem(mediaItem)
+            repeatMode = ExoPlayer.REPEAT_MODE_ALL
+            prepare()
+        }
         
         // Полноэкранный режим
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
@@ -88,7 +102,7 @@ class MainActivity : ComponentActivity() {
                 Log.d(TAG, "Content composable started")
                 MaterialTheme {
                     Log.d(TAG, "Rendering AppScreen")
-                    AppScreen(voiceManager)
+                    AppScreen(voiceManager, exoPlayer)
                 }
             }
         } catch (e: Exception) {
@@ -99,11 +113,12 @@ class MainActivity : ComponentActivity() {
     override fun onDestroy() {
         super.onDestroy()
         voiceManager.cleanup()
+        exoPlayer?.release()
     }
 }
 
 @Composable
-fun AppScreen(voiceManager: VoiceManager) {
+fun AppScreen(voiceManager: VoiceManager, exoPlayer: ExoPlayer?) {
     Log.d(TAG, "AppScreen composable created")
     
     // Make system UI bars transparent so content goes behind them
@@ -357,12 +372,29 @@ fun AppScreen(voiceManager: VoiceManager) {
     Log.d(TAG, "AppScreen state initialized")
     
     if (isAwaitingArtifact) {
-        // Режим ожидания - цветная заливка с переливанием
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(backgroundColor)
-        )
+        // Режим ожидания - проигрывание видео
+        if (exoPlayer != null) {
+            AndroidView(
+                factory = { context ->
+                    StyledPlayerView(context).apply {
+                        player = exoPlayer
+                        useController = false
+                        layoutParams = ViewGroup.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.MATCH_PARENT
+                        )
+                    }
+                },
+                modifier = Modifier.fillMaxSize()
+            )
+        } else {
+            // Fallback если видео не загрузилось
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(backgroundColor)
+            )
+        }
     } else {
         // Режим слушания - фон меняется от черного к зеленому
         val listeningScreenColor = if (allSpellWordsRecognized) {
