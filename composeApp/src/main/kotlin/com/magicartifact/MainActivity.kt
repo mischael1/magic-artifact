@@ -145,15 +145,16 @@ fun AppScreen(voiceManager: VoiceManager, exoPlayer: ExoPlayer?) {
     var lastRecognitionTime by remember { mutableStateOf(System.currentTimeMillis()) }
     
     // Таймер автоматического возврата в режим ожидания
-    LaunchedEffect(lastRecognitionTime, isAwaitingArtifact) {
-        if (!isAwaitingArtifact) {
-            delay(10000)  // 10 секунд
+    LaunchedEffect(isAwaitingArtifact) {
+        while (!isAwaitingArtifact) {
+            delay(1000)  // Проверяем каждую секунду
             val timeSinceLastRecognition = System.currentTimeMillis() - lastRecognitionTime
             if (timeSinceLastRecognition >= 10000) {
                 Log.d(TAG, "No recognition for 10 seconds, returning to greeting screen")
                 isAwaitingArtifact = true
                 allRecognizedWords = listOf()
                 recognizedText = ""
+                break
             }
         }
     }
