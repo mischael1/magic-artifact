@@ -28,6 +28,7 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.ui.StyledPlayerView
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 private const val TAG = "MagicArtifact"
@@ -141,6 +142,21 @@ fun AppScreen(voiceManager: VoiceManager, exoPlayer: ExoPlayer?) {
     var isAwaitingArtifact by remember { mutableStateOf(true) }
     var allRecognizedWords by remember { mutableStateOf(listOf<String>()) }
     var skipResultsWithArtifact by remember { mutableStateOf(false) }
+    var lastRecognitionTime by remember { mutableStateOf(System.currentTimeMillis()) }
+    
+    // Таймер автоматического возврата в режим ожидания
+    LaunchedEffect(lastRecognitionTime, isAwaitingArtifact) {
+        if (!isAwaitingArtifact) {
+            delay(10000)  // 10 секунд
+            val timeSinceLastRecognition = System.currentTimeMillis() - lastRecognitionTime
+            if (timeSinceLastRecognition >= 10000) {
+                Log.d(TAG, "No recognition for 10 seconds, returning to greeting screen")
+                isAwaitingArtifact = true
+                allRecognizedWords = listOf()
+                recognizedText = ""
+            }
+        }
+    }
     
     // Список слов для режима слушания
     val spellWords = remember { 
@@ -237,10 +253,11 @@ fun AppScreen(voiceManager: VoiceManager, exoPlayer: ExoPlayer?) {
                     voiceManager.startListening()
                 }
             } else {
-                // В режиме слушания заклинания - проверяем финал и слова
-                val lowerText = text.lowercase().trim()
-                
-                // Проверяем содержит ли артефакт
+               // В режиме слушания заклинания - проверяем финал и слова
+               val lowerText = text.lowercase().trim()
+               lastRecognitionTime = System.currentTimeMillis()  // Обновляем время последнего распознавания
+               
+               // Проверяем содержит ли артефакт
                 val containsArtifact = (
                     lowerText.contains("артефакт") ||
                     lowerText.contains("артефект") ||
