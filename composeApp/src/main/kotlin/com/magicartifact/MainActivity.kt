@@ -248,6 +248,7 @@ fun AppScreen(voiceManager: VoiceManager, exoPlayer: ExoPlayer?) {
                     allRecognizedWords = listOf()
                     recognizedText = ""  // Очищаем перед переходом на черный экран
                     skipResultsWithArtifact = true
+                    lastRecognitionTime = System.currentTimeMillis()  // Обновляем время при переходе
                 } else {
                     Log.d(TAG, "Not artifact, continuing to listen")
                     // Продолжаем слушать
@@ -340,6 +341,7 @@ fun AppScreen(voiceManager: VoiceManager, exoPlayer: ExoPlayer?) {
                     allRecognizedWords = listOf()
                     recognizedText = ""
                     skipResultsWithArtifact = true
+                    lastRecognitionTime = System.currentTimeMillis()  // Обновляем время при переходе
                 }
             } else {
                 // В режиме слушания - проверяем финал и слова
