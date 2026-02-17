@@ -369,6 +369,8 @@ fun AppScreen(voiceManager: VoiceManager, exoPlayer: ExoPlayer?) {
                     recognizedText = ""
                 } else {
                     // Проверяем слова из списка в partial результатах тоже
+                    lastRecognitionTime = System.currentTimeMillis()  // Обновляем время при любом partial результате
+                    
                     for (word in spellWords) {
                         if (lowerText.contains(word) && !recognizedSpellWords.contains(word)) {
                             recognizedSpellWords = recognizedSpellWords + word
