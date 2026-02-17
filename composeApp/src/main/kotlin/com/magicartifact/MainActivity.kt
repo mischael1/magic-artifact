@@ -178,23 +178,6 @@ fun AppScreen(voiceManager: VoiceManager) {
     
     val backgroundColor = hsvToRgb(colorAnim, 0.8f, 0.6f)
     
-    // Вычисляем цвет для экрана слушания
-    fun getListeningScreenColor(): Color {
-        return if (allSpellWordsRecognized) {
-            // Все слова распознаны - переливающиеся цвета
-            hsvToRgb(fastColorAnim, 0.8f, 0.6f)
-        } else {
-            // Еще не все слова - от черного к зеленому в зависимости от процента
-            val progress = recognizedSpellWords.size.toFloat() / spellWords.size.toFloat()
-            // Зеленый цвет: HSV(120°, насыщенность, яркость)
-            Color(
-                red = 0f + (0f * progress),
-                green = 0f + (1f * progress),
-                blue = 0f + (0f * progress)
-            )
-        }
-    }
-    
     // Настраиваем callbacks VoiceManager
     LaunchedEffect(Unit) {
         Log.d(TAG, "Setting up VoiceManager callbacks")
@@ -271,13 +254,11 @@ fun AppScreen(voiceManager: VoiceManager) {
                     // Проверяем каждое слово из списка
                     for (word in spellWords) {
                         if (lowerText.contains(word) && !recognizedSpellWords.contains(word)) {
-                            Log.d(TAG, "Spell word recognized: '$word'")
                             recognizedSpellWords = recognizedSpellWords + word
                             wordFound = true
                             
                             // Проверяем все ли слова распознаны
                             if (recognizedSpellWords.size == spellWords.size) {
-                                Log.d(TAG, "All spell words recognized!")
                                 allSpellWordsRecognized = true
                             }
                             break
@@ -291,7 +272,6 @@ fun AppScreen(voiceManager: VoiceManager) {
                     } else {
                         // Это слово не из нашего списка - добавляем как обычно
                         if (text.isNotEmpty()) {
-                            Log.d(TAG, "Adding non-spell word: '$text'")
                             allRecognizedWords = allRecognizedWords + text
                             recognizedText = allRecognizedWords.joinToString(" ")
                         }
@@ -326,8 +306,9 @@ fun AppScreen(voiceManager: VoiceManager) {
                     skipResultsWithArtifact = true
                 }
             } else {
-                // В режиме слушания - проверяем финал
+                // В режиме слушания - проверяем финал и слова
                 val lowerText = text.lowercase().trim()
+                
                 val isFinale = (
                     lowerText.contains("финал") ||
                     lowerText.contains("финале")
@@ -340,7 +321,6 @@ fun AppScreen(voiceManager: VoiceManager) {
                 )
                 
                 if (isFinale) {
-                    Log.d(TAG, "Finale detected in partial! Switching back to artifact mode")
                     isAwaitingArtifact = true
                     allRecognizedWords = listOf()
                     recognizedText = ""
@@ -348,9 +328,20 @@ fun AppScreen(voiceManager: VoiceManager) {
                     // НЕ сбрасываем recognizedSpellWords и allSpellWordsRecognized - сохраняем прогресс!
                 } else if (containsArtifact && skipResultsWithArtifact) {
                     // Не показываем partial результаты с артефактом после переключения
-                    Log.d(TAG, "Skipping partial result with artifact: '$text'")
                     recognizedText = ""
                 } else {
+                    // Проверяем слова из списка в partial результатах тоже
+                    for (word in spellWords) {
+                        if (lowerText.contains(word) && !recognizedSpellWords.contains(word)) {
+                            recognizedSpellWords = recognizedSpellWords + word
+                            
+                            if (recognizedSpellWords.size == spellWords.size) {
+                                allSpellWordsRecognized = true
+                            }
+                            break
+                        }
+                    }
+                    
                     recognizedText = text
                     // После получения результата без артефакта - перестаем пропускать
                     skipResultsWithArtifact = false
@@ -417,16 +408,6 @@ fun AppScreen(voiceManager: VoiceManager) {
                     modifier = Modifier.padding(horizontal = 16.dp)
                 )
                 
-                // Показываем прогресс распознавания слов
-                if (recognizedSpellWords.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(32.dp))
-                    Text(
-                        text = "${recognizedSpellWords.size}/${spellWords.size}",
-                        fontSize = 20.sp,
-                        color = Color.White.copy(alpha = 0.7f),
-                        textAlign = TextAlign.Center
-                    )
-                }
             }
         }
     }
