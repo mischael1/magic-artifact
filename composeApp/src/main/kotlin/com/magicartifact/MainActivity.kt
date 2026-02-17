@@ -66,7 +66,9 @@ class MainActivity : ComponentActivity() {
         
         // Полноэкранный режим
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        window.setDecorFitsSystemWindows(false)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.setDecorFitsSystemWindows(false)
+        }
         
         // Полностью скрыть системный UI с immersive режимом
         @Suppress("DEPRECATION")

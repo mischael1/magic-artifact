@@ -1,473 +1,455 @@
-2026-02-16 18:39:40.007  1105-1777  EGL_emulation           com...le.android.apps.nexuslauncher  D  app_time_stats: avg=992.05ms min=983.56ms max=1000.53ms count=2
-2026-02-16 18:39:41.357  1105-1777  EGL_emulation           com...le.android.apps.nexuslauncher  D  app_time_stats: avg=674.91ms min=350.58ms max=999.25ms count=2
-2026-02-16 18:39:41.453   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 161252188; UID 10181; state: DISABLED
-2026-02-16 18:39:41.453   497-1673  ActivityTaskManager     system_server                        I  START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.magicartifact.debug/com.magicartifact.MainActivity bnds=[1914,1379][2046,1528]} from uid 10151
-2026-02-16 18:39:41.453   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 265464455; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 265452344; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 266124927; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 265451093; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 265456536; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 255940284; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 236283604; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 263959004; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 264304459; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 264301586; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 254631730; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 273509367; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 263259275; UID 10181; state: DISABLED
-2026-02-16 18:39:41.454   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 194480991; UID 10181; state: ENABLED
-2026-02-16 18:39:41.460   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 205907456; UID 10181; state: ENABLED
-2026-02-16 18:39:41.462   497-1673  Compatibil...geReporter system_server                        D  Compat change id reported: 194833441; UID 10181; state: ENABLED
-2026-02-16 18:39:41.464   497-592   Compatibil...geReporter system_server                        D  Compat change id reported: 135634846; UID 10181; state: DISABLED
-2026-02-16 18:39:41.466   497-601   Compatibil...geReporter system_server                        D  Compat change id reported: 143937733; UID 10181; state: ENABLED
-2026-02-16 18:39:41.467  1105-1177  QuickstepModelDelegate  com...le.android.apps.nexuslauncher  D  notifyAppTargetEvent action=1 launchLocation=predictions/hotseat
-2026-02-16 18:39:41.478   309-309   Zygote                  pid-309                              D  Forked child process 19977
-2026-02-16 18:39:41.481   497-601   ActivityManager         system_server                        I  Start proc 19977:com.magicartifact.debug/u0a181 for next-top-activity {com.magicartifact.debug/com.magicartifact.MainActivity}
-2026-02-16 18:39:41.485  1105-1777  EGL_emulation           com...le.android.apps.nexuslauncher  D  app_time_stats: avg=624.59ms min=1.28ms max=4709.58ms count=8
-2026-02-16 18:39:41.489  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.494   853-927   Parcel                  com.android.systemui                 W  Expecting binder but got null!
-2026-02-16 18:39:41.508   497-579   CoreBackPreview         system_server                        D  Window{be51dcd u0 Splash Screen com.magicartifact.debug}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@e7ca193, mPriority=0}
-2026-02-16 18:39:41.521  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.528 19977-19977 cartifact.debug         pid-19977                            I  Late-enabling -Xcheck:jni
-2026-02-16 18:39:41.545 19977-19977 cartifact.debug         pid-19977                            I  Using CollectorTypeCC GC.
-2026-02-16 18:39:41.546 19977-19977 cartifact.debug         pid-19977                            W  Unexpected CPU variant for x86: x86_64.
-                                                                                                    Known variants: atom, sandybridge, silvermont, kabylake, default
-2026-02-16 18:39:41.560  1860-1873  adbd                    adbd                                 I  jdwp connection from 19977
-2026-02-16 18:39:41.569   497-580   AppsFilter              system_server                        I  interaction: PackageSetting{9f6943e com.magicartifact.debug/10181} -> PackageSetting{3072872 com.google.android.apps.nexuslauncher/10151} BLOCKED
-2026-02-16 18:39:41.574   853-927   OpenGLRenderer          com.android.systemui                 E  Unable to match the desired swap behavior.
-2026-02-16 18:39:41.579 19977-19977 Compatibil...geReporter pid-19977                            D  Compat change id reported: 171979766; UID 10181; state: ENABLED
-2026-02-16 18:39:41.624 19977-19977 ziparchive              pid-19977                            W  Unable to open '/data/app/~~KPuUKB5tdi6S8NfoR-8e6w==/com.magicartifact.debug-L6v-IDY_l1SqRTva1KHNlQ==/base.dm': No such file or directory
-2026-02-16 18:39:41.625 19977-19977 ziparchive              pid-19977                            W  Unable to open '/data/app/~~KPuUKB5tdi6S8NfoR-8e6w==/com.magicartifact.debug-L6v-IDY_l1SqRTva1KHNlQ==/base.dm': No such file or directory
-2026-02-16 18:39:41.676  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.707  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
----------------------------- PROCESS STARTED (19977) for package com.magicartifact.debug ----------------------------
-2026-02-16 18:39:41.730  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.736   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.745  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.755   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.760  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.771   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.776  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.787   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.793  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.804   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.808  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.821   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.827  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.837   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.846  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.854   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.859  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.871   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.876  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.887   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.892  1105-1105  b/260135164             com...le.android.apps.nexuslauncher  D  updateIconAlphaForHome - setIconsAlpha(0), isTaskbarPresent: true
-2026-02-16 18:39:41.904   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.920   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.931 19977-19977 nativeloader            com.magicartifact.debug              D  Configuring classloader-namespace for other apk /data/app/~~KPuUKB5tdi6S8NfoR-8e6w==/com.magicartifact.debug-L6v-IDY_l1SqRTva1KHNlQ==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~KPuUKB5tdi6S8NfoR-8e6w==/com.magicartifact.debug-L6v-IDY_l1SqRTva1KHNlQ==/lib/x86_64:/data/app/~~KPuUKB5tdi6S8NfoR-8e6w==/com.magicartifact.debug-L6v-IDY_l1SqRTva1KHNlQ==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.magicartifact.debug
-2026-02-16 18:39:41.937   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.955   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.967 19977-19977 GraphicsEnvironment     com.magicartifact.debug              V  ANGLE Developer option for 'com.magicartifact.debug' set to: 'default'
-2026-02-16 18:39:41.967 19977-19977 GraphicsEnvironment     com.magicartifact.debug              V  ANGLE GameManagerService for com.magicartifact.debug: false
-2026-02-16 18:39:41.967 19977-19977 GraphicsEnvironment     com.magicartifact.debug              V  Neither updatable production driver nor prerelease driver is supported.
-2026-02-16 18:39:41.970   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:41.974 19977-19977 NetworkSecurityConfig   com.magicartifact.debug              D  No Network Security Config specified, using platform default
-2026-02-16 18:39:41.975 19977-19977 NetworkSecurityConfig   com.magicartifact.debug              D  No Network Security Config specified, using platform default
-2026-02-16 18:39:41.987   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.003   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.021   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.033 19977-20000 libEGL                  com.magicartifact.debug              D  loaded /vendor/lib64/egl/libEGL_emulation.so
-2026-02-16 18:39:42.035 19977-20000 libEGL                  com.magicartifact.debug              D  loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
-2026-02-16 18:39:42.037   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.040 19977-20000 libEGL                  com.magicartifact.debug              D  loaded /vendor/lib64/egl/libGLESv2_emulation.so
-2026-02-16 18:39:42.053   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.070   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.078 19977-19977 MagicArtifact           com.magicartifact.debug              E  >>> MainActivity onCreate called <<<
-2026-02-16 18:39:42.078 19977-19977 MagicArtifact           com.magicartifact.debug              E  App is starting!
-2026-02-16 18:39:42.088   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.103   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.120   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.135 19977-19977 VoiceManager            com.magicartifact.debug              D  LibVosk initialized
-2026-02-16 18:39:42.137   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.138 19977-19977 MagicArtifact           com.magicartifact.debug              D  Window flags set
-2026-02-16 18:39:42.143 19977-19977 MagicArtifact           com.magicartifact.debug              D  Audio permission already granted
-2026-02-16 18:39:42.143 19977-19977 MagicArtifact           com.magicartifact.debug              D  Setting content
-2026-02-16 18:39:42.153   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.158 19977-20002 VoskAPI                 com.magicartifact.debug              I  ReadDataFiles():model.cc:223) Decoding params beam=10 max-active=3000 lattice-beam=2
-2026-02-16 18:39:42.158 19977-20002 VoskAPI                 com.magicartifact.debug              I  ReadDataFiles():model.cc:226) Silence phones 1:2:3:4:5:6:7:8:9:10
-2026-02-16 18:39:42.170   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.187   332-332   RanchuHwc               and...graphics.composer@2.4-service  I  validateDisplay: layer 137 CompositionType 1, fallback to client
-2026-02-16 18:39:42.240 19977-20002 VoskAPI                 com.magicartifact.debug              I  RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
-2026-02-16 18:39:42.240 19977-20002 VoskAPI                 com.magicartifact.debug              I  RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
-2026-02-16 18:39:42.261 19977-19977 Compatibil...geReporter com.magicartifact.debug              D  Compat change id reported: 210923482; UID 10181; state: ENABLED
-2026-02-16 18:39:42.268 19977-19977 Compatibil...geReporter com.magicartifact.debug              D  Compat change id reported: 237531167; UID 10181; state: DISABLED
-2026-02-16 18:39:42.275 19977-19998 Parcel                  com.magicartifact.debug              W  Expecting binder but got null!
-2026-02-16 18:39:42.277   497-1673  WindowManager           system_server                        W  Failed looking up window session=Session{746143d 19977:u0a10181} callers=com.android.server.wm.WindowManagerService.windowForClientLocked:6050 com.android.server.wm.Session.updateRequestedVisibilities:701 android.view.IWindowSession$Stub.onTransact:1075 
-2026-02-16 18:39:42.281   497-1670  CoreBackPreview         system_server                        D  Window{4364300 u0 com.magicartifact.debug/com.magicartifact.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@86b917e, mPriority=0}
-2026-02-16 18:39:42.317 19977-20002 VoskAPI                 com.magicartifact.debug              I  ReadDataFiles():model.cc:259) Loading i-vector extractor from /storage/emulated/0/Android/data/com.magicartifact.debug/files/model/model-ru-0.22/ivector/final.ie
-2026-02-16 18:39:42.330 19977-20002 VoskAPI                 com.magicartifact.debug              I  ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
-2026-02-16 18:39:42.640 19977-20002 VoskAPI                 com.magicartifact.debug              I  ComputeDerivedVars():ivector-extractor.cc:204) Done.
-2026-02-16 18:39:42.641 19977-20002 VoskAPI                 com.magicartifact.debug              I  ReadDataFiles():model.cc:295) Loading HCL and G from /storage/emulated/0/Android/data/com.magicartifact.debug/files/model/model-ru-0.22/graph/HCLr.fst /storage/emulated/0/Android/data/com.magicartifact.debug/files/model/model-ru-0.22/graph/Gr.fst
-2026-02-16 18:39:42.884 19977-19977 MagicArtifact           com.magicartifact.debug              D  Content composable started
-2026-02-16 18:39:42.930 19977-19977 MagicArtifact           com.magicartifact.debug              D  Rendering AppScreen
-2026-02-16 18:39:42.935 19977-19977 MagicArtifact           com.magicartifact.debug              D  AppScreen composable created
-2026-02-16 18:39:42.935 19977-19977 MagicArtifact           com.magicartifact.debug              D  Creating SpellRecognizer
-2026-02-16 18:39:42.937 19977-19977 SpellRecognizer         com.magicartifact.debug              D  SpellRecognizer initialized
-2026-02-16 18:39:42.937 19977-19977 SpellRecognizer         com.magicartifact.debug              D  Available spells: 5
-2026-02-16 18:39:42.938 19977-19977 MagicArtifact           com.magicartifact.debug              D  AppScreen state initialized
-2026-02-16 18:39:42.953 19977-19977 MagicArtifact           com.magicartifact.debug              D  Box drawn
-2026-02-16 18:39:42.994 19977-19977 cartifact.debug         com.magicartifact.debug              W  Method boolean androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate(boolean, kotlin.jvm.functions.Function1) failed lock verification and will run slower.
-                                                                                                    Common causes for lock verification issues are non-optimized dex code
-                                                                                                    and incorrect proguard optimizations.
-2026-02-16 18:39:42.994 19977-19977 cartifact.debug         com.magicartifact.debug              W  Method boolean androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate$default(androidx.compose.runtime.snapshots.SnapshotStateList, boolean, kotlin.jvm.functions.Function1, int, java.lang.Object) failed lock verification and will run slower.
-2026-02-16 18:39:42.995 19977-19977 cartifact.debug         com.magicartifact.debug              W  Method java.lang.Object androidx.compose.runtime.snapshots.SnapshotStateList.mutate(kotlin.jvm.functions.Function1) failed lock verification and will run slower.
-2026-02-16 18:39:42.995 19977-19977 cartifact.debug         com.magicartifact.debug              W  Method void androidx.compose.runtime.snapshots.SnapshotStateList.update(boolean, kotlin.jvm.functions.Function1) failed lock verification and will run slower.
-2026-02-16 18:39:42.995 19977-19977 cartifact.debug         com.magicartifact.debug              W  Method void androidx.compose.runtime.snapshots.SnapshotStateList.update$default(androidx.compose.runtime.snapshots.SnapshotStateList, boolean, kotlin.jvm.functions.Function1, int, java.lang.Object) failed lock verification and will run slower.
-2026-02-16 18:39:43.143   853-927   EGL_emulation           com.android.systemui                 D  app_time_stats: avg=569.02ms min=2.32ms max=6550.82ms count=12
-2026-02-16 18:39:43.174 19977-20002 VoskAPI                 com.magicartifact.debug              I  ReadDataFiles():model.cc:321) Loading winfo /storage/emulated/0/Android/data/com.magicartifact.debug/files/model/model-ru-0.22/graph/phones/word_boundary.int
-2026-02-16 18:39:43.182 19977-19998 HostConnection          com.magicartifact.debug              D  HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1 
-2026-02-16 18:39:43.184 19977-19998 OpenGLRenderer          com.magicartifact.debug              W  Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
-2026-02-16 18:39:43.184 19977-19998 OpenGLRenderer          com.magicartifact.debug              W  Failed to initialize 101010-2 format, error = EGL_SUCCESS
-2026-02-16 18:39:43.196 19977-19998 EGL_emulation           com.magicartifact.debug              D  eglCreateContext: 0x7a5667e91710: maj 3 min 1 rcv 4
-2026-02-16 18:39:43.226 19977-19998 EGL_emulation           com.magicartifact.debug              D  eglMakeCurrent: 0x7a5667e91710: ver 3 1 (tinfo 0x7a5883e72080) (first time)
-2026-02-16 18:39:43.235   150-150   hwservicemanager        hwservicemanager                     I  getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
-2026-02-16 18:39:43.236 19977-19998 Gralloc4                com.magicartifact.debug              I  mapper 4.x is not supported
-2026-02-16 18:39:43.239   150-150   hwservicemanager        hwservicemanager                     I  getTransport: Cannot find entry android.hardware.graphics.allocator@4.0::IAllocator/default in either framework or device VINTF manifest.
-2026-02-16 18:39:43.240   145-145   servicemanager          servicemanager                       I  Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
-2026-02-16 18:39:43.240 19977-19998 Gralloc4                com.magicartifact.debug              W  allocator 4.x is not supported
-2026-02-16 18:39:43.266 19977-19998 HostConnection          com.magicartifact.debug              D  HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1 
-2026-02-16 18:39:43.266 19977-19998 OpenGLRenderer          com.magicartifact.debug              E  Unable to match the desired swap behavior.
-2026-02-16 18:39:43.342   497-589   ziparchive              system_server                        W  Unable to open '/data/app/~~KPuUKB5tdi6S8NfoR-8e6w==/com.magicartifact.debug-L6v-IDY_l1SqRTva1KHNlQ==/base.dm': No such file or directory
-2026-02-16 18:39:43.342   497-589   ActivityTaskManager     system_server                        I  Displayed com.magicartifact.debug/com.magicartifact.MainActivity: +1s889ms
-2026-02-16 18:39:43.346 19977-19977 Choreographer           com.magicartifact.debug              I  Skipped 54 frames!  The application may be doing too much work on its main thread.
-2026-02-16 18:39:43.357 19977-19993 OpenGLRenderer          com.magicartifact.debug              I  Davey! duration=1333ms; Flags=1, FrameTimelineVsyncId=155131, IntendedVsync=8794754506572, Vsync=8795004506562, InputEventId=0, HandleInputStart=8795019015600, AnimationStart=8795019033200, PerformTraversalsStart=8795019249800, DrawStart=8796002916000, FrameDeadline=8794771173238, FrameInterval=8795018980400, FrameStartTime=16666666, SyncQueued=8796047530800, SyncStart=8796048155100, IssueDrawCommandsStart=8796048275200, SwapBuffers=8796073208200, FrameCompleted=8796088653000, DequeueBufferDuration=15800, QueueBufferDuration=350900, GpuCompleted=8796088653000, SwapBuffersCompleted=8796074300800, DisplayPresentTime=0, CommandSubmissionCompleted=8796073208200, 
-2026-02-16 18:39:43.445 19977-19977 VoiceManager            com.magicartifact.debug              D  Model loaded successfully
-2026-02-16 18:39:43.446 19977-19977 MagicArtifact           com.magicartifact.debug              D  VoiceManager ready
-2026-02-16 18:39:43.452   497-1670  Compatibil...geReporter system_server                        D  Compat change id reported: 214016041; UID 10181; state: ENABLED
-2026-02-16 18:39:43.455  1482-1482  GoogleInpu...hodService com...gle.android.inputmethod.latin  I  GoogleInputMethodService.onFinishInput():3227 
-2026-02-16 18:39:43.457  1482-1482  GoogleInpu...hodService com...gle.android.inputmethod.latin  I  GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
-2026-02-16 18:39:43.458  1482-1482  GoogleInpu...hodService com...gle.android.inputmethod.latin  I  GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.magicartifact.debug fieldId=-1 fieldName=null extras=null}, false)
-2026-02-16 18:39:43.458  1482-1482  GoogleInpu...hodService com...gle.android.inputmethod.latin  I  GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
-2026-02-16 18:39:43.459 19977-19993 OpenGLRenderer          com.magicartifact.debug              I  Davey! duration=1010ms; Flags=0, FrameTimelineVsyncId=155434, IntendedVsync=8795171173222, Vsync=8796071173186, InputEventId=0, HandleInputStart=8796082423500, AnimationStart=8796082441800, PerformTraversalsStart=8796178735600, DrawStart=8796179307400, FrameDeadline=8796121173184, FrameInterval=8796082102500, FrameStartTime=16666666, SyncQueued=8796179478500, SyncStart=8796179686300, IssueDrawCommandsStart=8796179748600, SwapBuffers=8796180426900, FrameCompleted=8796181572100, DequeueBufferDuration=16900, QueueBufferDuration=712400, GpuCompleted=8796181489400, SwapBuffersCompleted=8796181572100, DisplayPresentTime=0, CommandSubmissionCompleted=8796180426900, 
-2026-02-16 18:39:43.459  1482-1482  GoogleInpu...hodService com...gle.android.inputmethod.latin  I  GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
-2026-02-16 18:39:43.468  6976-9316  FontLog                 com.google.android.gms.persistent    I  (REDACTED) Received query %s, URI %s
-2026-02-16 18:39:43.468  6976-9316  FontLog                 com.google.android.gms.persistent    I  (REDACTED) Query [%s] resolved to %s
-2026-02-16 18:39:43.471  6976-9316  FontLog                 com.google.android.gms.persistent    I  (REDACTED) Fetch %s end status %s
-2026-02-16 18:39:43.478  1105-2062  OneSearchS...stProvider com...le.android.apps.nexuslauncher  D  Shut down the binder channel
-2026-02-16 18:39:43.479  1105-1126  s.nexuslauncher         com...le.android.apps.nexuslauncher  I  oneway function results for code 2 on binder at 0x7a55f7ef5490 will be dropped but finished with status UNKNOWN_TRANSACTION
-2026-02-16 18:39:43.492  1779-19970 PBSessionCacheImpl      com....android.googlequicksearchbox  I  Deleted sessionId[7825895921176296] from persistence.
-2026-02-16 18:39:43.498  6976-6989  FontLog                 com.google.android.gms.persistent    I  (REDACTED) Pulling font file for id = %d, cache size = %d
-2026-02-16 18:39:43.499  1779-2483  A                       com....android.googlequicksearchbox  I  Using proto config with mendel
-2026-02-16 18:39:43.503  1779-2483  A                       com....android.googlequicksearchbox  I  Using proto config with mendel
-2026-02-16 18:39:43.504  1779-2483  SearchServiceCore       com....android.googlequicksearchbox  W  Abort, client detached.
-2026-02-16 18:39:43.505  1779-2483  MicroDetectionState     com....android.googlequicksearchbox  I  Should stop hotword detection immediately - true
-2026-02-16 18:39:43.505  1779-2483  A                       com....android.googlequicksearchbox  I  Using proto config with mendel
-2026-02-16 18:39:43.505  1779-2483  A                       com....android.googlequicksearchbox  I  Using proto config with mendel
-2026-02-16 18:39:43.508  6976-6989  FontLog                 com.google.android.gms.persistent    I  (REDACTED) Pulling font file for id = %d, cache size = %d
-2026-02-16 18:39:43.578 19977-19990 System                  com.magicartifact.debug              W  A resource failed to call close. 
-2026-02-16 18:39:43.696  1105-1777  EGL_emulation           com...le.android.apps.nexuslauncher  D  app_time_stats: avg=83.90ms min=2.17ms max=1636.06ms count=24
-2026-02-16 18:39:43.712   497-1670  InputManager-JNI        system_server                        W  Input channel object 'be51dcd Splash Screen com.magicartifact.debug (client)' was disposed without first being removed with the input manager!
-2026-02-16 18:39:43.714   497-580   CoreBackPreview         system_server                        D  Window{be51dcd u0 Splash Screen com.magicartifact.debug EXITING}: Setting back callback null
-2026-02-16 18:39:43.763   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:PREDICTION_ERROR, 155634, 9807648, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.763   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:PREDICTION_ERROR, 155707, 5917450, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.763   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:PREDICTION_ERROR, 155729, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missing HWUI jank callback for vsyncId: 155729, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:PREDICTION_ERROR, 155751, 5274118, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:PREDICTION_ERROR, 155773, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missing HWUI jank callback for vsyncId: 155773, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:PREDICTION_ERROR, 155809, 15239486, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed App frame:UNKNOWN: 24, 155838, 39691320, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:UNKNOWN: 24, 155838, 39691320, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:UNKNOWN: 80, 155881, 33913354, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:UNKNOWN: 80, 155903, 21285288, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:UNKNOWN: 80, 155925, 21423522, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:UNKNOWN: 80, 155940, 22135256, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:UNKNOWN: 80, 155962, 24739990, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:UNKNOWN: 80, 155984, 22443324, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:UNKNOWN: 80, 155999, 21432158, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:UNKNOWN: 80, 156014, 21816192, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:UNKNOWN: 80, 156029, 22110726, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:UNKNOWN: 80, 156044, 21473660, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:43.764   853-905   FrameTracker            com.android.systemui                 W  Missed SF frame:UNKNOWN: 80, 156059, 27669194, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
-2026-02-16 18:39:46.811 19977-19998 EGL_emulation           com.magicartifact.debug              D  app_time_stats: avg=863.64ms min=2.14ms max=3216.99ms count=4
-2026-02-16 18:39:46.896 19977-19977 VoiceManager            com.magicartifact.debug              D  Starting speech recognition, model ready: true
-2026-02-16 18:39:46.940 19977-19977 VoiceManager            com.magicartifact.debug              D  Recognizer created
-2026-02-16 18:39:46.952   381-20525 AudioFlinger            audioserver                          I  AudioFlinger's thread 0x76750d3ddbb0 tid=20525 ready to run
-2026-02-16 18:39:46.962 19977-19977 VoiceManager            com.magicartifact.debug              D  SpeechService created, starting listening...
-2026-02-16 18:39:46.964 19977-19977 VoiceManager            com.magicartifact.debug              D  Listening started
-2026-02-16 18:39:46.972   311-359   android.ha...mpl.ranchu android.hardware.audio.service       E  device/generic/goldfish/audio/stream_in.cpp:updateSinkMetadata:364 failure: Result::NOT_SUPPORTED
-2026-02-16 18:39:46.977   311-478   android.ha...mpl.ranchu android.hardware.audio.service       E  device/generic/goldfish/audio/stream_in.cpp:setMicrophoneDirection:428 failure: Result::NOT_SUPPORTED
-2026-02-16 18:39:46.978   311-359   android.ha...mpl.ranchu android.hardware.audio.service       E  device/generic/goldfish/audio/stream_in.cpp:setMicrophoneFieldDimension:433 failure: Result::NOT_SUPPORTED
-2026-02-16 18:39:46.980   853-927   EGL_emulation           com.android.systemui                 D  app_time_stats: avg=222.79ms min=1.47ms max=3446.03ms count=17
-2026-02-16 18:39:47.063   311-20527 android.ha...mpl.ranchu android.hardware.audio.service       W  TinyalsaSource::read:143 pcm_read was late delivering frames, inserting 15000 us of silence
-2026-02-16 18:39:47.067   311-20527 android.ha...mpl.ranchu android.hardware.audio.service       W  TinyalsaSource::read:143 pcm_read was late delivering frames, inserting 15000 us of silence
-2026-02-16 18:39:47.075   311-20527 android.ha...mpl.ranchu android.hardware.audio.service       W  TinyalsaSource::read:143 pcm_read was late delivering frames, inserting 15000 us of silence
-2026-02-16 18:39:47.080   311-20527 android.ha...mpl.ranchu android.hardware.audio.service       W  TinyalsaSource::read:143 pcm_read was late delivering frames, inserting 15000 us of silence
-2026-02-16 18:39:47.085   311-20527 android.ha...mpl.ranchu android.hardware.audio.service       W  TinyalsaSource::read:143 pcm_read was late delivering frames, inserting 15000 us of silence
-2026-02-16 18:39:47.091   311-20527 android.ha...mpl.ranchu android.hardware.audio.service       W  TinyalsaSource::read:143 pcm_read was late delivering frames, inserting 15000 us of silence
-2026-02-16 18:39:47.193 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:47.633 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:47.634 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:47.799 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:48.002 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:48.101 19977-20531 ProfileInstaller        com.magicartifact.debug              D  Installing profile for com.magicartifact.debug
-2026-02-16 18:39:48.195 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:48.399 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:48.601 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:48.782 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:49.002 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:49.196 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:49.391 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:49.602 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:49.796 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:49.982 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:50.106   853-927   EGL_emulation           com.android.systemui                 D  app_time_stats: avg=101.05ms min=10.63ms max=2531.22ms count=30
-2026-02-16 18:39:50.200 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:50.229   853-927   OpenGLRenderer          com.android.systemui                 E  Unable to match the desired swap behavior.
-2026-02-16 18:39:50.399 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:50.596 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:50.801 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:50.996 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:51.184 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:51.402 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:51.599 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:51.799 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:52.007 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:52.143   311-20527 android.ha...mpl.ranchu android.hardware.audio.service       W  TinyalsaSource::read:143 pcm_read was late delivering frames, inserting 15000 us of silence
-2026-02-16 18:39:52.158   311-20527 android.ha...mpl.ranchu android.hardware.audio.service       W  TinyalsaSource::read:143 pcm_read was late delivering frames, inserting 15000 us of silence
-2026-02-16 18:39:52.197 19977-19977 VoiceManager            com.magicartifact.debug              D  onResult: {
-                                                                                                      "text" : ""
-                                                                                                    }
-2026-02-16 18:39:52.383 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:52.626 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:52.795 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:52.994 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:53.205 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:53.398 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:53.582 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:53.800 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:53.996 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:54.194 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:54.404 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:54.598 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:54.783 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:55.002 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:55.195 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:55.279 15360-15377 Finsky                  com.android.vending                  I  [45] Stats for Executor: BlockingExecutor uww@b1bfae[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 43]
-2026-02-16 18:39:55.279 15360-15377 Finsky                  com.android.vending                  I  [45] Stats for Executor: LightweightExecutor uww@2a9d14f[Running, pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 2515]
-2026-02-16 18:39:55.279 15360-15377 Finsky                  com.android.vending                  I  [45] Stats for Executor: bgExecutor uww@22e60dc[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 345]
-2026-02-16 18:39:55.395 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:55.666 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:55.793 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:55.983 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:56.205 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:56.396 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:56.591 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:56.618  1779-2483  WorkerManager           com....android.googlequicksearchbox  I  dispose()
-2026-02-16 18:39:56.620  1779-2483  A                       com....android.googlequicksearchbox  W  Queue length for executor EventBus is now 11. Perhaps some tasks are too long, or the pool is too small.
-2026-02-16 18:39:56.799 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:57.006 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:57.185 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:57.406 19977-19977 VoiceManager            com.magicartifact.debug              D  onResult: {
-                                                                                                      "text" : ""
-                                                                                                    }
-2026-02-16 18:39:57.609 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:57.794 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:58.006 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:58.200 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:58.383 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:58.598 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:58.797 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:58.995 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:59.204 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:59.395 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:59.583 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:59.803 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:39:59.992 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:00.003  1547-2199  AiAiEcho                com.google.android.as                I  Predicting[0]: 
-2026-02-16 18:40:00.003  1547-2199  AiAiEcho                com.google.android.as                I  Ranked targets strategy: SORT, count: 0, ranking metadata: 
-2026-02-16 18:40:00.005  1547-2199  AiAiEcho                com.google.android.as                I  #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
-2026-02-16 18:40:00.005  1547-2199  AiAiEcho                com.google.android.as                I  #postPredictionTargets: Sending updates to UISurface home with targets# 0
-2026-02-16 18:40:00.054   853-927   EGL_emulation           com.android.systemui                 D  app_time_stats: avg=321.83ms min=1.36ms max=9447.06ms count=30
-2026-02-16 18:40:00.193 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:00.401 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:00.602 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:00.783 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:01.003 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:01.194 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:01.390 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:01.600 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:01.796 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:01.982 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:02.207 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:02.396 19977-19977 VoiceManager            com.magicartifact.debug              D  onResult: {
-                                                                                                      "text" : ""
-                                                                                                    }
-2026-02-16 18:40:02.590 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:02.800 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:02.997 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:03.092 19977-19998 EGL_emulation           com.magicartifact.debug              D  app_time_stats: avg=324.13ms min=1.36ms max=15350.92ms count=50
-2026-02-16 18:40:03.196   311-359   android.ha...mpl.ranchu android.hardware.audio.service       E  device/generic/goldfish/audio/stream_in.cpp:updateSinkMetadata:364 failure: Result::NOT_SUPPORTED
-2026-02-16 18:40:03.261 19977-19977 VoiceManager            com.magicartifact.debug              D  Stopped listening
-2026-02-16 18:40:03.265 19977-19977 VoiceManager            com.magicartifact.debug              D  onPartialResult: {
-                                                                                                      "partial" : ""
-                                                                                                    }
-2026-02-16 18:40:03.280 19977-19977 VoiceManager            com.magicartifact.debug              D  onFinalResult: {
-                                                                                                      "text" : ""
-                                                                                                    }
-2026-02-16 18:40:03.307   853-927   EGL_emulation           com.android.systemui                 D  app_time_stats: avg=1631.22ms min=13.47ms max=12930.52ms count=8
-2026-02-16 18:40:04.698  3203-3310  TimedProcessReaper      com.google.android.apps.messaging    W  Memory state is: 125
+2026-02-17 19:06:17.830  1651-11845 ADB_SERVICES            adbd                                 I  post waitpid (pid=11844) status=0000
+2026-02-17 19:06:17.830  1651-1651  ADB_SERVICES            adbd                                 I  for fd 29, revents = 2011
+2026-02-17 19:06:17.831  1651-1651  ADB_SERVICES            adbd                                 I  for fd 29, revents = 2011
+2026-02-17 19:06:18.139   661-11846 ResolverController      netd                                 E  No valid NAT64 prefix (100, <unspecified>/0)
+2026-02-17 19:06:19.456   891-1000  WifiVendorHal           system_server                        E  getWifiLinkLayerStats_1_3_Internal(l.927) failed {.code = ERROR_NOT_SUPPORTED, .description = }
+2026-02-17 19:06:21.327  1485-1485  Launcher.Utilities      com.tblenovo.launcher                V  accessibilityEnabled = 0
+2026-02-17 19:06:21.336   466-466   hwcomposer              and...graphics.composer@2.1-service  I  [HWC] (0) displayGetActiveConfig config:0  
+2026-02-17 19:06:21.352  1485-1485  Launcher.Utilities      com.tblenovo.launcher                V  accessibilityEnabled = 0
+2026-02-17 19:06:21.362  1485-1485  chatty                  com.tblenovo.launcher                I  uid=10054(com.tblenovo.launcher) identical 1 line
+2026-02-17 19:06:21.384  1485-1485  Launcher.Utilities      com.tblenovo.launcher                V  accessibilityEnabled = 0
+2026-02-17 19:06:21.395  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:21.398  1485-1485  chatty                  com.tblenovo.launcher                I  uid=10054(com.tblenovo.launcher) identical 11 lines
+2026-02-17 19:06:21.398  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:21.400  1485-1485  Launcher.Utilities      com.tblenovo.launcher                V  accessibilityEnabled = 0
+2026-02-17 19:06:21.402   499-546   BufferQueueProducer     surfaceflinger                       I  [com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1](this:0x7f18aae000,id:51,api:1,p:1485,c:499) queueBuffer: fps=0.09 dur=21375.57 max=21353.22 min=22.35
+2026-02-17 19:06:21.403   891-1310  ActivityTaskManager     system_server                        I  START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.magicartifact.debug/com.magicartifact.MainActivity bnds=[378,48][669,276]} from uid 10054
+2026-02-17 19:06:21.412   466-8044  hwcomposer              and...graphics.composer@2.1-service  I  [HWCDisplay] [Display_0 (type:1)] fps:0.203768,dur:4907.55,max:4907.55,min:4907.55  
+2026-02-17 19:06:21.414   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.android.systemui.ImageWallpaper#0)
+2026-02-17 19:06:21.414   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1)
+2026-02-17 19:06:21.418   479-498   power@1.3-impl          ven...hardware.mtkpower@1.0-service  I  powerHintInternal hint:8, data:1
+2026-02-17 19:06:21.419   479-497   libPowerHal             ven...hardware.mtkpower@1.0-service  I  8: cpu_ctrl set freq: 2301000 -1 1800000 -1
+2026-02-17 19:06:21.421   891-1310  PowerHalWrapper         system_server                        D  <amsBoostResume> last:com.tblenovo.launcher, next:com.magicartifact.debug 
+2026-02-17 19:06:21.425  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:21.427  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:21.427  1103-1103  RecentsOnboarding       com.android.systemui                 D  com.magicartifact.debug && com.magicartifact.MainActivity is blocked, return.
+2026-02-17 19:06:21.427  1103-1103  NavigationBar           com.android.systemui                 D  sjj ---- onTaskCreated
+2026-02-17 19:06:21.427  1103-1103  NavigationBar           com.android.systemui                 D  sjj ---- doTaskChangeAct
+2026-02-17 19:06:21.428   891-1310  SettingsState           system_server                        V  addHistoricalOperationLocked type updatesetting: Setting{name=reminder_exp_learning_time_elapsed value=20223278240 default=20223278240 packageName=com.android.systemui tag=null defaultFromSystem=true}
+2026-02-17 19:06:21.429   891-891   SettingsProvider        system_server                        V  Notifying for 0: content://settings/secure/reminder_exp_learning_time_elapsed
+2026-02-17 19:06:21.432   891-1310  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:21.432   891-1310  Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:21.433   891-1310  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:21.433   891-1310  Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:21.436   891-909   PowerHalWrapper         system_server                        D  amsBoostProcessCreate package:com.magicartifact.debug 
+2026-02-17 19:06:21.436   891-910   system_server           system_server                        E  Invalid ID 0x00000000.
+2026-02-17 19:06:21.436  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:21.439   891-909   NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:21.439   891-909   NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:21.439   891-909   NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:21.439   891-909   NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:21.439   891-909   NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:21.439   891-909   NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:21.439   891-909   NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+2026-02-17 19:06:21.439   891-909   NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:21.442   472-472   IMGMemtrackHAL          and...hardware.memtrack@1.0-service  W  hal_get_memory: memtrack cache rebuild was required
+2026-02-17 19:06:21.445  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:21.452   891-910   ViewRootImpl[debug]     system_server                        D  hardware acceleration = false , fakeHwAccelerated = true, sRendererDisabled = false, forceHwAccelerated = false, sSystemRendererDisabled = false
+2026-02-17 19:06:21.453   640-640   Zygote                  pid-640                              D  Forked child process 11847
+2026-02-17 19:06:21.454   891-910   Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:21.456   891-916   ActivityManager         system_server                        I  Start proc 11847:com.magicartifact.debug/u0a303 for activity {com.magicartifact.debug/com.magicartifact.MainActivity}
+2026-02-17 19:06:21.461  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:21.464 11847-11847 cartifact.debu          pid-11847                            I  Late-enabling -Xcheck:jni
+2026-02-17 19:06:21.467   499-984   BufferQueue             surfaceflinger                       I  [unnamed-499-53](this:0x7f280a2000,id:53,api:0,p:-1,c:-1) BufferQueue core=(499:/system/bin/surfaceflinger)
+2026-02-17 19:06:21.467   499-984   BufferQueueConsumer     surfaceflinger                       I  [unnamed-499-53](this:0x7f280a2000,id:53,api:0,p:-1,c:499) connect(C): consumer=(499:/system/bin/surfaceflinger) controlledByApp=false
+2026-02-17 19:06:21.467   499-984   BufferQueueConsumer     surfaceflinger                       I  [unnamed-499-53](this:0x7f280a2000,id:53,api:0,p:-1,c:499) setConsumerName: unnamed-499-53
+2026-02-17 19:06:21.467   499-984   BufferQueueConsumer     surfaceflinger                       I  [Splash Screen com.magicartifact.debug#0](this:0x7f280a2000,id:53,api:0,p:-1,c:499) setConsumerName: Splash Screen com.magicartifact.debug#0
+2026-02-17 19:06:21.467   499-984   BufferQueueConsumer     surfaceflinger                       I  [Splash Screen com.magicartifact.debug#0](this:0x7f280a2000,id:53,api:0,p:-1,c:499) setDefaultBufferSize: width=1920 height=1200
+2026-02-17 19:06:21.469   891-910   Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:21.470   891-910   GraphicExt              system_server                        E  GraphicExtModuleLoader::CreateGraphicExtInstance false
+2026-02-17 19:06:21.472   891-910   Surface                 system_server                        D  lockCanvas
+2026-02-17 19:06:21.472   891-910   Surface                 system_server                        D  Surface::connect(this=0x7d984d4000,api=2)
+2026-02-17 19:06:21.473   499-984   BufferQueueProducer     surfaceflinger                       I  [Splash Screen com.magicartifact.debug#0](this:0x7f280a2000,id:53,api:2,p:891,c:499) connect(P): api=2 producer=(891:system_server) producerControlledByApp=false
+2026-02-17 19:06:21.478  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:21.482   499-984   BufferQueueProducer     surfaceflinger                       I  [NavigationBar0#0](this:0x7f1897f000,id:4,api:1,p:1103,c:499) queueBuffer: fps=0.00 dur=202366.10 max=202366.10 min=202366.10
+2026-02-17 19:06:21.494  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:21.499 11847-11847 cartifact.debu          pid-11847                            E  Unknown bits set in runtime_flags: 0x8000
+2026-02-17 19:06:21.511  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:21.511  1651-1651  ADB_SERVICES            adbd                                 I  service_to_fd shell:getprop
+2026-02-17 19:06:21.514   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.android.systemui.ImageWallpaper#0)
+2026-02-17 19:06:21.514   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1)
+2026-02-17 19:06:21.517  1651-1651  ADB_SERVICES            adbd                                 I  service_to_fd shell:stat -c %u /proc/11847 | xargs -n 1 cmd package list packages --uid
+2026-02-17 19:06:21.526   891-1310  ActivityManager         system_server                        V  New death recipient com.android.server.am.ActivityManagerService$AppDeathRecipient@1f52474 for thread android.os.BinderProxy@c340d9d, pid:11847,mApp:null
+2026-02-17 19:06:21.527  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:21.528   891-1310  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:21.529   891-1310  Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:21.530  2309-2309  bqat                    com....android.googlequicksearchbox  I  onPause
+2026-02-17 19:06:21.534   891-1310  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:21.535   891-1310  Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:21.537   891-1310  ActivityTaskManager     system_server                        W  Request to remove task ignored for non-existent task 1427
+2026-02-17 19:06:21.537   891-1310  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:21.538   891-1310  Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:21.539   891-1310  PowerHalWrapper         system_server                        D  amsBoostNotify pid:11847,activity:com.magicartifact.MainActivity, package:com.magicartifact.debug, mProcessCreatePackcom.magicartifact.debug 
+2026-02-17 19:06:21.540   479-497   libPowerHal             ven...hardware.mtkpower@1.0-service  I  [perfNotifyAppState] foreground:com.magicartifact.debug, pid:11847, uid:10303
+2026-02-17 19:06:21.541   479-497   UxUtility               ven...hardware.mtkpower@1.0-service  E  notifyAppState error = NULL
+2026-02-17 19:06:21.541   479-497   powerd                  ven...hardware.mtkpower@1.0-service  I  [powerd_req] POWER_MSG_NOTIFY_STATE, pc:1, com.tblenovo.launcher => com.magicartifact.debug
+2026-02-17 19:06:21.544  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:21.545 11847-11867 Typeface                pid-11847                            D  Invaild or same path: 
+2026-02-17 19:06:21.545   891-910   Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+---------------------------- PROCESS STARTED (11847) for package com.magicartifact.debug ----------------------------
+2026-02-17 19:06:21.545   891-910   Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:21.547   891-910   Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:21.547   891-910   Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:21.549   891-910   Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:21.555  1651-11865 ADB_SERVICES            adbd                                 I  post waitpid (pid=11864) status=0000
+2026-02-17 19:06:21.557   891-909   NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:21.557   891-909   NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:21.557   891-909   NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:21.557   891-909   NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:21.557   891-909   NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:21.557   891-909   NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:21.557   891-909   NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+2026-02-17 19:06:21.557   891-909   NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:21.558   891-1310  NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:21.559   891-1310  NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:21.559   891-1310  NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:21.559   891-1310  NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:21.559   891-1310  NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:21.559   891-1310  NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:21.559   891-1310  NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+2026-02-17 19:06:21.559   891-1310  NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:21.560   891-998   NetworkManagement       system_server                        D  oldRule = 0, newRule=0 for uid=10303 on chain 2
+2026-02-17 19:06:21.560   891-998   NetworkManagement       system_server                        D  !!!!! Skipping change
+2026-02-17 19:06:21.593  2309-2675  ClearcutMetricXmitter   com....android.googlequicksearchbox  V  Transmission is done.
+2026-02-17 19:06:21.624  1651-11869 ADB_SERVICES            adbd                                 I  post waitpid (pid=11868) status=0000
+2026-02-17 19:06:21.631   499-499   BufferQueueProducer     surfaceflinger                       I  [FramebufferSurface](this:0x7f27f9e800,id:0,api:1,p:499,c:499) queueBuffer: fps=0.05 dur=204812.20 max=204236.32 min=13.48
+2026-02-17 19:06:21.634   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.android.systemui.ImageWallpaper#0)
+2026-02-17 19:06:21.634   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1)
+2026-02-17 19:06:21.663   499-499   RenderEngine            surfaceflinger                       E  GL error 0x0501
+2026-02-17 19:06:21.673   891-979   SettingsState           system_server                        V  addHistoricalOperationLocked type persistsetting: null
+2026-02-17 19:06:21.732   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.android.systemui.ImageWallpaper#0)
+2026-02-17 19:06:21.732   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1)
+2026-02-17 19:06:21.847   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.android.systemui.ImageWallpaper#0)
+2026-02-17 19:06:21.847   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1)
+2026-02-17 19:06:21.947   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.android.systemui.ImageWallpaper#0)
+2026-02-17 19:06:21.947   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1)
+2026-02-17 19:06:21.947   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (Splash Screen com.magicartifact.debug#0)
+2026-02-17 19:06:21.950   499-499   RenderEngine            surfaceflinger                       E  GL error 0x0501
+2026-02-17 19:06:21.987   466-561   hwcomposer              and...graphics.composer@2.1-service  W  [OVL] (0) No overlay input queue(2)  
+2026-02-17 19:06:21.987   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [DBQ] (q2:0x793b4b9c00) Buffer queue is created with size(3)  
+2026-02-17 19:06:21.987   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [DBQ] (q2:0x793b4b9c00) setConsumerListener  
+2026-02-17 19:06:21.987   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [DBQ] (q2:0x793b4b9c00) Reallocate Slot(0), pool(0 -> 0) size(0 -> 9216000)  
+2026-02-17 19:06:21.995   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [DBQ] (q2:0x793b4b9c00) Reallocate Slot(1), pool(0 -> 0) size(0 -> 9216000)  
+2026-02-17 19:06:22.008  1103-1103  EventBus                com.android.systemui                 D  [1103, u0] send(SetWaitingForTransitionStartEvent)
+2026-02-17 19:06:22.009  1103-1103  EventBus                com.android.systemui                 D  [1103, u0] send(SetWaitingForTransitionStartEvent)
+2026-02-17 19:06:22.011  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:22.017   466-561   hwcomposer              and...graphics.composer@2.1-service  W  [OVL] (0) No overlay input queue(0)  
+2026-02-17 19:06:22.017   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [DBQ] (q2:0x793b4ba800) Buffer queue is created with size(3)  
+2026-02-17 19:06:22.017   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [DBQ] (q2:0x793b4ba800) setConsumerListener  
+2026-02-17 19:06:22.017   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [DBQ] (q2:0x793b4ba800) Reallocate Slot(0), pool(0 -> 0) size(0 -> 9216000)  
+2026-02-17 19:06:22.020   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [OVL] (0) Overlay input(2) was used with queue previously  
+2026-02-17 19:06:22.021   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [DBQ] (q2:0x793b4b9c00) Buffer queue is destroyed  
+2026-02-17 19:06:22.021   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [DBQ] (q2:0x793b4b9c00) Free Slot(0), handle=0x793b410280, 9216000 -> 0  
+2026-02-17 19:06:22.021   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [DBQ] (q2:0x793b4b9c00) Free Slot(1), handle=0x7939876fc0, 9216000 -> 0  
+2026-02-17 19:06:22.023   499-499   Layer                   surfaceflinger                       E  [Surface(name=AppWindowToken{8a7675 token=Token{e62c9ac ActivityRecord{dde1b5f u0 com.magicartifact.debug/com.magicartifact.MainActivity t1428}}})/@0x2bdd212 - animation-leash#0] No local sync point found
+2026-02-17 19:06:22.023   499-499   Layer                   surfaceflinger                       E  [Surface(name=AppWindowToken{8a7675 token=Token{e62c9ac ActivityRecord{dde1b5f u0 com.magicartifact.debug/com.magicartifact.MainActivity t1428}}})/@0x2bdd212 - animation-leash#0] No local sync point found
+2026-02-17 19:06:22.023   499-499   Layer                   surfaceflinger                       E  [Surface(name=AppWindowToken{b632338 token=Token{f60f39b ActivityRecord{25a0baa u0 com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher t1417}}})/@0x301a83 - animation-leash#0] No local sync point found
+2026-02-17 19:06:22.023   499-499   Layer                   surfaceflinger                       E  [Surface(name=AppWindowToken{b632338 token=Token{f60f39b ActivityRecord{25a0baa u0 com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher t1417}}})/@0x301a83 - animation-leash#0] No local sync point found
+2026-02-17 19:06:22.026  2309-2692  Surface                 com....android.googlequicksearchbox  D  Surface::disconnect(this=0x7ddbabe000,api=1)
+2026-02-17 19:06:22.027   499-546   BufferQueueProducer     surfaceflinger                       I  [com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#0](this:0x7f242bc000,id:52,api:1,p:2309,c:499) disconnect(P): api 1
+2026-02-17 19:06:22.036   891-1304  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:22.050  1485-1855  Surface                 com.tblenovo.launcher                D  Surface::disconnect(this=0x7dfbcc4000,api=1)
+2026-02-17 19:06:22.051   499-984   BufferQueueProducer     surfaceflinger                       I  [com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1](this:0x7f18aae000,id:51,api:1,p:1485,c:499) disconnect(P): api 1
+2026-02-17 19:06:22.056   891-1304  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:22.058   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (Splash Screen com.magicartifact.debug#0)
+2026-02-17 19:06:22.176   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (Splash Screen com.magicartifact.debug#0)
+2026-02-17 19:06:22.480   891-1000  WifiVendorHal           system_server                        E  getWifiLinkLayerStats_1_3_Internal(l.927) failed {.code = ERROR_NOT_SUPPORTED, .description = }
+2026-02-17 19:06:22.509   499-984   BufferQueueProducer     surfaceflinger                       I  [StatusBar#0](this:0x7f18980800,id:5,api:1,p:1103,c:499) queueBuffer: fps=0.17 dur=6021.68 max=6021.68 min=6021.68
+2026-02-17 19:06:22.521   466-8044  hwcomposer              and...graphics.composer@2.1-service  I  [HWCDisplay] [Display_0 (type:1)] fps:38.791199,dur:1108.50,max:414.07,min:14.53  
+2026-02-17 19:06:22.522   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (Splash Screen com.magicartifact.debug#0)
+2026-02-17 19:06:23.702   466-8044  hwcomposer              and...graphics.composer@2.1-service  I  [HWC] (0) displayGetActiveConfig config:0  
+2026-02-17 19:06:23.763   891-1310  SettingsProvider        system_server                        V  packageValueForCallResult, name = null, value : Bundle[{_track_generation=android.util.MemoryIntArray@70, value=null, _generation_index=0, _generation=7}]
+2026-02-17 19:06:23.766 11847-11847 Applicatio...ageManager com.magicartifact.debug              D  hasSystemFeature android.software.picture_in_picture com.magicartifact.debug
+2026-02-17 19:06:23.770 11847-11847 MagicArtifact           com.magicartifact.debug              E  >>> MainActivity onCreate called <<<
+2026-02-17 19:06:23.770 11847-11847 MagicArtifact           com.magicartifact.debug              E  App is starting!
+2026-02-17 19:06:23.875 11847-11847 VoiceManager            com.magicartifact.debug              D  LibVosk initialized
+2026-02-17 19:06:23.888 11847-11888 VoskAPI                 com.magicartifact.debug              I  ReadDataFiles():model.cc:223) Decoding params beam=10 max-active=3000 lattice-beam=2
+2026-02-17 19:06:23.888 11847-11888 VoskAPI                 com.magicartifact.debug              I  ReadDataFiles():model.cc:226) Silence phones 1:2:3:4:5:6:7:8:9:10
+2026-02-17 19:06:23.974 11847-11847 ExoPlayerImpl           com.magicartifact.debug              I  Init ab149ac [ExoPlayerLib/2.19.1] [X606X, Lenovo TB-X606X, LENOVO, 29]
+2026-02-17 19:06:24.062 11847-11847 Applicatio...ageManager com.magicartifact.debug              D  hasSystemFeature android.hardware.type.automotive com.magicartifact.debug
+2026-02-17 19:06:24.067 11847-11847 cartifact.debu          com.magicartifact.debug              W  Accessing hidden method Landroid/media/AudioTrack;->getLatency()I (greylist, reflection, allowed)
+2026-02-17 19:06:24.074 11847-11862 System                  com.magicartifact.debug              W  A resource failed to call close. 
+2026-02-17 19:06:24.101   891-1310  SettingsProvider        system_server                        V  packageValueForCallResult, name = null, value : Bundle[{_track_generation=android.util.MemoryIntArray@70, value=null, _generation_index=2, _generation=27}]
+2026-02-17 19:06:24.172 11847-11888 VoskAPI                 com.magicartifact.debug              I  RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+2026-02-17 19:06:24.173 11847-11888 VoskAPI                 com.magicartifact.debug              I  RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+2026-02-17 19:06:24.215 11847-11847 AndroidRuntime          com.magicartifact.debug              D  Shutting down VM
+2026-02-17 19:06:24.219 11847-11847 AndroidRuntime          com.magicartifact.debug              E  FATAL EXCEPTION: main
+                                                                                                    Process: com.magicartifact.debug, PID: 11847
+                                                                                                    java.lang.NoSuchMethodError: No virtual method setDecorFitsSystemWindows(Z)V in class Landroid/view/Window; or its super classes (declaration of 'android.view.Window' appears in /system/framework/framework.jar!classes3.dex)
+                                                                                                    	at com.magicartifact.MainActivity.onCreate(MainActivity.kt:69)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:7869)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:7858)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1306)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3277)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3441)
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:83)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:135)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2045)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:107)
+                                                                                                    	at android.os.Looper.loop(Looper.java:214)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:7399)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:502)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:980)
+2026-02-17 19:06:24.224   891-11893 DropBoxManagerService   system_server                        I  add tag=data_app_crash isTagEnabled=true flags=0x2
+2026-02-17 19:06:24.225   891-1310  ActivityTaskManager     system_server                        W    Force finishing activity com.magicartifact.debug/com.magicartifact.MainActivity
+2026-02-17 19:06:24.227   891-1310  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:24.228   891-1310  Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:24.228   891-1310  PowerHalWrapper         system_server                        D  <amsBoostResume> last:com.magicartifact.debug, next:com.tblenovo.launcher 
+2026-02-17 19:06:24.230   891-11893 DropBoxManagerService   system_server                        W  Dropping: data_app_crash (1617 > 0 bytes)
+2026-02-17 19:06:24.231   891-11893 AES                     system_server                        W  Exception Log handling...
+2026-02-17 19:06:24.231   891-11893 AES                     system_server                        W  Skipped - do not care third party apk
+2026-02-17 19:06:24.232   466-8044  hwcomposer              and...graphics.composer@2.1-service  I  [HWC] (0) displayGetActiveConfig config:0  
+2026-02-17 19:06:24.235   891-915   BroadcastQueue          system_server                        W  Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.stats.service.DropBoxEntryAddedReceiver
+2026-02-17 19:06:24.236   891-915   NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:24.237   891-915   NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:24.237   891-915   NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:24.237   891-915   NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:24.237   891-915   NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:24.237   891-915   NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:24.237   891-915   NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+2026-02-17 19:06:24.237   891-915   NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:24.239 11847-11847 Process                 com.magicartifact.debug              I  Sending signal. PID: 11847 SIG: 9
+2026-02-17 19:06:24.240   891-1304  NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:24.240   891-1304  NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:24.240   891-1304  NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:24.240   891-1304  NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:24.240   891-1304  NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:24.240   891-1304  NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:24.240   891-1304  NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+2026-02-17 19:06:24.240   891-1304  NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:24.256   466-8044  hwcomposer              and...graphics.composer@2.1-service  I  [HWCDisplay] [Display_0 (type:1)] fps:0.576320,dur:1735.15,max:1735.15,min:1735.15  
+2026-02-17 19:06:24.256   891-1304  NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:24.256   891-1304  NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:24.256   891-1304  NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:24.256   891-1304  NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:24.256   891-1304  NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:24.256   891-1304  NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:24.256   891-1304  NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+2026-02-17 19:06:24.256   891-1304  NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:24.257   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (Splash Screen com.magicartifact.debug#0)
+2026-02-17 19:06:24.264   891-1304  NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:24.265   891-1304  NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:24.265   891-1304  NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:24.265   891-1304  NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:24.265   891-1304  NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:24.265   891-1304  NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:24.265   891-1304  NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+---------------------------- PROCESS ENDED (11847) for package com.magicartifact.debug ----------------------------
+2026-02-17 19:06:24.265   891-1304  NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:24.270  1651-1651  ADB_SERVICES            adbd                                 I  for fd 21, revents = 2011
+2026-02-17 19:06:24.270  1651-1651  ADB_SERVICES            adbd                                 I  for fd 17, revents = 2011
+2026-02-17 19:06:24.270   483-1070  AudioPolicyService      audioserver                          D  removeNotificationClient mNotificationClients.size() 6
+2026-02-17 19:06:24.270   891-1304  ActivityManager         system_server                        V  Death received in com.android.server.am.ActivityManagerService$AppDeathRecipient@1f52474 for thread android.os.BinderProxy@c340d9d, mPid:11847,mApp:ProcessRecord{63ecd4 11847:com.magicartifact.debug/u0a303}
+2026-02-17 19:06:24.270  1651-1651  ADB_SERVICES            adbd                                 I  for fd 21, revents = 2011
+2026-02-17 19:06:24.270   891-1304  ActivityManager         system_server                        I  Process com.magicartifact.debug (pid 11847) has died: vis+99 TOP 
+2026-02-17 19:06:24.271   891-917   libprocessgroup         system_server                        I  Successfully killed process cgroup uid 10303 pid 11847 in 0ms
+2026-02-17 19:06:24.272   640-640   Zygote                  pid-640                              I  Process 11847 exited due to signal 9 (Killed)
+2026-02-17 19:06:24.274  1651-1651  ADB_SERVICES            adbd                                 I  service_to_fd shell:getprop
+2026-02-17 19:06:24.275   891-1304  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:24.275   891-1304  Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:24.280   891-1304  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:24.280   891-1304  Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:24.281   891-1304  PowerHalWrapper         system_server                        D  amsBoostNotify pid:1485,activity:com.android.searchlauncher.SearchLauncher, package:com.tblenovo.launcher, mProcessCreatePackcom.magicartifact.debug 
+2026-02-17 19:06:24.281   891-1304  PowerHalWrapper         system_server                        D  amsBoostNotify AMS_BOOST_PROCESS_CREATE_BOOST:true 
+2026-02-17 19:06:24.281   891-1304  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:24.281   891-1304  Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:24.282   479-497   libPowerHal             ven...hardware.mtkpower@1.0-service  I  [perfNotifyAppState] foreground:com.tblenovo.launcher, pid:1485, uid:10054
+2026-02-17 19:06:24.282   479-497   UxUtility               ven...hardware.mtkpower@1.0-service  E  notifyAppState error = NULL
+2026-02-17 19:06:24.282   479-497   powerd                  ven...hardware.mtkpower@1.0-service  I  [powerd_req] POWER_MSG_NOTIFY_STATE, pc:1, com.magicartifact.debug => com.tblenovo.launcher
+2026-02-17 19:06:24.282   891-1304  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:24.283   891-1304  Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:24.287   891-910   View                    system_server                        D  [Warning] assignParent to null: this = DecorView@cac9e7d[debug]
+2026-02-17 19:06:24.289   891-5906  WindowManager           system_server                        I  Relayout Window{2609d6d u0 com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher}: oldVis=8 newVis=0 focusMayChange = true
+2026-02-17 19:06:24.290   891-910   Surface                 system_server                        D  Surface::disconnect(this=0x7d984d4000,api=2)
+2026-02-17 19:06:24.290   499-985   BufferQueueProducer     surfaceflinger                       I  [Splash Screen com.magicartifact.debug#0](this:0x7f280a2000,id:53,api:2,p:891,c:499) disconnect(P): api 2
+2026-02-17 19:06:24.291   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [OVL] (0) Overlay input(0) was used with queue previously  
+2026-02-17 19:06:24.291   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [DBQ] (q2:0x793b4ba800) Buffer queue is destroyed  
+2026-02-17 19:06:24.291   466-561   hwcomposer              and...graphics.composer@2.1-service  I  [DBQ] (q2:0x793b4ba800) Free Slot(0), handle=0x793b410100, 9216000 -> 0  
+2026-02-17 19:06:24.293   891-5906  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:24.295  2309-2309  GraphicExt              com....android.googlequicksearchbox  E  GraphicExtModuleLoader::CreateGraphicExtInstance false
+2026-02-17 19:06:24.296  2309-2692  Surface                 com....android.googlequicksearchbox  D  Surface::connect(this=0x7ddbabe000,api=1)
+2026-02-17 19:06:24.297   499-985   BufferQueueProducer     surfaceflinger                       I  [com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#0](this:0x7f242bc000,id:52,api:1,p:2309,c:499) connect(P): api=1 producer=(2309:com.google.android.googlequicksearchbox:googleapp) producerControlledByApp=false
+2026-02-17 19:06:24.298  2309-2692  Surface                 com....android.googlequicksearchbox  D  Surface::setBufferCount(this=0x7ddbabe000,bufferCount=3)
+2026-02-17 19:06:24.299  2309-2692  Surface                 com....android.googlequicksearchbox  D  Surface::allocateBuffers(this=0x7ddbabe000)
+2026-02-17 19:06:24.299   891-910   WindowManager           system_server                        W  Failed looking up window callers=com.android.server.wm.WindowManagerService.windowForClientLocked:5346 com.android.server.wm.WindowManagerService.removeWindow:1789 com.android.server.wm.Session.remove:176 
+2026-02-17 19:06:24.299   891-1073  WindowManager           system_server                        I  Relayout Window{cc6d006 u0 com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher}: oldVis=8 newVis=0 focusMayChange = true
+2026-02-17 19:06:24.302   891-5942  GED                     system_server                        I  ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+2026-02-17 19:06:24.305   891-1073  Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:24.306   499-1683  BufferQueue             surfaceflinger                       I  [Splash Screen com.magicartifact.debug#0](this:0x7f280a2000,id:53,api:2,p:-1,c:-1) ~BufferQueueCore
+2026-02-17 19:06:24.307  1485-1485  GraphicExt              com.tblenovo.launcher                E  GraphicExtModuleLoader::CreateGraphicExtInstance false
+2026-02-17 19:06:24.308  1485-1855  Surface                 com.tblenovo.launcher                D  Surface::connect(this=0x7dfbcc4000,api=1)
+2026-02-17 19:06:24.310   499-1683  BufferQueueProducer     surfaceflinger                       I  [com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1](this:0x7f18aae000,id:51,api:1,p:1485,c:499) connect(P): api=1 producer=(1485:com.tblenovo.launcher) producerControlledByApp=false
+2026-02-17 19:06:24.311   499-985   BufferQueueProducer     surfaceflinger                       I  [com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#0](this:0x7f242bc000,id:52,api:1,p:2309,c:499) queueBuffer: fps=0.02 dur=206955.37 max=206206.70 min=20.67
+2026-02-17 19:06:24.312  1485-1855  Surface                 com.tblenovo.launcher                D  Surface::setBufferCount(this=0x7dfbcc4000,bufferCount=3)
+2026-02-17 19:06:24.313  1485-1855  Surface                 com.tblenovo.launcher                D  Surface::allocateBuffers(this=0x7dfbcc4000)
+2026-02-17 19:06:24.315  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:24.319   891-1304  NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:24.319   891-1304  NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:24.319   891-1304  NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:24.319   891-1304  NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:24.319   891-1304  NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:24.319   891-1304  NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:24.319   891-1304  NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+2026-02-17 19:06:24.319   891-1304  NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:24.315  1485-1485  chatty                  com.tblenovo.launcher                I  uid=10054(com.tblenovo.launcher) identical 2 lines
+2026-02-17 19:06:24.316  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:24.323  1103-1103  NavigationBar           com.android.systemui                 D  sjj ---- onTaskRemoved
+2026-02-17 19:06:24.323  1103-1103  NavigationBar           com.android.systemui                 D  sjj ---- doTaskChangeAct
+2026-02-17 19:06:24.324   891-8114  NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:24.324   891-8114  NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:24.324   891-8114  NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:24.324   891-8114  NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:24.324   891-8114  NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:24.324   891-8114  NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:24.324   891-8114  NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+2026-02-17 19:06:24.324   891-8114  NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:24.325  1651-11898 ADB_SERVICES            adbd                                 I  post waitpid (pid=11897) status=0000
+2026-02-17 19:06:24.326  1103-1103  EventBus                com.android.systemui                 D  [1103, u0] send(SetWaitingForTransitionStartEvent)
+2026-02-17 19:06:24.327   891-909   NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:24.327   891-909   NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:24.327   891-909   NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:24.327   891-909   NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:24.327   891-909   NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:24.327   891-909   NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:24.327   891-909   NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+2026-02-17 19:06:24.327   891-909   NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:24.328   499-547   BufferQueueProducer     surfaceflinger                       I  [com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1](this:0x7f18aae000,id:51,api:1,p:1485,c:499) queueBuffer: fps=12.99 dur=2925.98 max=2307.64 min=9.28
+2026-02-17 19:06:24.332  1103-1103  NavigationBar           com.android.systemui                 D  sjj ---- onTaskStackChanged
+2026-02-17 19:06:24.334   891-910   Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:24.334  1103-1103  EventBus                com.android.systemui                 D  [1103, u0] send(SetWaitingForTransitionStartEvent)
+2026-02-17 19:06:24.334  2309-2309  bqat                    com....android.googlequicksearchbox  I  onResume
+2026-02-17 19:06:24.334  1485-1485  PhoneWindow             com.tblenovo.launcher                V  DecorView setVisiblity: visibility = 0, Parent = android.view.ViewRootImpl@d445afc, this = DecorView@4bbb585[SearchLauncher]
+2026-02-17 19:06:24.334   891-910   Applicatio...ageManager system_server                        D  hasSystemFeature android.software.picture_in_picture android.uid.system:1000
+2026-02-17 19:06:24.336  1103-1103  EventBus                com.android.systemui                 D  [1103, u0] send(SetWaitingForTransitionStartEvent)
+2026-02-17 19:06:24.336   891-910   Applicatio...ageManager system_server                        D  hasSystemFeature android.hardware.type.automotive android.uid.system:1000
+2026-02-17 19:06:24.342  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:24.345   891-5906  NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:24.345   891-5906  NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:24.345   891-5906  NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:24.345   891-5906  NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:24.345   891-5906  NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:24.345   891-5906  NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:24.345   891-5906  NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+2026-02-17 19:06:24.345   891-5906  NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:24.347   891-5906  NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:24.347   891-5906  NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:24.347   891-5906  NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:24.347   891-5906  NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:24.347   891-5906  NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:24.347   891-5906  NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:24.347   891-5906  NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+2026-02-17 19:06:24.347   891-5906  NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:24.345  1485-1485  chatty                  com.tblenovo.launcher                I  uid=10054(com.tblenovo.launcher) identical 10 lines
+2026-02-17 19:06:24.345  1485-1485  jindi10                 com.tblenovo.launcher                E  Lenovo TB-X606X
+2026-02-17 19:06:24.349  1485-1485  jindi20                 com.tblenovo.launcher                E  REQUEST_NONE
+2026-02-17 19:06:24.349  1485-1485  jindi20                 com.tblenovo.launcher                E  REQUEST_NONE
+2026-02-17 19:06:24.354   891-8114  skia                    system_server                        D  SkJpegCodec::onGetPixels +
+2026-02-17 19:06:24.361   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.android.systemui.ImageWallpaper#0)
+2026-02-17 19:06:24.361   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1)
+2026-02-17 19:06:24.362   891-8114  skia                    system_server                        D  SkJpegCodec::onGetPixels -
+2026-02-17 19:06:24.366   479-498   power@1.3-impl          ven...hardware.mtkpower@1.0-service  I  powerHintInternal hint:8, data:0
+2026-02-17 19:06:24.367   891-1304  PowerHalWrapper         system_server                        D  amsBoostStop AMS_BOOST_PACK_SWITCH:true, AMS_BOOST_ACT_SWITCH:false, AMS_BOOST_PROCESS_CREATE:true 
+2026-02-17 19:06:24.368   891-909   NetworkManagement       system_server                        D  Uid 10168 restricted because of app standby mode
+2026-02-17 19:06:24.368   891-909   NetworkManagement       system_server                        D  Uid 10144 restricted because of app standby mode
+2026-02-17 19:06:24.368   891-909   NetworkManagement       system_server                        D  Uid 10141 restricted because of app standby mode
+2026-02-17 19:06:24.368   891-909   NetworkManagement       system_server                        D  Uid 10133 restricted because of app standby mode
+2026-02-17 19:06:24.368   891-909   NetworkManagement       system_server                        D  Uid 10131 restricted because of app standby mode
+2026-02-17 19:06:24.368   891-909   NetworkManagement       system_server                        D  Uid 10122 restricted because of app standby mode
+2026-02-17 19:06:24.368   891-909   NetworkManagement       system_server                        D  Uid 10115 restricted because of app standby mode
+2026-02-17 19:06:24.368   891-909   NetworkManagement       system_server                        D  Uid 10095 restricted because of app standby mode
+2026-02-17 19:06:24.368   479-497   libPowerHal             ven...hardware.mtkpower@1.0-service  I  32: cpu_ctrl set freq: -1 -1 -1 -1
+2026-02-17 19:06:24.374   499-985   BufferQueueProducer     surfaceflinger                       I  [NavigationBar0#0](this:0x7f1897f000,id:4,api:1,p:1103,c:499) queueBuffer: fps=5.88 dur=2892.76 max=2629.62 min=14.03
+2026-02-17 19:06:24.474   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.android.systemui.ImageWallpaper#0)
+2026-02-17 19:06:24.474   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1)
+2026-02-17 19:06:24.518  1697-11896 DropBoxUtil             com.google.android.gms.persistent    E  [AppErrors] null InputStream [CONTEXT service_id=254 ]
+                                                                                                    java.io.IOException: null InputStream
+                                                                                                    	at ecfp.c(:com.google.android.gms@260438013@26.04.38 (100400-867839860):182)
+                                                                                                    	at ecdx.l(:com.google.android.gms@260438013@26.04.38 (100400-867839860):4)
+                                                                                                    	at ecdm.apply(:com.google.android.gms@260438013@26.04.38 (100400-867839860):39)
+                                                                                                    	at acoo.apply(:com.google.android.gms@260438013@26.04.38 (100400-867839860):5)
+                                                                                                    	at acpa.apply(:com.google.android.gms@260438013@26.04.38 (100400-867839860):45)
+                                                                                                    	at ezqs.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):3)
+                                                                                                    	at flbk.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):13)
+                                                                                                    	at ftkb.d(:com.google.android.gms@260438013@26.04.38 (100400-867839860):3)
+                                                                                                    	at ftkd.run(:com.google.android.gms@260438013@26.04.38 (100400-867839860):38)
+                                                                                                    	at ftlp.execute(:com.google.android.gms@260438013@26.04.38 (100400-867839860):1)
+                                                                                                    	at ftjq.f(:com.google.android.gms@260438013@26.04.38 (100400-867839860):1)
+                                                                                                    	at ftjq.hx(:com.google.android.gms@260438013@26.04.38 (100400-867839860):41)
+                                                                                                    	at ftkd.g(:com.google.android.gms@260438013@26.04.38 (100400-867839860):10)
+                                                                                                    	at ezqk.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):20)
+                                                                                                    	at flbj.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):13)
+                                                                                                    	at ftlw.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):20)
+                                                                                                    	at ftoa.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):3)
+                                                                                                    	at ftnb.run(:com.google.android.gms@260438013@26.04.38 (100400-867839860):19)
+                                                                                                    	at ftoc.run(:com.google.android.gms@260438013@26.04.38 (100400-867839860):5)
+                                                                                                    	at ftly.run(:com.google.android.gms@260438013@26.04.38 (100400-867839860):53)
+                                                                                                    	at ftlp.execute(:com.google.android.gms@260438013@26.04.38 (100400-867839860):1)
+                                                                                                    	at ftly.execute(:com.google.android.gms@260438013@26.04.38 (100400-867839860):76)
+                                                                                                    	at ftjq.f(:com.google.android.gms@260438013@26.04.38 (100400-867839860):1)
+                                                                                                    	at ftjq.hx(:com.google.android.gms@260438013@26.04.38 (100400-867839860):41)
+                                                                                                    	at ftma.b(:com.google.android.gms@260438013@26.04.38 (100400-867839860):33)
+                                                                                                    	at ezqo.i(:com.google.android.gms@260438013@26.04.38 (100400-867839860):18)
+                                                                                                    	at ezqw.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):10)
+                                                                                                    	at flbk.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):13)
+                                                                                                    	at ftkb.d(:com.google.android.gms@260438013@26.04.38 (100400-867839860):3)
+                                                                                                    	at ftkd.run(:com.google.android.gms@260438013@26.04.38 (100400-867839860):38)
+                                                                                                    	at ftlp.execute(:com.google.android.gms@260438013@26.04.38 (100400-867839860):1)
+                                                                                                    	at ftjq.f(:com.google.android.gms@260438013@26.04.38 (100400-867839860):1)
+                                                                                                    	at ftjq.hx(:com.google.android.gms@260438013@26.04.38 (100400-867839860):41)
+                                                                                                    	at ftkd.g(:com.google.android.gms@260438013@26.04.38 (100400-867839860):10)
+                                                                                                    	at ezqu.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):20)
+                                                                                                    	at flbj.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):13)
+                                                                                                    	at ftlw.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):20)
+                                                                                                    	at ftoa.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):3)
+                                                                                                    	at ftnb.run(:com.google.android.gms@260438013@26.04.38 (100400-867839860):19)
+                                                                                                    	at ftoc.run(:com.google.android.gms@260438013@26.04.38 (100400-867839860):5)
+                                                                                                    	at ftly.run(:com.google.android.gms@260438013@26.04.38 (100400-867839860):53)
+                                                                                                    	at ftlp.execute(:com.google.android.gms@260438013@26.04.38 (100400-867839860):1)
+                                                                                                    	at ftly.execute(:com.google.android.gms@260438013@26.04.38 (100400-867839860):76)
+                                                                                                    	at ftjq.f(:com.google.android.gms@260438013@26.04.38 (100400-867839860):1)
+                                                                                                    	at ftjq.hx(:com.google.android.gms@260438013@26.04.38 (100400-867839860):41)
+                                                                                                    	at ftma.b(:com.google.android.gms@260438013@26.04.38 (100400-867839860):33)
+                                                                                                    	at ezrc.c(:com.google.android.gms@260438013@26.04.38 (100400-867839860):52)
+                                                                                                    	at ezrc.b(:com.google.android.gms@260438013@26.04.38 (100400-867839860):10)
+                                                                                                    	at com.google.android.gms.stats.service.DropBoxEntryAddedChimeraService.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):441)
+2026-02-17 19:06:24.519  1697-11896 DropBoxUtil             com.google.android.gms.persistent    E  	at com.google.android.gms.framework.tracing.wrapper.TracingIntentService.onHandleIntent(:com.google.android.gms@260438013@26.04.38 (100400-867839860):13)
+                                                                                                    	at xtm.handleMessage(:com.google.android.gms@260438013@26.04.38 (100400-867839860):7)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:107)
+                                                                                                    	at android.os.Looper.loop(Looper.java:214)
+                                                                                                    	at android.os.HandlerThread.run(HandlerThread.java:67)
+2026-02-17 19:06:24.533  1697-11896 DropBoxUtil             com.google.android.gms.persistent    E  [AppDoctor] null InputStream [CONTEXT service_id=254 ]
+                                                                                                    java.io.IOException: null InputStream
+                                                                                                    	at ecfp.c(:com.google.android.gms@260438013@26.04.38 (100400-867839860):182)
+                                                                                                    	at ecdx.l(:com.google.android.gms@260438013@26.04.38 (100400-867839860):4)
+                                                                                                    	at ecdk.apply(:com.google.android.gms@260438013@26.04.38 (100400-867839860):37)
+                                                                                                    	at com.google.android.gms.stats.service.DropBoxEntryAddedChimeraService.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):656)
+                                                                                                    	at com.google.android.gms.framework.tracing.wrapper.TracingIntentService.onHandleIntent(:com.google.android.gms@260438013@26.04.38 (100400-867839860):13)
+                                                                                                    	at xtm.handleMessage(:com.google.android.gms@260438013@26.04.38 (100400-867839860):7)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:107)
+                                                                                                    	at android.os.Looper.loop(Looper.java:214)
+                                                                                                    	at android.os.HandlerThread.run(HandlerThread.java:67)
+2026-02-17 19:06:24.546  1697-11896 chatty                  com.google.android.gms.persistent    I  uid=10127 com.google.android.gms.persistent identical 4 lines
+2026-02-17 19:06:24.548  1697-11896 DropBoxUtil             com.google.android.gms.persistent    E  [AppDoctor] null InputStream [CONTEXT service_id=254 ]
+                                                                                                    java.io.IOException: null InputStream
+                                                                                                    	at ecfp.c(:com.google.android.gms@260438013@26.04.38 (100400-867839860):182)
+                                                                                                    	at ecdx.l(:com.google.android.gms@260438013@26.04.38 (100400-867839860):4)
+                                                                                                    	at ecdk.apply(:com.google.android.gms@260438013@26.04.38 (100400-867839860):37)
+                                                                                                    	at com.google.android.gms.stats.service.DropBoxEntryAddedChimeraService.a(:com.google.android.gms@260438013@26.04.38 (100400-867839860):656)
+                                                                                                    	at com.google.android.gms.framework.tracing.wrapper.TracingIntentService.onHandleIntent(:com.google.android.gms@260438013@26.04.38 (100400-867839860):13)
+                                                                                                    	at xtm.handleMessage(:com.google.android.gms@260438013@26.04.38 (100400-867839860):7)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:107)
+                                                                                                    	at android.os.Looper.loop(Looper.java:214)
+                                                                                                    	at android.os.HandlerThread.run(HandlerThread.java:67)
+2026-02-17 19:06:24.590   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.android.systemui.ImageWallpaper#0)
+2026-02-17 19:06:24.590   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1)
+2026-02-17 19:06:24.727   891-909   ActivityTaskManager     system_server                        W  Activity top resumed state loss timeout for ActivityRecord{dde1b5f u0 com.magicartifact.debug/com.magicartifact.MainActivity t-1 f}
+2026-02-17 19:06:24.936   661-11900 ResolverController      netd                                 E  No valid NAT64 prefix (100, <unspecified>/0)
+2026-02-17 19:06:25.105   676-676   thermal_repeater        thermal                              I  [recvMdThermalInfo] ret=33, strLen=127,  2, 32767, -127, 111, 32767, 3996
+2026-02-17 19:06:25.501   891-1000  WifiVendorHal           system_server                        E  getWifiLinkLayerStats_1_3_Internal(l.927) failed {.code = ERROR_NOT_SUPPORTED, .description = }
+2026-02-17 19:06:25.522   466-8044  hwcomposer              and...graphics.composer@2.1-service  I  [HWC] (0) displayGetActiveConfig config:0  
+2026-02-17 19:06:25.535   499-985   BufferQueueProducer     surfaceflinger                       I  [StatusBar#0](this:0x7f18980800,id:5,api:1,p:1103,c:499) queueBuffer: fps=0.33 dur=3026.54 max=3026.54 min=3026.54
+2026-02-17 19:06:25.547   466-8044  hwcomposer              and...graphics.composer@2.1-service  I  [HWCDisplay] [Display_0 (type:1)] fps:11.618283,dur:1291.07,max:1042.29,min:13.67  
+2026-02-17 19:06:25.551   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.android.systemui.ImageWallpaper#0)
+2026-02-17 19:06:25.551   499-499   SurfaceFlinger          surfaceflinger                       I  screenshot (com.tblenovo.launcher/com.android.searchlauncher.SearchLauncher#1)
